@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - KRIZA FRP</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pt-24">
+<!-- TopNavBar -->
+<nav class="bg-surface/90 dark:bg-primary/90 backdrop-blur-md fixed top-0 left-0 w-full z-50 border-b border-outline-variant dark:border-primary-container shadow-sm">
+<div class="flex items-center justify-between px-margin-mobile md:px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-black tracking-tighter text-primary dark:text-secondary-fixed uppercase flex items-center gap-2">
+<img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo" class="h-12 md:h-16 w-auto object-contain drop-shadow-sm" />
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-all duration-300 active:scale-95" href="home.html">Home</a>
+<a class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-all duration-300 active:scale-95" href="about-us.html">About Us</a>
+<a class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-all duration-300 active:scale-95" href="products.html">Products</a>
+<a class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-all duration-300 active:scale-95" href="contact-quote.html">Request a Quote</a>
+</div>
+<div class="flex items-center gap-3">
+  <button id="hamburger" aria-label="Toggle menu" class="md:hidden flex flex-col gap-[6px] p-2 text-primary dark:text-secondary-fixed">
+    <span class="ham-bar"></span>
+    <span class="ham-bar"></span>
+    <span class="ham-bar"></span>
+  </button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="md:hidden bg-surface dark:bg-primary border-t border-outline-variant dark:border-primary-container">
+  <div class="flex flex-col px-margin-mobile py-4 gap-4">
+    <a class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="home.html">Home</a>
+    <a class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="about-us.html">About Us</a>
+    <a class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="products.html">Products</a>
+    <a class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="contact-quote.html">Request a Quote</a>
+  </div>
+</div>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative bg-primary pt-16 pb-32 px-margin-mobile md:px-margin-desktop clip-diagonal overflow-hidden">
+<div class="absolute inset-0 opacity-20 bg-cover bg-center" data-alt="Close up industrial macro photography of carbon fiber weave pattern showing texture and geometric precision in a manufacturing facility under harsh directional lighting emphasizing structural integrity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJJDh14e73uMsYK0W9Me95tS3gPgMWz7vmlmIZekEl0duNGyGGTit4GHTTthpWfBKfPViyG40GDEWBbXnKydzF7HHWHRlEWH6yZJwh53v8_Yg47pRp71gtE2LMAgE1Ci5xbdvulGvjOa0mO7MUdegFPkxhopTJPmCbMld9t9NIdh-OPjUpcF5oPmdfmPG4UzXH_LeUnTxI2E7gN2GOHmcLBIAGXBdQ4vlXzU9n5g5hZs8wKzM7DzvOJyrWqmIYufoontcmyFfa2g-C');"></div>
+<div class="relative max-w-max-width mx-auto z-10 flex flex-col md:flex-row items-center justify-between">
+<div class="md:w-2/3 reveal">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg font-bold text-on-primary mb-6">Let's Build Your Composite Solution.</h1>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim max-w-2xl mb-8">
+                        Beyond Quality, Proud Workmanship. Partner with us for engineered FRP solutions that stand the test of time in the most demanding environments.
+                    </p>
+</div>
+</div>
+<!-- Diagonal Accent -->
+<div class="absolute bottom-0 right-0 w-1/3 h-full bg-secondary-fixed opacity-10 transform translate-x-1/2 -skew-x-12"></div>
+</section>
+<!-- Main Content Area -->
+<section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-16 -mt-24 relative z-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Contact Form (Bento Style) -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant p-8 md:p-12 relative overflow-hidden reveal bento-card">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-fixed/10 rounded-bl-full -mr-16 -mt-16"></div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Request a Quote</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Provide your project details below and our engineering team will respond within 24 hours.</p>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-2" for="fullName">Full Name</label>
+<input class="w-full bg-surface border border-outline-variant rounded p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors h-12" id="fullName" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-2" for="company">Company</label>
+<input class="w-full bg-surface border border-outline-variant rounded p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors h-12" id="company" placeholder="Industrial Corp" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-2" for="email">Email Address</label>
+<input class="w-full bg-surface border border-outline-variant rounded p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors h-12" id="email" placeholder="john@example.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-2" for="phone">Phone Number</label>
+<input class="w-full bg-surface border border-outline-variant rounded p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors h-12" id="phone" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-2" for="interest">Product Interest</label>
+<div class="relative">
+<select class="w-full bg-surface border border-outline-variant rounded p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors h-12 appearance-none" id="interest">
+<option disabled="" selected="" value="">Select a category</option>
+<option value="gratings">FRP Gratings</option>
+<option value="tanks">Storage Tanks &amp; Silos</option>
+<option value="profiles">Pultruded Profiles</option>
+<option value="custom">Custom Fabrication</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-on-surface-variant">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-2" for="specs">Project Details &amp; Specifications</label>
+<textarea class="w-full bg-surface border border-outline-variant rounded p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none" id="specs" placeholder="Describe environmental conditions, load requirements, dimensions..." rows="5"></textarea>
+</div>
+<div class="pt-4 flex justify-end">
+<button class="bg-secondary-fixed text-on-secondary-fixed font-headline-md text-headline-md font-bold py-3 px-8 rounded hover:bg-secondary-fixed-dim transition-colors border-b-[3px] border-[#aad630] flex items-center gap-2" type="submit">
+                                Submit Request
+                                <span class="material-symbols-outlined font-bold">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Sidebar Information -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<!-- Contact Info Card -->
+<div class="bg-primary text-on-primary rounded-xl shadow-sm p-8 flex-grow reveal reveal-delay-1 bento-card">
+<h3 class="font-headline-md text-headline-md font-bold mb-8 text-secondary-fixed">Contact Information</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary-fixed mt-1">location_on</span>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed-dim mb-1">Corporate HQ</h4>
+<p class="font-body-md text-body-md">123 Industrial Parkway<br/>Manufacturing District<br/>Cityville, State 12345</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary-fixed mt-1">call</span>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed-dim mb-1">Direct Line</h4>
+<p class="font-body-md text-body-md">+1 (555) 123-4567</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary-fixed mt-1">mail</span>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed-dim mb-1">Email Support</h4>
+<p class="font-body-md text-body-md">sales@krizafrp.com</p>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-primary-container">
+<h4 class="font-headline-md text-headline-md font-bold mb-4">Quality Assured</h4>
+<div class="flex flex-wrap gap-2">
+<span class="inline-block px-3 py-1 bg-surface/10 rounded font-label-sm text-label-sm text-white">ISO 9001:2015</span>
+<span class="inline-block px-3 py-1 bg-surface/10 rounded font-label-sm text-label-sm text-white">ASTM Certified</span>
+</div>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="h-64 bg-surface-container-high rounded-xl overflow-hidden relative border border-outline-variant shadow-inner reveal reveal-delay-2 bento-card">
+<img alt="Map Location" class="w-full h-full object-cover opacity-70" data-alt="A stylized, clean top-down view of a map showing an industrial district with highlighted routes. Soft light mode aesthetic with subtle green and gray tones indicating zones. The map looks professional and modern, fitting for a corporate location overview." data-location="Cityville" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgjmF0rkKwwKdNN3nAl4-6-kz5gq0fGHXeN0K2PFNK8m0m-1VKx2MUIuwFMA8OW9Ty_7JkofcTVKAbLdd7gxVeSRi6FV8FFErPMsK0mxF3E6ax_gSvoOKy1jEVdsXksuKO03YVek862pRiEgD9ESvl1Sfdq0HKVDZn7k6mkSc56cLtFmWO9Xf8tQvio6VMtc1xintRO4s4Szj-KtPejwak32PHfoCsYL5Jxk3fGKH5FzBrJ-bKTJkLDbXfjAbdde7CMz_ENrXAKv0e"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="bg-primary text-secondary-fixed p-3 rounded-full shadow-lg border-2 border-secondary-fixed">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Banner -->
+<section class="bg-surface-container py-12 border-y border-outline-variant clip-diagonal-reverse mt-8">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-6">Complete Composite Solution</h3>
+<div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<!-- Placeholder logos for client trust -->
+<div class="h-12 w-32 bg-outline-variant/30 rounded flex items-center justify-center font-label-sm">CLIENT ONE</div>
+<div class="h-12 w-32 bg-outline-variant/30 rounded flex items-center justify-center font-label-sm">PARTNER CO</div>
+<div class="h-12 w-32 bg-outline-variant/30 rounded flex items-center justify-center font-label-sm">INDUSTRY LTD</div>
+<div class="h-12 w-32 bg-outline-variant/30 rounded flex items-center justify-center font-label-sm">GLOBAL MFG</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-on-surface font-body-md text-body-md w-full py-12 border-t-4 border-secondary-fixed">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto mb-12">
+<div class="col-span-1 md:col-span-2 lg:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-secondary-fixed mb-4 uppercase">
+                    <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo" class="h-12 md:h-16 w-auto object-contain drop-shadow-sm" />
+                </div>
+<p class="text-on-primary-container dark:text-on-surface-variant text-[14px] pr-4">
+                    Delivering unparalleled structural integrity and corrosion resistance through advanced composite engineering for industrial applications worldwide.
+                </p>
+</div>
+<div>
+      <h4 class="font-bold mb-4 text-white">Quick Links</h4>
+      <ul class="space-y-3">
+        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="home.html">Home</a></li>
+        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="about-us.html">About Us</a></li>
+        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">Products</a></li>
+        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="contact-quote.html">Contact Us</a></li>
+      </ul>
+    </div>
+<div>
+<h4 class="font-bold mb-4 text-white">Products</h4>
+<ul class="space-y-3">
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">FRP Gratings</a></li>
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">FRP Cable Trays</a></li>
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">PP FRP Tanks</a></li>
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">FRP Profiles &amp; Poles</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4 text-white">Contact</h4>
+<ul class="space-y-3">
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="contact-quote.html">Contact Support</a></li>
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="contact-quote.html">Request a Quote</a></li>
+<li class="flex items-center gap-2 text-on-primary-container mt-4">
+<span class="material-symbols-outlined text-[18px]">location_on</span> Industrial Estate, Phase II
+                    </li>
+</ul>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto border-t border-primary-container pt-8 flex flex-col md:flex-row justify-between items-center text-[12px] text-on-primary-container">
+<div>© 2024 Kriza FRP Products. Complete Composite Solution. All Rights Reserved.</div>
+<div class="flex gap-4 mt-4 md:mt-0">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+<script>
+  // --- Mobile hamburger ---
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('open');
+  });
+
+  // --- Scroll-reveal with IntersectionObserver ---
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // --- Navbar scroll shadow ---
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('shadow-lg', window.scrollY > 20);
+  });
+</script>
+</body></html>

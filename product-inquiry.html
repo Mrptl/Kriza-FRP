@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Inquiry - KRIZA FRP</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col pt-[72px]">
+<!-- TopNavBar -->
+<nav class="bg-surface/90 dark:bg-primary/90 backdrop-blur-md fixed top-0 left-0 w-full z-50 border-b border-outline-variant dark:border-primary-container shadow-sm">
+<div class="flex items-center justify-between px-margin-mobile md:px-margin-desktop py-4 max-w-max-width mx-auto">
+  <div class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-black tracking-tighter text-primary dark:text-secondary-fixed uppercase flex items-center gap-2">
+    <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo" class="h-12 md:h-16 w-auto object-contain drop-shadow-sm" />
+  </div>
+  <div class="hidden md:flex items-center space-x-8">
+    <a class="text-on-surface-variant font-medium hover:text-secondary transition-all duration-300" href="home.html">Home</a>
+    <a class="text-on-surface-variant font-medium hover:text-secondary transition-all duration-300" href="about-us.html">About Us</a>
+    <a class="text-primary dark:text-secondary-fixed border-b-2 border-secondary-fixed pb-1 hover:text-secondary transition-all duration-300 font-bold" href="products.html">Products</a>
+    <a class="text-on-surface-variant font-medium hover:text-secondary transition-all duration-300" href="contact-quote.html">Request a Quote</a>
+  </div>
+  <div class="flex items-center gap-3">
+    <button id="hamburger" aria-label="Toggle menu" class="md:hidden flex flex-col gap-[6px] p-2 text-primary">
+      <span class="ham-bar"></span>
+      <span class="ham-bar"></span>
+      <span class="ham-bar"></span>
+    </button>
+  </div>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="md:hidden bg-surface border-t border-outline-variant">
+  <div class="flex flex-col px-margin-mobile py-4 gap-4">
+    <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors" href="home.html">Home</a>
+    <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors" href="about-us.html">About Us</a>
+    <a class="text-primary font-bold hover:text-secondary transition-colors" href="products.html">Products</a>
+    <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors" href="contact-quote.html">Request a Quote</a>
+  </div>
+</div>
+</nav>
+<main class="flex-grow w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Header -->
+<div class="mb-12 reveal">
+<h1 class="font-display-lg text-display-lg text-on-background mb-4">Product Inquiry</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">Provide detailed specifications below to receive an accurate technical consultation and quotation for your required composite solutions.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Main Form Column -->
+<div class="lg:col-span-8 bg-surface-container-lowest border border-surface-variant rounded shadow-sm p-8 reveal reveal-delay-1 bento-card">
+<form class="space-y-8">
+<!-- Selected Product Context -->
+<div class="bg-surface-container-low border border-outline-variant p-6 rounded flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md uppercase text-on-surface-variant block mb-2">Subject of Inquiry</span>
+<h3 class="font-headline-md text-headline-md text-primary">Heavy-Duty FRP Grating</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Ref: KRZ-GR-500</p>
+</div>
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="grid_view" data-weight="fill" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+</div>
+<hr class="border-surface-variant"/>
+<!-- Contact Details -->
+<div>
+<h4 class="font-headline-md text-headline-md text-on-background mb-6">Contact Information</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="font-label-md text-label-md uppercase text-on-surface-variant block mb-2">Full Name</label>
+<input class="w-full min-h-[48px] bg-surface-container-lowest border border-surface-variant rounded px-4 py-2 font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="e.g. John Doe" type="text"/>
+</div>
+<div>
+<label class="font-label-md text-label-md uppercase text-on-surface-variant block mb-2">Company</label>
+<input class="w-full min-h-[48px] bg-surface-container-lowest border border-surface-variant rounded px-4 py-2 font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="Organization Name" type="text"/>
+</div>
+<div>
+<label class="font-label-md text-label-md uppercase text-on-surface-variant block mb-2">Email Address</label>
+<input class="w-full min-h-[48px] bg-surface-container-lowest border border-surface-variant rounded px-4 py-2 font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="john@company.com" type="email"/>
+</div>
+<div>
+<label class="font-label-md text-label-md uppercase text-on-surface-variant block mb-2">Phone Number</label>
+<input class="w-full min-h-[48px] bg-surface-container-lowest border border-surface-variant rounded px-4 py-2 font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+</div>
+</div>
+<hr class="border-surface-variant"/>
+<!-- Technical Specs -->
+<div>
+<h4 class="font-headline-md text-headline-md text-on-background mb-6">Technical Specifications</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<label class="font-label-md text-label-md uppercase text-on-surface-variant block mb-2">Application Environment</label>
+<select class="w-full min-h-[48px] bg-surface-container-lowest border border-surface-variant rounded px-4 py-2 font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors">
+<option>Select Environment</option>
+<option>Chemical / Corrosive</option>
+<option>Marine / Offshore</option>
+<option>Industrial Manufacturing</option>
+<option>Water Treatment</option>
+</select>
+</div>
+<div>
+<label class="font-label-md text-label-md uppercase text-on-surface-variant block mb-2">Required Quantity</label>
+<input class="w-full min-h-[48px] bg-surface-container-lowest border border-surface-variant rounded px-4 py-2 font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="e.g. 500 sq meters" type="text"/>
+</div>
+<div class="md:col-span-2">
+<label class="font-label-md text-label-md uppercase text-on-surface-variant block mb-2">Dimensions / Size Constraints</label>
+<input class="w-full min-h-[48px] bg-surface-container-lowest border border-surface-variant rounded px-4 py-2 font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="Provide specific dimensions if known" type="text"/>
+</div>
+</div>
+<div>
+<label class="font-label-md text-label-md uppercase text-on-surface-variant block mb-2">Technical Requirements / Inquiry Details</label>
+<textarea class="w-full bg-surface-container-lowest border border-surface-variant rounded px-4 py-3 font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="Describe load requirements, specific resin types, or customized structural needs..." rows="5"></textarea>
+</div>
+</div>
+<!-- Submit -->
+<div class="flex justify-end pt-4">
+<button class="bg-primary text-on-primary font-label-md text-label-md uppercase px-8 py-4 rounded hover:bg-surface-tint transition-colors active:scale-95 duration-300 flex items-center gap-2" type="button">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+                            Send Inquiry
+                        </button>
+</div>
+</form>
+</div>
+<!-- Sidebar -->
+<div class="lg:col-span-4 space-y-6">
+<!-- Trust Card 1 -->
+<div class="bg-surface-container-high border border-surface-variant rounded p-6 shadow-sm reveal reveal-delay-2 bento-card">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 bg-primary rounded flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="engineering" data-weight="fill" style="font-variation-settings: 'FILL' 1;">engineering</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-background">Technical Support</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Our engineering team provides structural analysis and material selection guidance for complex industrial applications.</p>
+<a class="font-label-md text-label-md text-primary uppercase flex items-center gap-1 hover:text-surface-tint" href="#">
+                        View Engineering Services
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Trust Card 2 -->
+<div class="bg-surface-container-high border border-surface-variant rounded p-6 shadow-sm reveal reveal-delay-3 bento-card">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 bg-tertiary-container rounded flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-2xl" data-icon="timer" data-weight="fill" style="font-variation-settings: 'FILL' 1;">timer</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-background">Fast Response Times</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">We understand industrial project timelines. Expect a detailed technical proposal within 24-48 business hours.</p>
+</div>
+<!-- Direct Contact -->
+<div class="bg-primary border border-primary-container rounded p-6 shadow-sm text-on-primary mt-8 reveal reveal-delay-4 bento-card">
+<h4 class="font-headline-md text-headline-md mb-4 text-on-primary">Need immediate assistance?</h4>
+<p class="font-body-md text-body-md mb-6 text-primary-fixed-dim">Call our industrial sales desk directly for urgent project inquiries.</p>
+<div class="flex items-center gap-3 font-label-md text-label-md text-tertiary-fixed">
+<span class="material-symbols-outlined" data-icon="call" data-weight="fill" style="font-variation-settings: 'FILL' 1;">call</span>
+                        +1 (800) 555-FRP1
+                    </div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-on-surface font-body-md text-body-md w-full py-12 border-t-4 border-secondary-fixed">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto mb-12">
+<div class="col-span-1 md:col-span-2 lg:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-secondary-fixed mb-4 uppercase">
+                    <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo" class="h-12 md:h-16 w-auto object-contain drop-shadow-sm" />
+                </div>
+<p class="text-on-primary-container dark:text-on-surface-variant text-[14px] pr-4">
+                    Delivering unparalleled structural integrity and corrosion resistance through advanced composite engineering for industrial applications worldwide.
+                </p>
+</div>
+<div>
+      <h4 class="font-bold mb-4 text-white">Quick Links</h4>
+      <ul class="space-y-3">
+        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="home.html">Home</a></li>
+        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="about-us.html">About Us</a></li>
+        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">Products</a></li>
+        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="contact-quote.html">Contact Us</a></li>
+      </ul>
+    </div>
+<div>
+<h4 class="font-bold mb-4 text-white">Products</h4>
+<ul class="space-y-3">
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">FRP Gratings</a></li>
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">FRP Cable Trays</a></li>
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">PP FRP Tanks</a></li>
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">FRP Profiles &amp; Poles</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4 text-white">Contact</h4>
+<ul class="space-y-3">
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="contact-quote.html">Contact Support</a></li>
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="contact-quote.html">Request a Quote</a></li>
+<li class="flex items-center gap-2 text-on-primary-container mt-4">
+<span class="material-symbols-outlined text-[18px]">location_on</span> Industrial Estate, Phase II
+                    </li>
+</ul>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto border-t border-primary-container pt-8 flex flex-col md:flex-row justify-between items-center text-[12px] text-on-primary-container">
+<div>© 2024 Kriza FRP Products. Complete Composite Solution. All Rights Reserved.</div>
+<div class="flex gap-4 mt-4 md:mt-0">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+
+<script>
+  // --- Mobile hamburger ---
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('open');
+  });
+
+  // --- Scroll-reveal with IntersectionObserver ---
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // --- Navbar scroll shadow ---
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('shadow-lg', window.scrollY > 20);
+  });
+</script>
+</body></html>
