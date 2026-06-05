@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Company Catalog - KRIZA FRP</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700;900&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col pt-[64px] md:pt-[72px]">
+
+  <!-- TopNavBar -->
+  <nav class="bg-surface/90 dark:bg-primary/90 backdrop-blur-md fixed top-0 left-0 w-full z-50 border-b border-outline-variant dark:border-primary-container shadow-sm">
+    <div class="relative flex items-center justify-between px-margin-mobile md:px-8 py-3 w-full mx-auto">
+      <a href="index.html" class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-black tracking-tighter text-primary dark:text-secondary-fixed uppercase flex items-center gap-2 hover:opacity-90 transition-opacity">
+        <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo" class="h-10 md:h-12 w-auto object-contain drop-shadow-sm" style="max-height: 48px;" />
+      </a>
+      <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center space-x-8">
+        <a class="text-on-surface-variant font-medium hover:text-secondary transition-all duration-300" href="index.html">Home</a>
+        <a class="text-on-surface-variant font-medium hover:text-secondary transition-all duration-300" href="about-us.html">About Us</a>
+        <a class="text-on-surface-variant font-medium hover:text-secondary transition-all duration-300" href="products.html">Products</a>
+        <a class="text-on-surface-variant font-medium hover:text-secondary transition-all duration-300" href="contact-quote.html">Request a Quote</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="catalog.html" aria-label="View Catalog" class="flex items-center gap-2 bg-secondary-fixed text-white px-3 py-2 md:px-4 md:py-2 rounded-full font-bold text-xs md:text-sm hover:bg-secondary-fixed-dim transition-all active:scale-95 shadow-sm">
+          <span class="material-symbols-outlined text-base md:text-lg">menu_book</span>
+          <span class="hidden sm:inline">Catalog</span>
+        </a>
+        <button id="hamburger" aria-label="Toggle menu" class="md:hidden flex flex-col gap-[6px] p-2 text-primary">
+          <span class="ham-bar"></span>
+          <span class="ham-bar"></span>
+          <span class="ham-bar"></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden bg-surface border-t border-outline-variant">
+      <div class="flex flex-col px-margin-mobile py-4 gap-4">
+        <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors" href="index.html">Home</a>
+        <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors" href="about-us.html">About Us</a>
+        <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors" href="products.html">Products</a>
+        <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors" href="contact-quote.html">Request a Quote</a>
+        <a class="flex items-center gap-2 text-secondary-fixed font-bold hover:text-secondary transition-colors pt-2 border-t border-outline-variant/30" href="catalog.html">
+          <span class="material-symbols-outlined text-lg">menu_book</span>
+          View Catalog
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header Hero (Structural Theme) -->
+  <section class="relative bg-primary text-on-primary py-16 md:py-24 overflow-hidden structural-clip reveal">
+    <!-- Abstract structural pattern overlay -->
+    <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 1px, transparent 1px, transparent 24px);"></div>
+    <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+      <div class="max-w-2xl">
+        <h1 class="font-display-lg text-display-lg mb-4 text-white">Product Catalog</h1>
+        <p class="font-body-lg text-body-lg text-primary-fixed-dim mb-8">View our comprehensive product specifications and engineering solutions online or download the full catalog.</p>
+      </div>
+    </div>
+    <!-- Angular accent piece -->
+    <div class="absolute top-0 right-0 w-1/3 h-full bg-secondary-fixed opacity-90 transform skew-x-[15deg] translate-x-1/4 -z-0 hidden md:block"></div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="flex-grow max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12 w-full">
+    <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 md:p-8 shadow-[0_4px_4px_rgba(0,0,0,0.02)] flex flex-col reveal reveal-delay-1">
+      <div class="w-full flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 pb-6 border-b border-surface-variant">
+        <div>
+          <h2 class="font-headline-md text-headline-md text-primary">Interactive Catalog Viewer</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant mt-1">Scroll through the catalog pages directly on the site.</p>
+        </div>
+        <a href="assets/Kriza FRP Products.pdf" download class="flex items-center gap-2 bg-secondary-fixed text-white px-5 py-3 rounded-full font-bold hover:bg-secondary-fixed-dim transition-all active:scale-95 shadow-sm w-full sm:w-auto justify-center">
+          <span class="material-symbols-outlined">download</span>
+          Download PDF Catalog
+        </a>
+      </div>
+      
+      <!-- PDF Viewer Frame -->
+      <div class="w-full h-[75vh] min-h-[500px] border border-outline-variant rounded-lg overflow-hidden bg-surface relative">
+        <iframe src="assets/Kriza FRP Products.pdf#toolbar=1" class="w-full h-full border-none absolute inset-0" title="Kriza FRP Products Catalog">
+          <div class="p-6 text-center text-on-surface-variant h-full flex flex-col items-center justify-center">
+            <span class="material-symbols-outlined text-4xl mb-2 text-outline">picture_as_pdf</span>
+            <p class="mb-4">Your browser does not support inline PDFs.</p>
+            <a class="bg-secondary-fixed text-white px-5 py-2 rounded-full font-bold hover:bg-secondary-fixed-dim transition-colors" href="assets/Kriza FRP Products.pdf" download>Download PDF File</a>
+          </div>
+        </iframe>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-on-surface font-body-md text-body-md w-full py-12 border-t-4 border-secondary-fixed">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto mb-12">
+      <div class="col-span-1 md:col-span-2 lg:col-span-1">
+        <a href="index.html" class="inline-block font-headline-md text-headline-md font-bold text-secondary-fixed mb-4 uppercase hover:opacity-90 transition-opacity">
+          <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo" class="h-12 md:h-16 w-auto object-contain drop-shadow-sm" />
+        </a>
+        <p class="text-on-primary-container dark:text-on-surface-variant text-[14px] pr-4">
+          Delivering unparalleled structural integrity and corrosion resistance through advanced composite engineering for industrial applications worldwide.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-white">Quick Links</h4>
+        <ul class="space-y-3">
+          <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="index.html">Home</a></li>
+          <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="about-us.html">About Us</a></li>
+          <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">Products</a></li>
+          <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="contact-quote.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-white">Products</h4>
+        <ul class="space-y-3">
+          <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">FRP Gratings</a></li>
+          <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">FRP Cable Trays</a></li>
+          <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">PP FRP Tanks</a></li>
+          <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">FRP Profiles &amp; Poles</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-white">Contact</h4>
+        <ul class="space-y-3">
+          <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="contact-quote.html">Contact Support</a></li>
+          <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="contact-quote.html">Request a Quote</a></li>
+          <li class="flex items-center gap-2 text-on-primary-container mt-4">
+            <span class="material-symbols-outlined text-[18px]">location_on</span> Industrial Estate, Phase II
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto border-t border-primary-container pt-8 flex flex-col md:flex-row justify-between items-center text-[12px] text-on-primary-container">
+      <div>© 2024 Kriza FRP Products. Complete Composite Solution. All Rights Reserved.</div>
+      <div class="flex gap-4 mt-4 md:mt-0">
+        <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+        <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // --- Mobile hamburger ---
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('open');
+    });
+
+    // --- Scroll-reveal with IntersectionObserver ---
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // --- Navbar scroll shadow ---
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('shadow-lg', window.scrollY > 20);
+    });
+  </script>
+</body>
+</html>
