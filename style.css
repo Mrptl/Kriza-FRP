@@ -3037,6 +3037,10 @@ input:where([type='file']):focus {
     flex-direction: row;
   }
 
+  .md\:justify-end {
+    justify-content: flex-end;
+  }
+
   .md\:gap-16 {
     gap: 4rem;
   }
