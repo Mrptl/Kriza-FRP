@@ -4,10 +4,18 @@
 
 @layer utilities {
     .clip-diagonal {
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
     }
     .clip-diagonal-reverse {
-        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+    }
+    @media (min-width: 640px) {
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .clip-diagonal-reverse {
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        }
     }
     /* Scroll Reveal */
     .reveal {
@@ -55,4 +63,48 @@
     .stat-val {
         font-variant-numeric: tabular-nums;
     }
+    /* Ken Burns Zoom Effect */
+    @keyframes kenburns {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.08);
+        }
+    }
+    .animate-kenburns {
+        animation: kenburns 7s ease-out forwards;
+    }
+    
+    /* Short aspect ratio / landscape mobile optimization */
+    @media (max-height: 520px) and (orientation: landscape) {
+        #hero-carousel {
+            height: 90vh !important;
+            min-height: 340px !important;
+        }
+        #hero-carousel .carousel-slide .carousel-content {
+            padding-bottom: 1.5rem !important;
+            padding-top: 1.5rem !important;
+        }
+        #hero-carousel h1 {
+            font-size: 1.75rem !important;
+            line-height: 2.25rem !important;
+            margin-bottom: 0.5rem !important;
+        }
+        #hero-carousel p {
+            font-size: 0.8125rem !important;
+            line-height: 1.25rem !important;
+            margin-bottom: 0.75rem !important;
+        }
+        #hero-carousel .flex-col {
+            flex-direction: row !important;
+            gap: 0.75rem !important;
+        }
+        #hero-carousel a {
+            padding: 0.5rem 1rem !important;
+            font-size: 0.8125rem !important;
+            line-height: 1.25rem !important;
+        }
+    }
 }
+

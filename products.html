@@ -9,14 +9,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 </head>
-<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col pt-[72px]">
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col pt-[64px] md:pt-[72px]">
 <!-- TopNavBar -->
 <nav class="bg-surface/90 dark:bg-primary/90 backdrop-blur-md fixed top-0 left-0 w-full z-50 border-b border-outline-variant dark:border-primary-container shadow-sm">
-  <div class="flex items-center justify-between px-margin-mobile md:px-margin-desktop py-4 max-w-max-width mx-auto">
-    <div class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-black tracking-tighter text-primary dark:text-secondary-fixed uppercase flex items-center gap-2">
-      <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo" class="h-12 md:h-16 w-auto object-contain drop-shadow-sm" />
-    </div>
-    <div class="hidden md:flex items-center space-x-8">
+  <div class="relative flex items-center justify-between px-margin-mobile md:px-8 py-3 w-full mx-auto">
+    <a href="index.html" class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-black tracking-tighter text-primary dark:text-secondary-fixed uppercase flex items-center gap-2 hover:opacity-90 transition-opacity">
+      <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo" class="h-10 md:h-12 w-auto object-contain drop-shadow-sm" style="max-height: 48px;" />
+    </a>
+    <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center space-x-8">
       <a class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-all duration-300 active:scale-95 transition-transform" href="index.html">Home</a>
       <a class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-all duration-300 active:scale-95 transition-transform" href="about-us.html">About Us</a>
       <a class="text-primary dark:text-secondary-fixed border-b-2 border-secondary-fixed pb-1 hover:text-secondary dark:hover:text-secondary-fixed-dim transition-all duration-300 font-bold" href="products.html">Products</a>
@@ -287,9 +287,9 @@
 <footer class="bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-on-surface font-body-md text-body-md w-full py-12 border-t-4 border-secondary-fixed">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto mb-12">
 <div class="col-span-1 md:col-span-2 lg:col-span-1">
-<div class="font-headline-md text-headline-md font-bold text-secondary-fixed mb-4 uppercase">
+<a href="index.html" class="inline-block font-headline-md text-headline-md font-bold text-secondary-fixed mb-4 uppercase hover:opacity-90 transition-opacity">
                     <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo" class="h-12 md:h-16 w-auto object-contain drop-shadow-sm" />
-                </div>
+                </a>
 <p class="text-on-primary-container dark:text-on-surface-variant text-[14px] pr-4">
                     Delivering unparalleled structural integrity and corrosion resistance through advanced composite engineering for industrial applications worldwide.
                 </p>

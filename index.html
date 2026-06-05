@@ -11,14 +11,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 </head>
-<body class="bg-background text-on-background font-body-md antialiased pt-20">
+<body class="bg-background text-on-background font-body-md antialiased pt-[64px] md:pt-[72px]">
 <!-- TopNavBar -->
 <nav class="bg-surface/90 dark:bg-primary/90 backdrop-blur-md fixed top-0 left-0 w-full z-50 border-b border-outline-variant dark:border-primary-container shadow-sm">
-<div class="flex items-center justify-between px-margin-mobile md:px-margin-desktop py-4 max-w-max-width mx-auto">
-  <div class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-black tracking-tighter text-primary dark:text-secondary-fixed uppercase flex items-center gap-2">
-    <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo" class="h-12 md:h-16 w-auto object-contain drop-shadow-sm" />
-  </div>
-  <div class="hidden md:flex items-center space-x-8">
+<div class="relative flex items-center justify-between px-margin-mobile md:px-8 py-3 w-full mx-auto">
+  <a href="index.html" class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-black tracking-tighter text-primary dark:text-secondary-fixed uppercase flex items-center gap-2 hover:opacity-90 transition-opacity">
+    <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo" class="h-10 md:h-12 w-auto object-contain drop-shadow-sm" style="max-height: 48px;" />
+  </a>
+  <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center space-x-8">
     <a class="text-primary dark:text-secondary-fixed border-b-2 border-secondary-fixed pb-1 hover:text-secondary transition-all duration-300 font-bold" href="index.html">Home</a>
     <a class="text-on-surface-variant font-medium hover:text-secondary transition-all duration-300" href="about-us.html">About Us</a>
     <a class="text-on-surface-variant font-medium hover:text-secondary transition-all duration-300" href="products.html">Products</a>
@@ -42,35 +42,221 @@
   </div>
 </div>
 </nav>
-<!-- Hero Section -->
-<section class="relative bg-primary text-on-primary overflow-hidden clip-diagonal pt-16 pb-32 md:pt-32 md:pb-48">
-<!-- Background Image -->
-<div class="absolute inset-0 z-0 opacity-40 mix-blend-overlay">
-<img alt="A vast, high-tech industrial manufacturing facility bathed in bright, cold lighting. The scene features massive, intricate steel structures and fiberglass-reinforced plastic components being assembled by precision machinery. The overall mood is authoritative and modern, emphasizing engineering excellence with deep slate shadows and sharp, precise geometry. The image conveys structural integrity and large-scale industrial capability." class="w-full h-full object-cover" data-alt="A vast, high-tech industrial manufacturing facility bathed in bright, cold lighting. The scene features massive, intricate steel structures and fiberglass-reinforced plastic components being assembled by precision machinery. The overall mood is authoritative and modern, emphasizing engineering excellence with deep slate shadows and sharp, precise geometry. The image conveys structural integrity and large-scale industrial capability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCScvQWgBJv8ciOJ6DmgUjfKb-nQlWBKL4liW35Ia19XSgo-KyAYzGAlJPw5FnLDEezXr4UsbgEw_EFiFFQroh7a_KTLGyVaDAwB8XXgpAoa1790ahBykvrpbaA7NTF6i4zIATVXsn2aYLDeI-_amcWkSP5P9-I08ctdjsPXE71UL2rtm-DDkit3ymoaVnrynl5brR3kskLg1lW8YewDajZsw_oy0LDGzxOqKArRxCc8tpbTNu8p0bw-V4i43zp67AwHf7c8O-kCTx1"/>
-</div>
-<!-- Diagonal Accent Element -->
-<div class="absolute top-0 right-0 w-1/2 h-full bg-tertiary-fixed-dim/20 transform skew-x-[-15deg] translate-x-1/4 z-0"></div>
-<div class="relative z-10 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex flex-col items-start justify-center h-full">
-<div class="max-w-3xl">
-<h1 class="font-display-lg text-display-lg md:text-5xl lg:text-7xl mb-6 leading-tight">
-                    Beyond <span class="text-secondary-fixed block md:inline">Quality,</span> <br class="hidden md:block"/>
-                    Proud <span class="text-tertiary-fixed-dim">Workmanship</span>
-</h1>
-<p class="font-body-lg text-body-lg md:text-xl text-primary-fixed mb-10 max-w-2xl">
-                    Complete Composite Solution for Modern Industry. Delivering high-performance, corrosion-resistant FRP structures engineered for ultimate durability.
-                </p>
-<div class="flex flex-col sm:flex-row gap-4">
-<a class="bg-secondary-fixed text-primary px-8 py-4 rounded font-headline-md text-headline-md border-b-2 border-secondary-fixed-dim hover:bg-secondary-fixed-dim transition-all shadow-sm flex items-center justify-center gap-2" href="products.html">
-                        View Products
-                        <span class="material-symbols-outlined text-xl">arrow_forward</span>
-</a>
-<a class="bg-transparent text-on-primary border border-outline px-8 py-4 rounded font-headline-md text-headline-md hover:bg-surface/10 transition-all flex items-center justify-center" href="contact-quote.html">
-                        Request a Quote
-                    </a>
-</div>
-</div>
-</div>
+<!-- Hero Section (Carousel) -->
+<section id="hero-carousel" class="relative bg-primary text-on-primary overflow-hidden clip-diagonal h-[80vh] min-h-[460px] sm:h-[80vh] sm:min-h-[520px] md:h-[85vh] md:min-h-[660px] lg:h-[85vh] lg:min-h-[740px]">
+  <!-- Slides Container -->
+  <div class="relative w-full h-full overflow-hidden">
+    
+    <!-- Slide 0: General Overview -->
+    <div class="carousel-slide absolute inset-0 w-full h-full flex items-center transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none z-0">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0 opacity-40 mix-blend-overlay">
+        <img alt="Advanced industrial manufacturing facility bathed in bright, cold lighting." class="carousel-img w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCScvQWgBJv8ciOJ6DmgUjfKb-nQlWBKL4liW35Ia19XSgo-KyAYzGAlJPw5FnLDEezXr4UsbgEw_EFiFFQroh7a_KTLGyVaDAwB8XXgpAoa1790ahBykvrpbaA7NTF6i4zIATVXsn2aYLDeI-_amcWkSP5P9-I08ctdjsPXE71UL2rtm-DDkit3ymoaVnrynl5brR3kskLg1lW8YewDajZsw_oy0LDGzxOqKArRxCc8tpbTNu8p0bw-V4i43zp67AwHf7c8O-kCTx1"/>
+      </div>
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0 z-10 bg-gradient-to-r from-primary via-primary/75 to-transparent"></div>
+      <!-- Diagonal Accent Element -->
+      <div class="absolute top-0 right-0 w-1/2 h-full bg-tertiary-fixed-dim/10 transform skew-x-[-15deg] translate-x-1/4 z-0"></div>
+      <!-- Content -->
+      <div class="relative z-20 max-w-max-width w-full mx-auto px-6 sm:px-20 md:px-24 lg:px-32 xl:px-40 h-full flex flex-col justify-center pb-20 sm:pb-24 md:pb-20 pt-8 sm:pt-12">
+        <div class="carousel-content max-w-3xl transform translate-y-6 opacity-0 transition-all duration-700 ease-out">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-secondary-fixed/90 text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-3 sm:mb-4 border border-secondary-fixed/20 shadow-sm">
+            Composite Excellence
+          </span>
+          <h1 class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 sm:mb-6 leading-tight">
+            Beyond <span class="text-secondary-fixed block md:inline">Quality,</span> <br class="hidden md:block"/>
+            Proud <span class="text-tertiary-fixed-dim">Workmanship</span>
+          </h1>
+          <p class="text-sm sm:text-body-lg text-primary-fixed mb-6 sm:mb-10 max-w-2xl">
+            Complete Composite Solution for Modern Industry. Delivering high-performance, corrosion-resistant FRP structures engineered for ultimate durability.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <a class="bg-secondary-fixed text-primary px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md border-b-2 border-secondary-fixed-dim hover:bg-secondary-fixed-dim transition-all shadow-sm flex items-center justify-center gap-2" href="products.html">
+              View Products
+              <span class="material-symbols-outlined text-xl">arrow_forward</span>
+            </a>
+            <a class="bg-transparent text-on-primary border border-outline px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md hover:bg-surface/10 transition-all flex items-center justify-center" href="contact-quote.html">
+              Request a Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 1: FRP Gratings -->
+    <div class="carousel-slide absolute inset-0 w-full h-full flex items-center transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none z-0">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0 opacity-30 mix-blend-overlay">
+        <img alt="High-strength FRP molded gratings installation." class="carousel-img w-full h-full object-cover" src="assets/Grating-20260516T054823Z-3-001/Grating/frp-molded-grating.jpg"/>
+      </div>
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0 z-10 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+      <!-- Diagonal Accent Element -->
+      <div class="absolute top-0 right-0 w-1/2 h-full bg-tertiary-fixed-dim/10 transform skew-x-[-15deg] translate-x-1/4 z-0"></div>
+      <!-- Content -->
+      <div class="relative z-20 max-w-max-width w-full mx-auto px-6 sm:px-20 md:px-24 lg:px-32 xl:px-40 h-full flex flex-col justify-center pb-20 sm:pb-24 md:pb-20 pt-8 sm:pt-12">
+        <div class="carousel-content max-w-3xl transform translate-y-6 opacity-0 transition-all duration-700 ease-out">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-secondary-fixed/90 text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-3 sm:mb-4 border border-secondary-fixed/20 shadow-sm">
+            OSHA & ASTM Compliant
+          </span>
+          <h1 class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 sm:mb-6 leading-tight">
+            FRP Molded & <br class="hidden md:block"/>
+            <span class="text-tertiary-fixed-dim">Pultruded Gratings</span>
+          </h1>
+          <p class="text-sm sm:text-body-lg text-primary-fixed mb-6 sm:mb-10 max-w-2xl">
+            High slip resistance, maximum structural stability, and absolute corrosion resistance for industrial platforms, trench covers, and offshore walkways.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <a class="bg-secondary-fixed text-primary px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md border-b-2 border-secondary-fixed-dim hover:bg-secondary-fixed-dim transition-all shadow-sm flex items-center justify-center gap-2" href="products.html">
+              Inquire Now
+              <span class="material-symbols-outlined text-xl">arrow_forward</span>
+            </a>
+            <a class="bg-transparent text-on-primary border border-outline px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md hover:bg-surface/10 transition-all flex items-center justify-center" href="contact-quote.html">
+              Request a Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2: FRP Cable Trays -->
+    <div class="carousel-slide absolute inset-0 w-full h-full flex items-center transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none z-0">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0 opacity-30 mix-blend-overlay">
+        <img alt="Heavy duty FRP cable trays." class="carousel-img w-full h-full object-cover" src="assets/Cable Tray-20260516T054751Z-3-001/Cable Tray/1-1.jpg"/>
+      </div>
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0 z-10 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+      <!-- Diagonal Accent Element -->
+      <div class="absolute top-0 right-0 w-1/2 h-full bg-tertiary-fixed-dim/10 transform skew-x-[-15deg] translate-x-1/4 z-0"></div>
+      <!-- Content -->
+      <div class="relative z-20 max-w-max-width w-full mx-auto px-6 sm:px-20 md:px-24 lg:px-32 xl:px-40 h-full flex flex-col justify-center pb-20 sm:pb-24 md:pb-20 pt-8 sm:pt-12">
+        <div class="carousel-content max-w-3xl transform translate-y-6 opacity-0 transition-all duration-700 ease-out">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-secondary-fixed/90 text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-3 sm:mb-4 border border-secondary-fixed/20 shadow-sm">
+            NEMA FG-1 Certified
+          </span>
+          <h1 class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 sm:mb-6 leading-tight">
+            Industrial FRP <br class="hidden md:block"/>
+            <span class="text-tertiary-fixed-dim">Cable Trays</span>
+          </h1>
+          <p class="text-sm sm:text-body-lg text-primary-fixed mb-6 sm:mb-10 max-w-2xl">
+            Ladder & perforated non-conductive cable management systems. Perfect for shielding critical electrical systems in extreme acid & chemical fumes.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <a class="bg-secondary-fixed text-primary px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md border-b-2 border-secondary-fixed-dim hover:bg-secondary-fixed-dim transition-all shadow-sm flex items-center justify-center gap-2" href="products.html">
+              Explore Trays
+              <span class="material-symbols-outlined text-xl">arrow_forward</span>
+            </a>
+            <a class="bg-transparent text-on-primary border border-outline px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md hover:bg-surface/10 transition-all flex items-center justify-center" href="contact-quote.html">
+              Request a Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: PP FRP Chemical Storage Tanks -->
+    <div class="carousel-slide absolute inset-0 w-full h-full flex items-center transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none z-0">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0 opacity-30 mix-blend-overlay">
+        <img alt="Dual laminated PP FRP Chemical storage tanks." class="carousel-img w-full h-full object-cover" src="assets/PP FRP Tank-20260516T054828Z-3-001/PP FRP Tank/Tank 1.jpg"/>
+      </div>
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0 z-10 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+      <!-- Diagonal Accent Element -->
+      <div class="absolute top-0 right-0 w-1/2 h-full bg-tertiary-fixed-dim/10 transform skew-x-[-15deg] translate-x-1/4 z-0"></div>
+      <!-- Content -->
+      <div class="relative z-20 max-w-max-width w-full mx-auto px-6 sm:px-20 md:px-24 lg:px-32 xl:px-40 h-full flex flex-col justify-center pb-20 sm:pb-24 md:pb-20 pt-8 sm:pt-12">
+        <div class="carousel-content max-w-3xl transform translate-y-6 opacity-0 transition-all duration-700 ease-out">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-secondary-fixed/90 text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-3 sm:mb-4 border border-secondary-fixed/20 shadow-sm">
+            ASME RTP-1 Compliance
+          </span>
+          <h1 class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 sm:mb-6 leading-tight">
+            PP FRP Chemical <br class="hidden md:block"/>
+            <span class="text-tertiary-fixed-dim">Storage Tanks</span>
+          </h1>
+          <p class="text-sm sm:text-body-lg text-primary-fixed mb-6 sm:mb-10 max-w-2xl">
+            Filament wound, corrosion-resistant dual-laminate vessels designed for storage of aggressive acids, alkalis, and heavy industrial chemicals.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <a class="bg-secondary-fixed text-primary px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md border-b-2 border-secondary-fixed-dim hover:bg-secondary-fixed-dim transition-all shadow-sm flex items-center justify-center gap-2" href="products.html">
+              View Vessels
+              <span class="material-symbols-outlined text-xl">arrow_forward</span>
+            </a>
+            <a class="bg-transparent text-on-primary border border-outline px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md hover:bg-surface/10 transition-all flex items-center justify-center" href="contact-quote.html">
+              Request a Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4: FRP Walkways & Structural sections -->
+    <div class="carousel-slide absolute inset-0 w-full h-full flex items-center transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none z-0">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0 opacity-30 mix-blend-overlay">
+        <img alt="Pre-engineered FRP walkways and guardrails." class="carousel-img w-full h-full object-cover" src="assets/Walk Way-20260516T054832Z-3-001/Walk Way/WV.png"/>
+      </div>
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0 z-10 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+      <!-- Diagonal Accent Element -->
+      <div class="absolute top-0 right-0 w-1/2 h-full bg-tertiary-fixed-dim/10 transform skew-x-[-15deg] translate-x-1/4 z-0"></div>
+      <!-- Content -->
+      <div class="relative z-20 max-w-max-width w-full mx-auto px-6 sm:px-20 md:px-24 lg:px-32 xl:px-40 h-full flex flex-col justify-center pb-20 sm:pb-24 md:pb-20 pt-8 sm:pt-12">
+        <div class="carousel-content max-w-3xl transform translate-y-6 opacity-0 transition-all duration-700 ease-out">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-secondary-fixed/90 text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-3 sm:mb-4 border border-secondary-fixed/20 shadow-sm">
+            Heavy-Duty Composite Structural
+          </span>
+          <h1 class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 sm:mb-6 leading-tight">
+            Walkways, Handrails & <br class="hidden md:block"/>
+            <span class="text-tertiary-fixed-dim">Custom Profiles</span>
+          </h1>
+          <p class="text-sm sm:text-body-lg text-primary-fixed mb-6 sm:mb-10 max-w-2xl">
+            Pultruded profiles, beams, poles, and handrails engineered as lightweight, high-strength structural replacements for steel and concrete.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <a class="bg-secondary-fixed text-primary px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md border-b-2 border-secondary-fixed-dim hover:bg-secondary-fixed-dim transition-all shadow-sm flex items-center justify-center gap-2" href="products.html">
+              Explore Profiles
+              <span class="material-symbols-outlined text-xl">arrow_forward</span>
+            </a>
+            <a class="bg-transparent text-on-primary border border-outline px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md hover:bg-surface/10 transition-all flex items-center justify-center" href="contact-quote.html">
+              Request a Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Navigation Arrows -->
+  <button id="carousel-prev" aria-label="Previous slide" class="hidden sm:flex absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-white/10 hover:bg-secondary text-white hover:scale-105 border border-white/15 hover:border-secondary transition-all shadow-lg backdrop-blur-sm group">
+    <span class="material-symbols-outlined transition-transform group-hover:-translate-x-0.5">chevron_left</span>
+  </button>
+  <button id="carousel-next" aria-label="Next slide" class="hidden sm:flex absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-white/10 hover:bg-secondary text-white hover:scale-105 border border-white/15 hover:border-secondary transition-all shadow-lg backdrop-blur-sm group">
+    <span class="material-symbols-outlined transition-transform group-hover:translate-x-0.5">chevron_right</span>
+  </button>
+
+  <!-- Progress Bar Indicators -->
+  <div class="absolute bottom-8 sm:bottom-12 md:bottom-20 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3">
+    <button class="carousel-indicator w-12 md:w-16 h-1 rounded-full bg-white/20 overflow-hidden relative group" data-slide="0" aria-label="Go to slide 1">
+      <span class="indicator-progress absolute inset-y-0 left-0 w-0 bg-secondary transition-all"></span>
+    </button>
+    <button class="carousel-indicator w-12 md:w-16 h-1 rounded-full bg-white/20 overflow-hidden relative group" data-slide="1" aria-label="Go to slide 2">
+      <span class="indicator-progress absolute inset-y-0 left-0 w-0 bg-secondary transition-all"></span>
+    </button>
+    <button class="carousel-indicator w-12 md:w-16 h-1 rounded-full bg-white/20 overflow-hidden relative group" data-slide="2" aria-label="Go to slide 3">
+      <span class="indicator-progress absolute inset-y-0 left-0 w-0 bg-secondary transition-all"></span>
+    </button>
+    <button class="carousel-indicator w-12 md:w-16 h-1 rounded-full bg-white/20 overflow-hidden relative group" data-slide="3" aria-label="Go to slide 4">
+      <span class="indicator-progress absolute inset-y-0 left-0 w-0 bg-secondary transition-all"></span>
+    </button>
+    <button class="carousel-indicator w-12 md:w-16 h-1 rounded-full bg-white/20 overflow-hidden relative group" data-slide="4" aria-label="Go to slide 5">
+      <span class="indicator-progress absolute inset-y-0 left-0 w-0 bg-secondary transition-all"></span>
+    </button>
+  </div>
 </section>
+
 
 <!-- Company Overview Section -->
 <section class="py-24 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
@@ -433,9 +619,9 @@
 <footer class="bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-on-surface font-body-md text-body-md w-full py-12 border-t-4 border-secondary-fixed">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto mb-12">
 <div class="col-span-1 md:col-span-2 lg:col-span-1">
-<div class="font-headline-md text-headline-md font-bold text-secondary-fixed mb-4 uppercase">
+<a href="index.html" class="inline-block font-headline-md text-headline-md font-bold text-secondary-fixed mb-4 uppercase hover:opacity-90 transition-opacity">
                     <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo" class="h-12 md:h-16 w-auto object-contain drop-shadow-sm" />
-                </div>
+                </a>
 <p class="text-on-primary-container dark:text-on-surface-variant text-[14px] pr-4">
                     Delivering unparalleled structural integrity and corrosion resistance through advanced composite engineering for industrial applications worldwide.
                 </p>
@@ -523,23 +709,199 @@
   }, { threshold: 0.4 });
   document.querySelectorAll('[data-target]').forEach(el => statObserver.observe(el));
 
-  // --- Hero text typewriter effect ---
-  const heroWords = ['Quality,', 'Standards,', 'Expectations,'];
-  let wordIdx = 0, charIdx = 0, deleting = false;
-  const typeEl = document.getElementById('typewriter');
-  if (typeEl) {
-    function type() {
-      const word = heroWords[wordIdx];
-      if (!deleting) {
-        typeEl.textContent = word.slice(0, ++charIdx);
-        if (charIdx === word.length) { deleting = true; setTimeout(type, 1400); return; }
-      } else {
-        typeEl.textContent = word.slice(0, --charIdx);
-        if (charIdx === 0) { deleting = false; wordIdx = (wordIdx + 1) % heroWords.length; }
+  // --- Hero Carousel Controller ---
+  const carousel = document.getElementById('hero-carousel');
+  if (carousel) {
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    const indicators = carousel.querySelectorAll('.carousel-indicator');
+    
+    let currentSlide = 0;
+    const slideDuration = 6000; // 6 seconds per slide
+    let carouselInterval = null;
+    let slideTimeout = null;
+    let mouseHasMoved = false;
+    
+    function showSlide(index) {
+      // Clear any pending transition animations to prevent overlaps
+      if (slideTimeout) {
+        clearTimeout(slideTimeout);
+        slideTimeout = null;
       }
-      setTimeout(type, deleting ? 60 : 100);
+
+      // Clean up current active slide animations
+      const prevActiveSlide = slides[currentSlide];
+      const prevImage = prevActiveSlide.querySelector('.carousel-img');
+      const prevContent = prevActiveSlide.querySelector('.carousel-content');
+      
+      if (prevImage) {
+        prevImage.classList.remove('animate-kenburns');
+      }
+      if (prevContent) {
+        prevContent.classList.remove('translate-y-0', 'opacity-100');
+        prevContent.classList.add('translate-y-6', 'opacity-0');
+      }
+      
+      // Reset active slide visibility
+      prevActiveSlide.classList.remove('opacity-100', 'pointer-events-auto', 'z-10');
+      prevActiveSlide.classList.add('opacity-0', 'pointer-events-none', 'z-0');
+      
+      // Reset progress bars
+      indicators.forEach((indicator) => {
+        const progress = indicator.querySelector('.indicator-progress');
+        if (progress) {
+          progress.style.transition = 'none';
+          progress.style.width = '0%';
+        }
+      });
+
+      // Update current index (safely handling negative values)
+      currentSlide = ((index % slides.length) + slides.length) % slides.length;
+      
+      const activeSlide = slides[currentSlide];
+      const activeImage = activeSlide.querySelector('.carousel-img');
+      const activeContent = activeSlide.querySelector('.carousel-content');
+      
+      // Show slide
+      activeSlide.classList.remove('opacity-0', 'pointer-events-none', 'z-0');
+      activeSlide.classList.add('opacity-100', 'pointer-events-auto', 'z-10');
+      
+      // Capture the target index in local scope to prevent out-of-sync indicators
+      const targetIndex = currentSlide;
+
+      // Start animations after a microscopic delay to ensure state reset triggers the animation
+      slideTimeout = setTimeout(() => {
+        if (activeImage) {
+          activeImage.classList.add('animate-kenburns');
+        }
+        if (activeContent) {
+          activeContent.classList.remove('translate-y-6', 'opacity-0');
+          activeContent.classList.add('translate-y-0', 'opacity-100');
+        }
+        
+        // Start progress bar animation for active slide
+        const activeProgress = indicators[targetIndex].querySelector('.indicator-progress');
+        if (activeProgress) {
+          activeProgress.style.transition = `width ${slideDuration}ms linear`;
+          activeProgress.style.width = '100%';
+        }
+      }, 50);
     }
-    type();
+    
+    function startAutoplay() {
+      stopAutoplay();
+      carouselInterval = setInterval(() => {
+        showSlide(currentSlide + 1);
+      }, slideDuration);
+    }
+    
+    function stopAutoplay() {
+      if (carouselInterval) {
+        clearInterval(carouselInterval);
+        carouselInterval = null;
+      }
+    }
+    
+    // Event listeners for prev/next buttons
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        showSlide(currentSlide - 1);
+        startAutoplay(); // Reset autoplay timer
+      });
+    }
+    
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        showSlide(currentSlide + 1);
+        startAutoplay(); // Reset autoplay timer
+      });
+    }
+    
+    // Indicators clicking
+    indicators.forEach((indicator, idx) => {
+      indicator.addEventListener('click', () => {
+        showSlide(idx);
+        startAutoplay(); // Reset autoplay timer
+      });
+    });
+    
+    // Pause on hover (only for devices that support hover, to prevent sticky mouse hover states on mobile)
+    if (window.matchMedia('(hover: hover)').matches) {
+      carousel.addEventListener('mouseenter', () => {
+        if (mouseHasMoved) {
+          stopAutoplay();
+        }
+      });
+      carousel.addEventListener('mouseleave', () => {
+        startAutoplay();
+      });
+      carousel.addEventListener('mousemove', () => {
+        if (!mouseHasMoved) {
+          mouseHasMoved = true;
+          stopAutoplay();
+        }
+      });
+    }
+    
+    // Touch support (swipe)
+    let startX = 0;
+    carousel.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      stopAutoplay();
+    }, { passive: true });
+    
+    carousel.addEventListener('touchend', (e) => {
+      const endX = e.changedTouches[0].clientX;
+      const diffX = startX - endX;
+      
+      if (Math.abs(diffX) > 50) { // Swipe threshold
+        if (diffX > 0) {
+          // Swipe left -> Next slide
+          showSlide(currentSlide + 1);
+        } else {
+          // Swipe right -> Prev slide
+          showSlide(currentSlide - 1);
+        }
+      }
+      startAutoplay();
+    }, { passive: true });
+
+    // Resume autoplay if touch interaction is cancelled by scrolling
+    carousel.addEventListener('touchcancel', () => {
+      startAutoplay();
+    }, { passive: true });
+
+    // Pause autoplay when tab goes to background, resume when tab is active
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        stopAutoplay();
+      } else {
+        startAutoplay();
+      }
+    });
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      // Check if carousel is in viewport to prevent page-wide hijacking
+      const rect = carousel.getBoundingClientRect();
+      const inViewport = (rect.top >= -rect.height && rect.bottom <= window.innerHeight + rect.height);
+      if (!inViewport) return;
+
+      if (e.key === 'ArrowLeft') {
+        showSlide(currentSlide - 1);
+        startAutoplay();
+      } else if (e.key === 'ArrowRight') {
+        showSlide(currentSlide + 1);
+        startAutoplay();
+      }
+    });
+
+    // Initialize first slide
+    showSlide(0);
+    if (!document.hidden) {
+      startAutoplay();
+    }
   }
 
   // --- Navbar scroll shadow ---
