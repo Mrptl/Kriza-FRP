@@ -1129,16 +1129,16 @@ input:where([type='file']):focus {
   height: 400px;
 }
 
-.h-\[75vh\] {
-  height: 75vh;
-}
-
 .h-\[80vh\] {
   height: 80vh;
 }
 
 .h-full {
   height: 100%;
+}
+
+.max-h-\[75vh\] {
+  max-height: 75vh;
 }
 
 .min-h-\[250px\] {
@@ -1149,16 +1149,16 @@ input:where([type='file']):focus {
   min-height: 400px;
 }
 
+.min-h-\[450px\] {
+  min-height: 450px;
+}
+
 .min-h-\[460px\] {
   min-height: 460px;
 }
 
 .min-h-\[48px\] {
   min-height: 48px;
-}
-
-.min-h-\[500px\] {
-  min-height: 500px;
 }
 
 .min-h-screen {
@@ -1213,6 +1213,10 @@ input:where([type='file']):focus {
   max-width: 80rem;
 }
 
+.max-w-full {
+  max-width: 100%;
+}
+
 .max-w-max-width {
   max-width: 1280px;
 }
@@ -1231,6 +1235,10 @@ input:where([type='file']):focus {
 
 .origin-left {
   transform-origin: left;
+}
+
+.origin-top {
+  transform-origin: top;
 }
 
 .-translate-x-1\/2 {
@@ -1287,6 +1295,16 @@ input:where([type='file']):focus {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
 .cursor-default {
   cursor: default;
 }
@@ -1297,6 +1315,10 @@ input:where([type='file']):focus {
 
 .resize-none {
   resize: none;
+}
+
+.resize {
+  resize: both;
 }
 
 .appearance-none {
@@ -1415,12 +1437,20 @@ input:where([type='file']):focus {
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
+.overflow-auto {
+  overflow: auto;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
 
 .scroll-smooth {
   scroll-behavior: smooth;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
 }
 
 .rounded {
@@ -1500,10 +1530,6 @@ input:where([type='file']):focus {
   border-top-width: 4px;
 }
 
-.border-none {
-  border-style: none;
-}
-
 .border-\[\#aad630\] {
   --tw-border-opacity: 1;
   border-color: rgb(170 214 48 / var(--tw-border-opacity, 1));
@@ -1525,6 +1551,11 @@ input:where([type='file']):focus {
 
 .border-outline\/30 {
   border-color: rgb(119 118 125 / 0.3);
+}
+
+.border-primary {
+  --tw-border-opacity: 1;
+  border-color: rgb(24 28 44 / var(--tw-border-opacity, 1));
 }
 
 .border-primary-container {
@@ -1567,6 +1598,10 @@ input:where([type='file']):focus {
 
 .border-white\/15 {
   border-color: rgb(255 255 255 / 0.15);
+}
+
+.border-t-transparent {
+  border-top-color: transparent;
 }
 
 .bg-background {
@@ -1679,6 +1714,10 @@ input:where([type='file']):focus {
 
 .bg-surface\/10 {
   background-color: rgb(248 249 251 / 0.1);
+}
+
+.bg-surface\/80 {
+  background-color: rgb(248 249 251 / 0.8);
 }
 
 .bg-surface\/90 {
@@ -2445,6 +2484,10 @@ input:where([type='file']):focus {
   transition-duration: 1000ms;
 }
 
+.duration-150 {
+  transition-duration: 150ms;
+}
+
 .duration-300 {
   transition-duration: 300ms;
 }
@@ -2641,6 +2684,11 @@ input:where([type='file']):focus {
 .hover\:bg-secondary-fixed-dim:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(61 82 0 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-surface-container-high:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(231 232 234 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-surface-container-highest:hover {
@@ -2995,6 +3043,10 @@ input:where([type='file']):focus {
 
   .md\:h-auto {
     height: auto;
+  }
+
+  .md\:min-h-\[600px\] {
+    min-height: 600px;
   }
 
   .md\:min-h-\[660px\] {

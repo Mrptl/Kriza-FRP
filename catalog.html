@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700;900&amp;display=swap" rel="stylesheet"/>
+  <!-- PDF.js for interactive rendering on all mobile/desktop browsers -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
 </head>
 <body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col pt-[92px] md:pt-[100px]">
 
@@ -92,15 +94,46 @@
         </a>
       </div>
       
-      <!-- PDF Viewer Frame -->
-      <div class="w-full h-[75vh] min-h-[500px] border border-outline-variant rounded-lg overflow-hidden bg-surface relative">
-        <iframe src="assets/Kriza FRP Products.pdf#toolbar=1" class="w-full h-full border-none absolute inset-0" title="Kriza FRP Products Catalog">
-          <div class="p-6 text-center text-on-surface-variant h-full flex flex-col items-center justify-center">
-            <span class="material-symbols-outlined text-4xl mb-2 text-outline">picture_as_pdf</span>
-            <p class="mb-4">Your browser does not support inline PDFs.</p>
-            <a class="bg-secondary-fixed text-white px-5 py-2 rounded-full font-bold hover:bg-secondary-fixed-dim transition-colors" href="assets/Kriza FRP Products.pdf" download>Download PDF File</a>
+      <!-- PDF Viewer Container -->
+      <div class="w-full flex flex-col border border-outline-variant rounded-lg overflow-hidden bg-surface-container relative">
+        <!-- Controls Bar -->
+        <div class="bg-surface border-b border-outline-variant p-3 flex flex-wrap items-center justify-between gap-3 text-on-surface">
+          <!-- Page Controls -->
+          <div class="flex items-center gap-2">
+            <button id="prev-btn" class="p-2 hover:bg-surface-container-high rounded-full transition-colors active:scale-95 flex items-center justify-center border border-outline-variant bg-surface" aria-label="Previous Page">
+              <span class="material-symbols-outlined text-xl">navigate_before</span>
+            </button>
+            <span class="font-body-md text-sm whitespace-nowrap">
+              Page <span id="page_num" class="font-bold text-primary">1</span> of <span id="page_count" class="font-bold">...</span>
+            </span>
+            <button id="next-btn" class="p-2 hover:bg-surface-container-high rounded-full transition-colors active:scale-95 flex items-center justify-center border border-outline-variant bg-surface" aria-label="Next Page">
+              <span class="material-symbols-outlined text-xl">navigate_next</span>
+            </button>
           </div>
-        </iframe>
+
+          <!-- Zoom Controls -->
+          <div class="flex items-center gap-2">
+            <button id="zoom-out-btn" class="p-2 hover:bg-surface-container-high rounded-full transition-colors active:scale-95 flex items-center justify-center border border-outline-variant bg-surface" aria-label="Zoom Out">
+              <span class="material-symbols-outlined text-xl">zoom_out</span>
+            </button>
+            <span id="zoom-percent" class="font-body-md text-sm w-12 text-center whitespace-nowrap">100%</span>
+            <button id="zoom-in-btn" class="p-2 hover:bg-surface-container-high rounded-full transition-colors active:scale-95 flex items-center justify-center border border-outline-variant bg-surface" aria-label="Zoom In">
+              <span class="material-symbols-outlined text-xl">zoom_in</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Render Container (scrollable & zoomable) -->
+        <div class="w-full min-h-[450px] md:min-h-[600px] max-h-[75vh] overflow-auto p-4 flex justify-center items-start bg-surface-container-high relative" id="canvas-container">
+          <!-- Loading Spinner -->
+          <div id="pdf-loader" class="absolute inset-0 flex flex-col items-center justify-center bg-surface/80 z-10 transition-opacity duration-300">
+            <div class="animate-spin rounded-full h-12 w-12 border-4 border-primary border-t-transparent mb-4"></div>
+            <p class="font-body-md text-on-surface-variant">Loading catalog document...</p>
+          </div>
+          
+          <!-- Canvas for PDF page rendering -->
+          <canvas id="pdf-canvas" class="max-w-full shadow-lg border border-outline-variant rounded bg-white transition-all duration-150 origin-top"></canvas>
+        </div>
       </div>
     </div>
   </main>
@@ -179,6 +212,128 @@
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('shadow-lg', window.scrollY > 20);
+    });
+
+    // --- Custom PDF.js Viewer ---
+    const url = 'assets/Kriza FRP Products.pdf';
+    let pdfDoc = null;
+    let pageNum = 1;
+    let pageRendering = false;
+    let pageNumPending = null;
+    let scale = 1.0;
+    
+    const canvas = document.getElementById('pdf-canvas');
+    const ctx = canvas.getContext('2d');
+    const loader = document.getElementById('pdf-loader');
+    const pageNumEl = document.getElementById('page_num');
+    const pageCountEl = document.getElementById('page_count');
+    const zoomPercentEl = document.getElementById('zoom-percent');
+    
+    // Set up Global Worker
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+
+    function renderPage(num) {
+      pageRendering = true;
+      
+      // Get page
+      pdfDoc.getPage(num).then((page) => {
+        const containerWidth = document.getElementById('canvas-container').clientWidth - 32; // padding
+        const unscaledViewport = page.getViewport({ scale: 1.0 });
+        
+        // Calculate dynamic scale to fit viewport width by default if on mobile
+        let defaultScale = 1.2;
+        if (containerWidth < unscaledViewport.width) {
+          defaultScale = containerWidth / unscaledViewport.width;
+        }
+        
+        const viewport = page.getViewport({ scale: defaultScale * scale });
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        // Render PDF page into canvas context
+        const renderContext = {
+          canvasContext: ctx,
+          viewport: viewport
+        };
+        const renderTask = page.render(renderContext);
+
+        // Wait for rendering to finish
+        renderTask.promise.then(() => {
+          pageRendering = false;
+          loader.classList.add('opacity-0');
+          setTimeout(() => loader.classList.add('hidden'), 300);
+          
+          if (pageNumPending !== null) {
+            renderPage(pageNumPending);
+            pageNumPending = null;
+          }
+        });
+      });
+
+      // Update page counters
+      pageNumEl.textContent = num;
+      zoomPercentEl.textContent = Math.round(scale * 100) + '%';
+    }
+
+    function queueRenderPage(num) {
+      if (pageRendering) {
+        pageNumPending = num;
+      } else {
+        renderPage(num);
+      }
+    }
+
+    // Previous Page
+    document.getElementById('prev-btn').addEventListener('click', () => {
+      if (pageNum <= 1) return;
+      pageNum--;
+      queueRenderPage(pageNum);
+    });
+
+    // Next Page
+    document.getElementById('next-btn').addEventListener('click', () => {
+      if (pageNum >= pdfDoc.numPages) return;
+      pageNum++;
+      queueRenderPage(pageNum);
+    });
+
+    // Zoom In
+    document.getElementById('zoom-in-btn').addEventListener('click', () => {
+      if (scale >= 3.0) return;
+      scale += 0.25;
+      queueRenderPage(pageNum);
+    });
+
+    // Zoom Out
+    document.getElementById('zoom-out-btn').addEventListener('click', () => {
+      if (scale <= 0.5) return;
+      scale -= 0.25;
+      queueRenderPage(pageNum);
+    });
+
+    // Handle Window Resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        if (pdfDoc) renderPage(pageNum);
+      }, 300);
+    });
+
+    // Load Document
+    pdfjsLib.getDocument(url).promise.then((pdfDoc_) => {
+      pdfDoc = pdfDoc_;
+      pageCountEl.textContent = pdfDoc.numPages;
+      renderPage(pageNum);
+    }).catch(err => {
+      console.error('Error loading PDF: ', err);
+      loader.innerHTML = `
+        <div class="text-center p-6">
+          <span class="material-symbols-outlined text-4xl text-red-500 mb-2">error</span>
+          <p class="font-bold mb-2">Unable to display catalog inline.</p>
+          <a class="bg-secondary-fixed text-white px-5 py-2 rounded-full font-bold hover:bg-secondary-fixed-dim transition-colors inline-block" href="assets/Kriza FRP Products.pdf" download>Download PDF Catalog</a>
+        </div>
+      `;
     });
   </script>
 </body>
