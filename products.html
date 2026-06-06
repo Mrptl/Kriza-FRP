@@ -82,52 +82,94 @@
 <!-- Sidebar Navigation & Filters -->
 <aside class="md:col-span-3 space-y-8 reveal reveal-delay-1">
 <!-- Industry Filters -->
-<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT p-6 shadow-[0_4px_4px_rgba(0,0,0,0.02)] hidden md:block">
-<h3 class="font-headline-md text-headline-md text-primary border-b border-surface-variant pb-3 mb-4">Categories</h3>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT p-6 shadow-[0_4px_4px_rgba(0,0,0,0.02)]">
+<div class="flex justify-between items-center md:block cursor-pointer md:cursor-default" id="category-toggle">
+<h3 class="font-headline-md text-headline-md text-primary border-b-0 md:border-b border-surface-variant pb-0 md:pb-3 mb-0 md:mb-2 flex items-center justify-between w-full">
+  <span>Categories</span>
+</h3>
+<span class="material-symbols-outlined md:hidden text-primary transition-transform duration-300" id="category-toggle-icon">expand_more</span>
+</div>
+<div class="hidden md:block mt-4 md:mt-0" id="category-list-container">
+<div class="flex justify-between items-center text-[11px] text-secondary-fixed mb-4 border-b border-surface-variant/40 pb-2">
+<button id="filter-select-all" class="hover:text-primary transition-colors font-bold uppercase tracking-wider focus:outline-none">Select All</button>
+<span class="text-outline-variant/40">|</span>
+<button id="filter-clear-all" class="hover:text-primary transition-colors font-bold uppercase tracking-wider focus:outline-none">Clear All</button>
+</div>
 <ul class="space-y-3">
 <li>
 <label class="flex items-center gap-3 cursor-pointer group">
-<input checked="" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
+<input checked="" data-category="frp-gratings" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
 <span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP Gratings</span>
 </label>
 </li>
 <li>
 <label class="flex items-center gap-3 cursor-pointer group">
-<input checked="" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
+<input checked="" data-category="frp-cable-trays" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
 <span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP Cable Trays</span>
 </label>
 </li>
 <li>
 <label class="flex items-center gap-3 cursor-pointer group">
-<input checked="" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
+<input checked="" data-category="pp-frp-tanks" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
 <span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">PP FRP Tanks</span>
 </label>
 </li>
 <li>
 <label class="flex items-center gap-3 cursor-pointer group">
-<input checked="" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
+<input checked="" data-category="frp-doors" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
 <span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP Doors</span>
 </label>
 </li>
 <li>
 <label class="flex items-center gap-3 cursor-pointer group">
-<input checked="" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
+<input checked="" data-category="frp-poles" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
 <span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP Poles</span>
 </label>
 </li>
 <li>
 <label class="flex items-center gap-3 cursor-pointer group">
-<input checked="" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
+<input checked="" data-category="frp-profiles" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
 <span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP Profiles</span>
 </label>
 </li>
 <li>
 <label class="flex items-center gap-3 cursor-pointer group">
-<input checked="" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
+<input checked="" data-category="frp-walkways" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
 <span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP Walkways</span>
 </label>
 </li>
+<li>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" data-category="frp-sheets" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP Sheets</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" data-category="frp-canopies" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP Canopies</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" data-category="frp-pipes" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP Pipes</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" data-category="cable-tray-accessories" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">Cable Tray Accessories</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" data-category="frp-ladders" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP Ladders</span>
+</label>
+</li>
 </ul>
+</div>
 </div>
 <!-- Quality Assurance Highlight -->
 <div class="bg-primary text-on-primary rounded-DEFAULT p-6 border-l-4 border-secondary-fixed relative overflow-hidden">
@@ -147,11 +189,11 @@
 <div class="flex flex-col sm:flex-row justify-between items-center bg-surface-container-low p-4 rounded-DEFAULT border border-outline-variant mb-6 gap-4">
 <div class="relative w-full sm:w-64">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
-<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT py-2 pl-10 pr-4 focus:border-primary focus:ring-1 focus:ring-primary font-body-md text-body-md placeholder-on-surface-variant" placeholder="Search products..." type="text"/>
+<input id="product-search" class="w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT py-2 pl-10 pr-4 focus:border-primary focus:ring-1 focus:ring-primary font-body-md text-body-md placeholder-on-surface-variant" placeholder="Search products..." type="text"/>
 </div>
 <div class="flex items-center gap-2 w-full sm:w-auto">
 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Sort By:</span>
-<select class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT py-2 px-4 focus:border-primary focus:ring-1 focus:ring-primary font-body-md text-body-md w-full sm:w-auto">
+<select id="sort-select" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT py-2 px-4 focus:border-primary focus:ring-1 focus:ring-primary font-body-md text-body-md w-full sm:w-auto">
 <option>Category (A-Z)</option>
 <option>Most Popular</option>
 <option>Newest Additions</option>
@@ -161,10 +203,10 @@
 <!-- The Grid (Bento style inspiration for industrial products) -->
 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
 <!-- Product Card 1: Gratings -->
-<article class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-1">
+<article data-category="frp-gratings" data-popularity="12" data-id="1" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-1">
 <div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
 <div class="h-48 bg-surface-variant relative overflow-hidden">
-<img alt="Industrial FRP Grating" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/Grating-20260516T054823Z-3-001/Grating/frp-molded-grating.jpg"/>
+<img alt="Industrial FRP Grating" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/frp_gratings.png"/>
 <div class="absolute top-4 right-4 flex gap-2">
 <span class="bg-primary/90 text-on-primary backdrop-blur-sm px-2 py-1 rounded-sm font-label-sm text-label-sm uppercase tracking-wider">Fire Retardant</span>
 </div>
@@ -181,10 +223,10 @@
 </article>
 
 <!-- Product Card 2: Cable Tray -->
-<article class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-2">
+<article data-category="frp-cable-trays" data-popularity="11" data-id="2" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-2">
 <div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
-<div class="h-48 bg-surface-variant relative overflow-hidden bg-white">
-<img alt="FRP Cable Tray" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="assets/Cable%20Tray-20260516T054751Z-3-001/Cable%20Tray/1-1.jpg"/>
+<div class="h-48 bg-surface-variant relative overflow-hidden">
+<img alt="FRP Cable Tray" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/frp_cable_trays.png"/>
 </div>
 <div class="p-6 flex-grow flex flex-col">
 <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Cable Trays</h2>
@@ -198,10 +240,10 @@
 </article>
 
 <!-- Product Card 3: PP FRP Tank -->
-<article class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-3">
+<article data-category="pp-frp-tanks" data-popularity="10" data-id="3" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-3">
 <div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
-<div class="h-48 bg-surface-variant relative overflow-hidden bg-white">
-<img alt="PP FRP Tank" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="assets/PP%20FRP%20Tank-20260516T054828Z-3-001/PP%20FRP%20Tank/Tank%202.png"/>
+<div class="h-48 bg-surface-variant relative overflow-hidden">
+<img alt="PP FRP Tank" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/pp_frp_tanks.png"/>
 <div class="absolute top-4 right-4 flex gap-2">
 <span class="bg-primary/90 text-on-primary backdrop-blur-sm px-2 py-1 rounded-sm font-label-sm text-label-sm uppercase tracking-wider">Heavy Duty</span>
 </div>
@@ -218,10 +260,10 @@
 </article>
 
 <!-- Product Card 4: Doors -->
-<article class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-1">
+<article data-category="frp-doors" data-popularity="8" data-id="4" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-1">
 <div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
-<div class="h-48 bg-surface-variant relative overflow-hidden bg-white">
-<img alt="FRP Door" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="assets/Door-20260516T054821Z-3-001/Door/Door1.png"/>
+<div class="h-48 bg-surface-variant relative overflow-hidden">
+<img alt="FRP Door" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/frp_doors.png"/>
 </div>
 <div class="p-6 flex-grow flex flex-col">
 <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Doors</h2>
@@ -235,10 +277,10 @@
 </article>
 
 <!-- Product Card 5: Poles -->
-<article class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-2">
+<article data-category="frp-poles" data-popularity="6" data-id="5" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-2">
 <div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
-<div class="h-48 bg-surface-variant relative overflow-hidden bg-white">
-<img alt="FRP Poles" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 object-center" src="assets/Poles-20260516T054826Z-3-001/Poles/1.png"/>
+<div class="h-48 bg-surface-variant relative overflow-hidden">
+<img alt="FRP Poles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 object-center" src="assets/frp_poles.png"/>
 </div>
 <div class="p-6 flex-grow flex flex-col">
 <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Poles</h2>
@@ -252,10 +294,10 @@
 </article>
 
 <!-- Product Card 6: Profile -->
-<article class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-3">
+<article data-category="frp-profiles" data-popularity="7" data-id="6" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-3">
 <div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
-<div class="h-48 bg-surface-variant relative overflow-hidden bg-white">
-<img alt="FRP Profiles" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="assets/Profile-20260516T054829Z-3-001/Profile/Angles.png"/>
+<div class="h-48 bg-surface-variant relative overflow-hidden">
+<img alt="FRP Profiles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/frp_profiles.png"/>
 </div>
 <div class="p-6 flex-grow flex flex-col">
 <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Profiles</h2>
@@ -268,8 +310,93 @@
 </div>
 </article>
 
+<!-- Product Card 8: FRP Sheets -->
+<article data-category="frp-sheets" data-popularity="5" data-id="8" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-1">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
+<div class="h-48 bg-surface-variant relative overflow-hidden">
+<img alt="FRP Sheets" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/frp_sheets.png"/>
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Sheets</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Corrosion-proof, weather-resistant, and high-strength FRP sheets. Available in corrugated, flat, and gritted profiles for industrial roofing, cladding, partition walls, and protective linings.</p>
+<div class="flex items-center justify-between border-t border-surface-variant pt-4">
+<button class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors" onclick="window.location.href='product-inquiry.html'">
+                                    Inquire Now <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+
+<!-- Product Card 9: FRP Canopy -->
+<article data-category="frp-canopies" data-popularity="4" data-id="9" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-2">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
+<div class="h-48 bg-surface-variant relative overflow-hidden">
+<img alt="FRP Canopy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/frp_canopy.png"/>
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Canopies</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Heavy-duty protective canopies designed to shelter outdoor industrial equipment, instruments, push buttons, and motors from extreme weather, UV exposure, and corrosive chemical drops.</p>
+<div class="flex items-center justify-between border-t border-surface-variant pt-4">
+<button class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors" onclick="window.location.href='product-inquiry.html'">
+                                    Inquire Now <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+
+<!-- Product Card 10: FRP Pipe -->
+<article data-category="frp-pipes" data-popularity="3" data-id="10" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-3">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
+<div class="h-48 bg-surface-variant relative overflow-hidden">
+<img alt="FRP Pipe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/frp_pipe.png"/>
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Pipes & Fittings</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Filament-wound fiberglass reinforced pipes designed to handle corrosive chemicals, sewage, industrial effluents, and high-pressure water transmission. Built to ASME and ASTM standards.</p>
+<div class="flex items-center justify-between border-t border-surface-variant pt-4">
+<button class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors" onclick="window.location.href='product-inquiry.html'">
+                                    Inquire Now <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+
+<!-- Product Card 11: Cable Tray Accessories -->
+<article data-category="cable-tray-accessories" data-popularity="2" data-id="11" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-1">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
+<div class="h-48 bg-surface-variant relative overflow-hidden">
+<img alt="FRP Cable Tray Accessories" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/frp_cable_tray_accessories.png"/>
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Cable Tray Accessories</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Complete range of accessories including horizontal bends, vertical internal/external elbows, reducers, cross junctions, and tees. Engineered for seamless, corrosion-resistant routing.</p>
+<div class="flex items-center justify-between border-t border-surface-variant pt-4">
+<button class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors" onclick="window.location.href='product-inquiry.html'">
+                                    Inquire Now <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+
+<!-- Product Card 12: FRP Straight Ladder -->
+<article data-category="frp-ladders" data-popularity="1" data-id="12" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-2">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
+<div class="h-48 bg-surface-variant relative overflow-hidden">
+<img alt="FRP Straight Ladder" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/frp_straight_ladder.png"/>
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Straight Ladders</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Non-conductive, slip-resistant fiberglass straight ladders for high-voltage zones and corrosive environments. Designed to OSHA standards for safe industrial and electrical access.</p>
+<div class="flex items-center justify-between border-t border-surface-variant pt-4">
+<button class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors" onclick="window.location.href='product-inquiry.html'">
+                                    Inquire Now <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+
 <!-- Product Card 7: Walk Way -->
-<article class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative md:col-span-2 xl:col-span-3 bento-card reveal reveal-delay-4">
+<article data-category="frp-walkways" data-popularity="9" data-id="7" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative md:col-span-2 xl:col-span-3 bento-card reveal reveal-delay-4">
 <div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
 <div class="flex flex-col md:flex-row h-full">
     <div class="md:w-2/5 h-48 md:h-auto bg-surface-variant relative overflow-hidden border-b md:border-b-0 md:border-r border-outline-variant bg-white">
@@ -302,6 +429,12 @@
     </div>
 </div>
 </article>
+<!-- No Products Message -->
+<div id="no-products-message" class="hidden col-span-full py-12 text-center bg-surface-container-lowest border border-outline-variant rounded-DEFAULT shadow-sm">
+  <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2">search_off</span>
+  <p class="font-headline-md text-headline-md text-primary mb-1">No Products Found</p>
+  <p class="font-body-md text-body-md text-on-surface-variant">Try adjusting your filters or search terms.</p>
+</div>
 </div>
 </div>
 </div>
@@ -379,6 +512,155 @@
   const nav = document.querySelector('nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('shadow-lg', window.scrollY > 20);
+  });
+
+  // --- Category and Search Filtering ---
+  document.addEventListener('DOMContentLoaded', () => {
+    const categoryToggle = document.getElementById('category-toggle');
+    const categoryListContainer = document.getElementById('category-list-container');
+    const categoryToggleIcon = document.getElementById('category-toggle-icon');
+    
+    // Mobile toggle for categories panel
+    if (categoryToggle && categoryListContainer) {
+      categoryToggle.addEventListener('click', () => {
+        if (window.innerWidth < 768) { // Only toggle on mobile
+          const isHidden = categoryListContainer.classList.contains('hidden');
+          if (isHidden) {
+            categoryListContainer.classList.remove('hidden');
+            categoryToggleIcon.style.transform = 'rotate(180deg)';
+          } else {
+            categoryListContainer.classList.add('hidden');
+            categoryToggleIcon.style.transform = '';
+          }
+        }
+      });
+      
+      // Reset layout on window resize
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
+          categoryListContainer.classList.remove('hidden');
+          categoryToggleIcon.style.transform = '';
+        }
+      });
+    }
+
+    const checkboxes = document.querySelectorAll('input[data-category]');
+    const searchInput = document.getElementById('product-search');
+    const sortSelect = document.getElementById('sort-select');
+    const grid = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-2.xl\\:grid-cols-3.gap-6');
+    const noProductsMsg = document.getElementById('no-products-message');
+    
+    function filterAndSortProducts() {
+      if (!grid) return;
+      const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+      
+      // Get active categories
+      const activeCategories = Array.from(checkboxes)
+        .filter(cb => cb.checked)
+        .map(cb => cb.getAttribute('data-category'));
+
+      const cards = Array.from(grid.querySelectorAll('article[data-category]'));
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        const title = card.querySelector('h2').textContent.toLowerCase();
+        const desc = card.querySelector('p').textContent.toLowerCase();
+        
+        const matchesSearch = !query || title.includes(query) || desc.includes(query);
+        const matchesCategory = activeCategories.includes(cardCategory);
+
+        if (matchesSearch && matchesCategory) {
+          card.style.display = '';
+          card.classList.remove('hidden');
+          card.classList.add('visible');
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+          card.classList.add('hidden');
+        }
+      });
+
+      if (noProductsMsg) {
+        if (visibleCount === 0) {
+          noProductsMsg.classList.remove('hidden');
+        } else {
+          noProductsMsg.classList.add('hidden');
+        }
+      }
+    }
+
+    // Checkboxes change listeners
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', filterAndSortProducts);
+    });
+
+    // Search input listener
+    if (searchInput) {
+      searchInput.addEventListener('input', filterAndSortProducts);
+    }
+
+    // Select All / Clear All buttons
+    const selectAllBtn = document.getElementById('filter-select-all');
+    const clearAllBtn = document.getElementById('filter-clear-all');
+
+    if (selectAllBtn) {
+      selectAllBtn.addEventListener('click', () => {
+        checkboxes.forEach(cb => cb.checked = true);
+        filterAndSortProducts();
+      });
+    }
+
+    if (clearAllBtn) {
+      clearAllBtn.addEventListener('click', () => {
+        checkboxes.forEach(cb => cb.checked = false);
+        filterAndSortProducts();
+      });
+    }
+
+    // Sorting functionality
+    if (sortSelect && grid) {
+      sortSelect.addEventListener('change', () => {
+        const cards = Array.from(grid.querySelectorAll('article[data-category]'));
+        const sortVal = sortSelect.value;
+
+        // Ensure "FRP Walkways & Platforms" is always positioned last
+        const walkwaysCard = cards.find(card => card.getAttribute('data-category') === 'frp-walkways');
+        const normalCards = cards.filter(card => card !== walkwaysCard);
+
+        normalCards.sort((a, b) => {
+          if (sortVal.includes('Category')) {
+            const titleA = a.querySelector('h2').textContent.trim().toLowerCase();
+            const titleB = b.querySelector('h2').textContent.trim().toLowerCase();
+            return titleA.localeCompare(titleB);
+          } else if (sortVal.includes('Popular')) {
+            const popA = parseInt(a.getAttribute('data-popularity') || '0', 10);
+            const popB = parseInt(b.getAttribute('data-popularity') || '0', 10);
+            return popB - popA;
+          } else if (sortVal.includes('Newest')) {
+            const idA = parseInt(a.getAttribute('data-id') || '0', 10);
+            const idB = parseInt(b.getAttribute('data-id') || '0', 10);
+            return idB - idA;
+          }
+          return 0;
+        });
+
+        // Re-append normal cards to grid in sorted order
+        normalCards.forEach(card => grid.appendChild(card));
+        
+        // Always append walkways card at the very end
+        if (walkwaysCard) {
+          grid.appendChild(walkwaysCard);
+        }
+
+        if (noProductsMsg) {
+          grid.appendChild(noProductsMsg);
+        }
+      });
+    }
+
+    // Run initial filtering
+    filterAndSortProducts();
   });
 </script>
 </body></html>

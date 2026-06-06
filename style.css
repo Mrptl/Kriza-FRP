@@ -976,6 +976,10 @@ input:where([type='file']):focus {
   grid-column: span 1 / span 1;
 }
 
+.col-span-full {
+  grid-column: 1 / -1;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -999,6 +1003,10 @@ input:where([type='file']):focus {
 
 .-mt-8 {
   margin-top: -2rem;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
 }
 
 .mb-1 {
@@ -1083,6 +1091,10 @@ input:where([type='file']):focus {
 
 .inline-flex {
   display: inline-flex;
+}
+
+.\!grid {
+  display: grid !important;
 }
 
 .grid {
@@ -1335,6 +1347,10 @@ input:where([type='file']):focus {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -1498,6 +1514,10 @@ input:where([type='file']):focus {
   border-bottom-width: 1px;
 }
 
+.border-b-0 {
+  border-bottom-width: 0px;
+}
+
 .border-b-2 {
   border-bottom-width: 2px;
 }
@@ -1594,6 +1614,10 @@ input:where([type='file']):focus {
 .border-surface-variant {
   --tw-border-opacity: 1;
   border-color: rgb(225 226 228 / var(--tw-border-opacity, 1));
+}
+
+.border-surface-variant\/40 {
+  border-color: rgb(225 226 228 / 0.4);
 }
 
 .border-white\/15 {
@@ -1932,16 +1956,20 @@ input:where([type='file']):focus {
   padding-bottom: 2rem;
 }
 
+.pb-0 {
+  padding-bottom: 0px;
+}
+
 .pb-1 {
   padding-bottom: 0.25rem;
 }
 
-.pb-20 {
-  padding-bottom: 5rem;
+.pb-2 {
+  padding-bottom: 0.5rem;
 }
 
-.pb-3 {
-  padding-bottom: 0.75rem;
+.pb-20 {
+  padding-bottom: 5rem;
 }
 
 .pb-32 {
@@ -2039,6 +2067,10 @@ input:where([type='file']):focus {
 
 .text-\[10px\] {
   font-size: 10px;
+}
+
+.text-\[11px\] {
+  font-size: 11px;
 }
 
 .text-\[12px\] {
@@ -2349,6 +2381,10 @@ input:where([type='file']):focus {
   opacity: 0.3;
 }
 
+.opacity-35 {
+  opacity: 0.35;
+}
+
 .opacity-40 {
   opacity: 0.4;
 }
@@ -2433,6 +2469,10 @@ input:where([type='file']):focus {
 
 .grayscale {
   --tw-grayscale: grayscale(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -2705,6 +2745,11 @@ input:where([type='file']):focus {
   background-color: rgb(248 249 251 / 0.1);
 }
 
+.hover\:text-primary:hover {
+  --tw-text-opacity: 1;
+  color: rgb(24 28 44 / var(--tw-text-opacity, 1));
+}
+
 .hover\:text-secondary:hover {
   --tw-text-opacity: 1;
   color: rgb(78 103 0 / var(--tw-text-opacity, 1));
@@ -2750,6 +2795,11 @@ input:where([type='file']):focus {
 .focus\:border-primary:focus {
   --tw-border-opacity: 1;
   border-color: rgb(24 28 44 / var(--tw-border-opacity, 1));
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .focus\:ring-1:focus {
@@ -3009,6 +3059,10 @@ input:where([type='file']):focus {
     grid-column: span 9 / span 9;
   }
 
+  .md\:mb-2 {
+    margin-bottom: 0.5rem;
+  }
+
   .md\:mt-0 {
     margin-top: 0px;
   }
@@ -3073,6 +3127,10 @@ input:where([type='file']):focus {
     width: 60%;
   }
 
+  .md\:cursor-default {
+    cursor: default;
+  }
+
   .md\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
@@ -3095,6 +3153,10 @@ input:where([type='file']):focus {
 
   .md\:gap-16 {
     gap: 4rem;
+  }
+
+  .md\:border-b {
+    border-bottom-width: 1px;
   }
 
   .md\:border-b-0 {
@@ -3150,6 +3212,10 @@ input:where([type='file']):focus {
 
   .md\:pb-20 {
     padding-bottom: 5rem;
+  }
+
+  .md\:pb-3 {
+    padding-bottom: 0.75rem;
   }
 
   .md\:pt-\[100px\] {
