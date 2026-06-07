@@ -2889,11 +2889,6 @@ input:where([type='file']):focus {
   background-color: rgb(78 103 0 / var(--tw-bg-opacity, 1));
 }
 
-.group:hover .group-hover\:text-primary {
-  --tw-text-opacity: 1;
-  color: rgb(24 28 44 / var(--tw-text-opacity, 1));
-}
-
 .group:hover .group-hover\:text-secondary {
   --tw-text-opacity: 1;
   color: rgb(78 103 0 / var(--tw-text-opacity, 1));
