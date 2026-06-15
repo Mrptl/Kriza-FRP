@@ -1057,6 +1057,10 @@ input:where([type='file']):focus {
   margin-left: 0.25rem;
 }
 
+.mt-0\.5 {
+  margin-top: 0.125rem;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -2360,6 +2364,10 @@ input:where([type='file']):focus {
   color: rgb(255 255 255 / 0.1);
 }
 
+.text-white\/90 {
+  color: rgb(255 255 255 / 0.9);
+}
+
 .text-yellow-500 {
   --tw-text-opacity: 1;
   color: rgb(234 179 8 / var(--tw-text-opacity, 1));
@@ -2821,6 +2829,11 @@ input:where([type='file']):focus {
 }
 
 .hover\:text-secondary:hover {
+  --tw-text-opacity: 1;
+  color: rgb(78 103 0 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-secondary-fixed:hover {
   --tw-text-opacity: 1;
   color: rgb(78 103 0 / var(--tw-text-opacity, 1));
 }
