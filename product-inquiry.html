@@ -188,10 +188,10 @@
 <div class="bg-surface-container-low border border-outline-variant p-6 rounded flex items-center justify-between">
 <div>
 <span class="font-label-md text-label-md uppercase text-on-surface-variant block mb-2">Subject of Inquiry</span>
-<h3 class="font-headline-md text-headline-md text-primary">Heavy-Duty FRP Grating</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mt-1">Ref: KRZ-GR-500</p>
+<h3 id="inquiry-product-title" class="font-headline-md text-headline-md text-primary">Heavy-Duty FRP Grating</h3>
+<p id="inquiry-product-ref" class="font-body-md text-body-md text-on-surface-variant mt-1">Ref: KRZ-GR-500</p>
 </div>
-<span class="material-symbols-outlined text-4xl text-primary" data-icon="grid_view" data-weight="fill" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span id="inquiry-product-icon" class="material-symbols-outlined text-4xl text-primary" data-icon="grid_view" data-weight="fill" style="font-variation-settings: 'FILL' 1;">grid_view</span>
 </div>
 <hr class="border-surface-variant"/>
 <!-- Contact Details -->
@@ -242,7 +242,7 @@
 </div>
 <div>
 <label class="font-label-md text-label-md uppercase text-on-surface-variant block mb-2">Technical Requirements / Inquiry Details</label>
-<textarea class="w-full bg-surface-container-lowest border border-surface-variant rounded px-4 py-3 font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="Describe load requirements, specific resin types, or customized structural needs..." rows="5"></textarea>
+<textarea id="inquiry-details" class="w-full bg-surface-container-lowest border border-surface-variant rounded px-4 py-3 font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="Describe load requirements, specific resin types, or customized structural needs..." rows="5"></textarea>
 </div>
 </div>
 <!-- Submit -->
@@ -367,6 +367,61 @@
   const nav = document.querySelector('nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('shadow-lg', window.scrollY > 20);
+  });
+
+  // --- Parse URL parameters for pre-filling product inquiry ---
+  window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const productParam = params.get('product');
+    const refParam = params.get('ref');
+
+    if (productParam) {
+      const titleEl = document.getElementById('inquiry-product-title');
+      const refEl = document.getElementById('inquiry-product-ref');
+      const iconEl = document.getElementById('inquiry-product-icon');
+      const detailsTextarea = document.getElementById('inquiry-details');
+
+      if (titleEl) titleEl.textContent = productParam;
+      if (refEl && refParam) refEl.textContent = `Ref: ${refParam}`;
+      else if (refEl) refEl.style.display = 'none';
+
+      // Map product titles to corresponding material symbol icons if available
+      if (iconEl) {
+        const lowerTitle = productParam.toLowerCase();
+        if (lowerTitle.includes('grating')) {
+          iconEl.textContent = 'grid_view';
+        } else if (lowerTitle.includes('tray')) {
+          iconEl.textContent = 'reorder';
+        } else if (lowerTitle.includes('tank')) {
+          iconEl.textContent = 'propane_tank';
+        } else if (lowerTitle.includes('door')) {
+          iconEl.textContent = 'door_open';
+        } else if (lowerTitle.includes('pole')) {
+          iconEl.textContent = 'vertical_align_center';
+        } else if (lowerTitle.includes('profile')) {
+          iconEl.textContent = 'category';
+        } else if (lowerTitle.includes('walkway') || lowerTitle.includes('platform')) {
+          iconEl.textContent = 'architecture';
+        } else if (lowerTitle.includes('sheet')) {
+          iconEl.textContent = 'layers';
+        } else if (lowerTitle.includes('canop')) {
+          iconEl.textContent = 'umbrella';
+        } else if (lowerTitle.includes('pipe')) {
+          iconEl.textContent = 'water_pipe';
+        } else if (lowerTitle.includes('ladder')) {
+          iconEl.textContent = 'ladder';
+        } else {
+          iconEl.textContent = 'engineering';
+        }
+      }
+
+      if (detailsTextarea) {
+        detailsTextarea.value = `I would like to inquire about specifications, availability, and pricing for: ${productParam}.\n\n`;
+        // Put focus and set cursor at end of the text
+        detailsTextarea.focus();
+        detailsTextarea.setSelectionRange(detailsTextarea.value.length, detailsTextarea.value.length);
+      }
+    }
   });
 </script>
 </body></html>
