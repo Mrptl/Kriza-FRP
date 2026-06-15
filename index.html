@@ -1,1001 +1,1255 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Kriza FRP Products - Complete Composite Solution</title>
-<link rel="stylesheet" href="style.css" />
-<link rel="icon" type="image/png" href="assets/favicon.png" />
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Kriza FRP Products - Complete Composite Solution</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
 </head>
+
 <body class="bg-background text-on-background font-body-md antialiased pt-[92px] md:pt-[100px]">
-<!-- Preloader -->
-<div id="preloader" class="fixed inset-0 z-[9999] bg-[#181c2c] flex flex-col items-center justify-center transition-all duration-700 ease-in-out">
-  <div class="flex flex-col items-center max-w-xs px-4 text-center">
-    <!-- SVG Animation (Isometric Grating Panel Weaving & Curing) -->
-    <div class="relative w-28 h-28 mb-6 flex items-center justify-center preloader-glow">
-      <svg class="w-full h-full text-secondary" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Curing cells (polygons) -->
-        <!-- Row 0 -->
-        <polygon class="resin-cell" points="50,15 60,23.75 50,32.5 40,23.75" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;"></polygon>
-        <polygon class="resin-cell" points="60,23.75 70,32.5 60,41.25 50,32.5" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.55s forwards;"></polygon>
-        <polygon class="resin-cell" points="70,32.5 80,41.25 70,50 60,41.25" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.7s forwards;"></polygon>
-        <polygon class="resin-cell" points="80,41.25 90,50 80,58.75 70,50" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.85s forwards;"></polygon>
-        
-        <!-- Row 1 -->
-        <polygon class="resin-cell" points="40,23.75 50,32.5 40,41.25 30,32.5" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.55s forwards;"></polygon>
-        <polygon class="resin-cell" points="50,32.5 60,41.25 50,50 40,41.25" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.7s forwards;"></polygon>
-        <polygon class="resin-cell" points="60,41.25 70,50 60,58.75 50,50" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.85s forwards;"></polygon>
-        <polygon class="resin-cell" points="70,50 80,58.75 70,67.5 60,58.75" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.0s forwards;"></polygon>
-        
-        <!-- Row 2 -->
-        <polygon class="resin-cell" points="30,32.5 40,41.25 30,50 20,41.25" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.7s forwards;"></polygon>
-        <polygon class="resin-cell" points="40,41.25 50,50 40,58.75 30,50" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.85s forwards;"></polygon>
-        <polygon class="resin-cell" points="50,50 60,58.75 50,67.5 40,58.75" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.0s forwards;"></polygon>
-        <polygon class="resin-cell" points="60,58.75 70,67.5 60,76.25 50,67.5" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.15s forwards;"></polygon>
-        
-        <!-- Row 3 -->
-        <polygon class="resin-cell" points="20,41.25 30,50 20,58.75 10,50" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.85s forwards;"></polygon>
-        <polygon class="resin-cell" points="30,50 40,58.75 30,67.5 20,58.75" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.0s forwards;"></polygon>
-        <polygon class="resin-cell" points="40,58.75 50,67.5 40,76.25 30,67.5" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.15s forwards;"></polygon>
-        <polygon class="resin-cell" points="50,67.5 60,76.25 50,85 40,76.25" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.3s forwards;"></polygon>
+  <!-- Preloader -->
+  <div id="preloader"
+    class="fixed inset-0 z-[9999] bg-[#181c2c] flex flex-col items-center justify-center transition-all duration-700 ease-in-out">
+    <div class="flex flex-col items-center max-w-xs px-4 text-center">
+      <!-- SVG Animation (Isometric Grating Panel Weaving & Curing) -->
+      <div class="relative w-28 h-28 mb-6 flex items-center justify-center preloader-glow">
+        <svg class="w-full h-full text-secondary" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Curing cells (polygons) -->
+          <!-- Row 0 -->
+          <polygon class="resin-cell" points="50,15 60,23.75 50,32.5 40,23.75"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;"></polygon>
+          <polygon class="resin-cell" points="60,23.75 70,32.5 60,41.25 50,32.5"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.55s forwards;"></polygon>
+          <polygon class="resin-cell" points="70,32.5 80,41.25 70,50 60,41.25"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.7s forwards;"></polygon>
+          <polygon class="resin-cell" points="80,41.25 90,50 80,58.75 70,50"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.85s forwards;"></polygon>
 
-        <!-- Grid lines (fiberglass reinforcement) -->
-        <!-- Top-left to bottom-right -->
-        <line x1="10" y1="50" x2="50" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;"></line>
-        <line x1="20" y1="58.75" x2="60" y2="23.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;"></line>
-        <line x1="30" y1="67.5" x2="70" y2="32.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;"></line>
-        <line x1="40" y1="76.25" x2="80" y2="41.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;"></line>
-        <line x1="50" y1="85" x2="90" y2="50" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;"></line>
-        
-        <!-- Top-right to bottom-left -->
-        <line x1="50" y1="15" x2="90" y2="50" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;"></line>
-        <line x1="40" y1="23.75" x2="80" y2="58.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;"></line>
-        <line x1="30" y1="32.5" x2="70" y2="67.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;"></line>
-        <line x1="20" y1="41.25" x2="60" y2="76.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;"></line>
-        <line x1="10" y1="50" x2="50" y2="85" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;"></line>
-      </svg>
-    </div>
-    
-    <!-- Company Info (Logo-free text) -->
-    <div class="opacity-0 translate-y-2 animate-content-reveal">
-      <h1 class="font-headline-lg font-extrabold text-2xl tracking-[0.2em] text-white uppercase mb-1">KRIZA FRP</h1>
-      <span class="block text-[10px] uppercase tracking-[0.2em] text-[#fabd00] font-semibold mb-4">Complete Composite Solution</span>
-      <span class="block text-[10px] uppercase tracking-[0.15em] text-[#c2c5db] opacity-75 font-medium leading-none" id="preloader-text">Injecting Liquid Polymer...</span>
-    </div>
+          <!-- Row 1 -->
+          <polygon class="resin-cell" points="40,23.75 50,32.5 40,41.25 30,32.5"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.55s forwards;"></polygon>
+          <polygon class="resin-cell" points="50,32.5 60,41.25 50,50 40,41.25"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.7s forwards;"></polygon>
+          <polygon class="resin-cell" points="60,41.25 70,50 60,58.75 50,50"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.85s forwards;"></polygon>
+          <polygon class="resin-cell" points="70,50 80,58.75 70,67.5 60,58.75"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.0s forwards;"></polygon>
 
-    <!-- Progress Bar -->
-    <div class="w-40 h-[2px] bg-white/10 rounded-full mt-6 overflow-hidden opacity-0 animate-content-reveal-delay">
-      <div id="preloader-bar" class="w-0 h-full bg-[#fabd00] transition-all duration-300 ease-out"></div>
-    </div>
-  </div>
-</div>
-<script>
-  (function() {
-    let progress = 0;
-    let loaded = false;
-    const preloader = document.getElementById('preloader');
-    const progressBar = document.getElementById('preloader-bar');
-    const preloaderText = document.getElementById('preloader-text');
-    
-    const statusMessages = [
-      "Injecting Liquid Polymer...",
-      "Aligning Glass Fiber Rovings...",
-      "Initiating Exothermic Cure...",
-      "Composite Matrix Solidified",
-      "Ready"
-    ];
-    
-    const interval = setInterval(() => {
-      if (!loaded) {
-        progress += Math.floor(Math.random() * 8) + 3;
-        if (progress > 90) progress = 90;
-      } else {
-        progress += Math.floor(Math.random() * 15) + 15;
-        if (progress > 100) progress = 100;
-      }
-      
-      progressBar.style.width = `${progress}%`;
-      const msgIdx = Math.min(Math.floor((progress / 100) * statusMessages.length), statusMessages.length - 1);
-      preloaderText.textContent = statusMessages[msgIdx];
-      
-      if (progress >= 100) {
-        clearInterval(interval);
-        setTimeout(() => {
-          preloader.classList.add('opacity-0', 'pointer-events-none');
-          const preloaderContent = preloader.querySelector('.flex');
-          if (preloaderContent) {
-            preloaderContent.style.transform = 'scale(0.95)';
-            preloaderContent.style.transition = 'transform 0.6s ease-in-out';
-          }
-          setTimeout(() => preloader.remove(), 700);
-        }, 300);
-      }
-    }, 80);
-    
-    window.addEventListener('load', () => {
-      loaded = true;
-    });
-    
-    setTimeout(() => {
-      loaded = true;
-    }, 3000);
-  })();
-</script>
-<!-- TopNavBar -->
-<nav class="bg-surface/90 dark:bg-primary/90 backdrop-blur-md fixed top-0 left-0 w-full z-50 border-b border-outline-variant dark:border-primary-container shadow-sm">
-  <!-- Top Info Bar -->
-  <div class="bg-primary text-primary-fixed-dim text-[10px] md:text-xs py-1.5 border-b border-primary-container/40">
-    <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex flex-row justify-center md:justify-end items-center gap-4 sm:gap-6">
-      <div class="flex items-center gap-1 text-primary-fixed-dim">
-        <span class="material-symbols-outlined text-[13px] md:text-sm text-secondary-fixed">phone</span>
-        <span>Mobile: 
-          <a href="tel:+918128519480" class="hover:text-white transition-colors text-white font-semibold">+91 81285 19480</a> / 
-          <a href="tel:+919898972016" class="hover:text-white transition-colors text-white font-semibold">+91 98989 72016</a>
-        </span>
-      </div>
-      <span class="text-outline-variant/40">|</span>
-      <a href="mailto:info@krizafrp.co.in" class="hover:text-white transition-colors flex items-center gap-1">
-        <span class="material-symbols-outlined text-[13px] md:text-sm text-secondary-fixed">mail</span>
-        <span>E-Mail: <strong class="text-white">info@krizafrp.co.in</strong></span>
-      </a>
-    </div>
-  </div>
+          <!-- Row 2 -->
+          <polygon class="resin-cell" points="30,32.5 40,41.25 30,50 20,41.25"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.7s forwards;"></polygon>
+          <polygon class="resin-cell" points="40,41.25 50,50 40,58.75 30,50"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.85s forwards;"></polygon>
+          <polygon class="resin-cell" points="50,50 60,58.75 50,67.5 40,58.75"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.0s forwards;"></polygon>
+          <polygon class="resin-cell" points="60,58.75 70,67.5 60,76.25 50,67.5"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.15s forwards;"></polygon>
 
-<div class="relative flex items-center justify-between px-margin-mobile md:px-8 py-3 w-full mx-auto">
-  <a href="index.html" class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-black tracking-tighter text-primary dark:text-secondary-fixed uppercase flex items-center gap-2 hover:opacity-90 transition-opacity">
-    <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo" class="h-10 md:h-12 w-auto object-contain drop-shadow-sm" style="max-height: 48px;" />
-  </a>
-  <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center space-x-8">
-    <a class="text-primary dark:text-secondary-fixed border-b-2 border-secondary-fixed pb-1 hover:text-secondary transition-all duration-300 font-bold" href="index.html">Home</a>
-    <a class="text-on-surface-variant font-medium hover:text-secondary transition-all duration-300" href="about-us.html">About Us</a>
-    <a class="text-on-surface-variant font-medium hover:text-secondary transition-all duration-300" href="products.html">Products</a>
-    <a class="text-on-surface-variant font-medium hover:text-secondary transition-all duration-300" href="contact-us.html">Contact Us</a>
-  </div>
-  <div class="flex items-center gap-3">
-    <button id="hamburger" aria-label="Toggle menu" class="md:hidden flex flex-col gap-[6px] p-2 text-primary">
-      <span class="ham-bar"></span>
-      <span class="ham-bar"></span>
-      <span class="ham-bar"></span>
-    </button>
-  </div>
-</div>
-<!-- Mobile Menu -->
-<div id="mobile-menu" class="md:hidden bg-surface border-t border-outline-variant">
-  <div class="flex flex-col px-margin-mobile py-4 gap-4">
-    <a class="text-primary font-bold hover:text-secondary transition-colors" href="index.html">Home</a>
-    <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors" href="about-us.html">About Us</a>
-    <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors" href="products.html">Products</a>
-    <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors" href="contact-us.html">Contact Us</a>
+          <!-- Row 3 -->
+          <polygon class="resin-cell" points="20,41.25 30,50 20,58.75 10,50"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.85s forwards;"></polygon>
+          <polygon class="resin-cell" points="30,50 40,58.75 30,67.5 20,58.75"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.0s forwards;"></polygon>
+          <polygon class="resin-cell" points="40,58.75 50,67.5 40,76.25 30,67.5"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.15s forwards;"></polygon>
+          <polygon class="resin-cell" points="50,67.5 60,76.25 50,85 40,76.25"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.3s forwards;"></polygon>
 
-  </div>
-</div>
-</nav>
-<!-- Hero Section (Carousel) -->
-<section id="hero-carousel" class="relative bg-primary text-on-primary overflow-hidden clip-diagonal h-[80vh] min-h-[460px] sm:h-[80vh] sm:min-h-[520px] md:h-[85vh] md:min-h-[660px] lg:h-[85vh] lg:min-h-[740px]">
-  <!-- Slides Container -->
-  <div class="relative w-full h-full overflow-hidden">
-    
-    <!-- Slide 0: General Overview -->
-    <div class="carousel-slide absolute inset-0 w-full h-full flex items-center transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none z-0">
-      <!-- Background Image -->
-      <div class="absolute inset-0 z-0 opacity-40 mix-blend-overlay">
-        <img alt="Advanced industrial manufacturing facility bathed in bright, cold lighting." class="carousel-img w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCScvQWgBJv8ciOJ6DmgUjfKb-nQlWBKL4liW35Ia19XSgo-KyAYzGAlJPw5FnLDEezXr4UsbgEw_EFiFFQroh7a_KTLGyVaDAwB8XXgpAoa1790ahBykvrpbaA7NTF6i4zIATVXsn2aYLDeI-_amcWkSP5P9-I08ctdjsPXE71UL2rtm-DDkit3ymoaVnrynl5brR3kskLg1lW8YewDajZsw_oy0LDGzxOqKArRxCc8tpbTNu8p0bw-V4i43zp67AwHf7c8O-kCTx1"/>
-      </div>
-      <!-- Gradient Overlay -->
-      <div class="absolute inset-0 z-10 bg-gradient-to-r from-primary via-primary/75 to-transparent"></div>
-      <!-- Diagonal Accent Element -->
-      <div class="absolute top-0 right-0 w-1/2 h-full bg-tertiary-fixed-dim/10 transform skew-x-[-15deg] translate-x-1/4 z-0"></div>
-      <!-- Content -->
-      <div class="relative z-20 max-w-max-width w-full mx-auto px-6 sm:px-20 md:px-24 lg:px-32 xl:px-40 h-full flex flex-col justify-center pb-20 sm:pb-24 md:pb-20 pt-8 sm:pt-12">
-        <div class="carousel-content max-w-3xl transform translate-y-6 opacity-0 transition-all duration-700 ease-out">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-secondary-fixed/90 text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-3 sm:mb-4 border border-secondary-fixed/20 shadow-sm">
-            Composite Excellence
-          </span>
-          <h1 class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 sm:mb-6 leading-tight">
-            Beyond <span class="text-secondary-fixed block md:inline">Quality,</span> <br class="hidden md:block"/>
-            Proud <span class="text-tertiary-fixed-dim">Workmanship</span>
-          </h1>
-          <p class="text-sm sm:text-body-lg text-primary-fixed mb-6 sm:mb-10 max-w-2xl">
-            Complete Composite Solution for Modern Industry. Delivering high-performance, corrosion-resistant FRP structures engineered for ultimate durability.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <a class="bg-secondary-fixed text-primary px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md border-b-2 border-secondary-fixed-dim hover:bg-secondary-fixed-dim transition-all shadow-sm flex items-center justify-center gap-2" href="products.html">
-              View Products
-              <span class="material-symbols-outlined text-xl">arrow_forward</span>
-            </a>
-            <a class="bg-transparent text-on-primary border border-outline px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md hover:bg-surface/10 transition-all flex items-center justify-center" href="contact-us.html">
-              Contact Us
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+          <!-- Grid lines (fiberglass reinforcement) -->
+          <!-- Top-left to bottom-right -->
+          <line x1="10" y1="50" x2="50" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;">
+          </line>
+          <line x1="20" y1="58.75" x2="60" y2="23.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;">
+          </line>
+          <line x1="30" y1="67.5" x2="70" y2="32.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;">
+          </line>
+          <line x1="40" y1="76.25" x2="80" y2="41.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;">
+          </line>
+          <line x1="50" y1="85" x2="90" y2="50" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;">
+          </line>
 
-    <!-- Slide 1: FRP Gratings -->
-    <div class="carousel-slide absolute inset-0 w-full h-full flex items-center transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none z-0">
-      <!-- Background Image -->
-      <div class="absolute inset-0 z-0 opacity-35 mix-blend-overlay">
-        <img alt="High-strength FRP molded gratings installation." class="carousel-img w-full h-full object-cover" src="assets/frp_gratings.png"/>
+          <!-- Top-right to bottom-left -->
+          <line x1="50" y1="15" x2="90" y2="50" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;">
+          </line>
+          <line x1="40" y1="23.75" x2="80" y2="58.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;">
+          </line>
+          <line x1="30" y1="32.5" x2="70" y2="67.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;">
+          </line>
+          <line x1="20" y1="41.25" x2="60" y2="76.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;">
+          </line>
+          <line x1="10" y1="50" x2="50" y2="85" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;">
+          </line>
+        </svg>
       </div>
-      <!-- Gradient Overlay -->
-      <div class="absolute inset-0 z-10 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
-      <!-- Diagonal Accent Element -->
-      <div class="absolute top-0 right-0 w-1/2 h-full bg-tertiary-fixed-dim/10 transform skew-x-[-15deg] translate-x-1/4 z-0"></div>
-      <!-- Content -->
-      <div class="relative z-20 max-w-max-width w-full mx-auto px-6 sm:px-20 md:px-24 lg:px-32 xl:px-40 h-full flex flex-col justify-center pb-20 sm:pb-24 md:pb-20 pt-8 sm:pt-12">
-        <div class="carousel-content max-w-3xl transform translate-y-6 opacity-0 transition-all duration-700 ease-out">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-secondary-fixed/90 text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-3 sm:mb-4 border border-secondary-fixed/20 shadow-sm">
-            OSHA & ASTM Compliant
-          </span>
-          <h1 class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 sm:mb-6 leading-tight">
-            FRP Molded & <br class="hidden md:block"/>
-            <span class="text-tertiary-fixed-dim">Pultruded Gratings</span>
-          </h1>
-          <p class="text-sm sm:text-body-lg text-primary-fixed mb-6 sm:mb-10 max-w-2xl">
-            High slip resistance, maximum structural stability, and absolute corrosion resistance for industrial platforms, trench covers, and offshore walkways.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <a class="bg-secondary-fixed text-primary px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md border-b-2 border-secondary-fixed-dim hover:bg-secondary-fixed-dim transition-all shadow-sm flex items-center justify-center gap-2" href="products.html">
-              Inquire Now
-              <span class="material-symbols-outlined text-xl">arrow_forward</span>
-            </a>
-            <a class="bg-transparent text-on-primary border border-outline px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md hover:bg-surface/10 transition-all flex items-center justify-center" href="contact-us.html">
-              Contact Us
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Slide 2: FRP Cable Trays -->
-    <div class="carousel-slide absolute inset-0 w-full h-full flex items-center transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none z-0">
-      <!-- Background Image -->
-      <div class="absolute inset-0 z-0 opacity-35 mix-blend-overlay">
-        <img alt="Heavy duty FRP cable trays." class="carousel-img w-full h-full object-cover" src="assets/frp_cable_trays.png"/>
+      <!-- Company Info (Logo-free text) -->
+      <div class="opacity-0 translate-y-2 animate-content-reveal">
+        <h1 class="font-headline-lg font-extrabold text-2xl tracking-[0.2em] text-white uppercase mb-1">KRIZA FRP</h1>
+        <span class="block text-[10px] uppercase tracking-[0.2em] text-[#fabd00] font-semibold mb-4">Complete Composite
+          Solution</span>
+        <span class="block text-[10px] uppercase tracking-[0.15em] text-[#c2c5db] opacity-75 font-medium leading-none"
+          id="preloader-text">Injecting Liquid Polymer...</span>
       </div>
-      <!-- Gradient Overlay -->
-      <div class="absolute inset-0 z-10 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
-      <!-- Diagonal Accent Element -->
-      <div class="absolute top-0 right-0 w-1/2 h-full bg-tertiary-fixed-dim/10 transform skew-x-[-15deg] translate-x-1/4 z-0"></div>
-      <!-- Content -->
-      <div class="relative z-20 max-w-max-width w-full mx-auto px-6 sm:px-20 md:px-24 lg:px-32 xl:px-40 h-full flex flex-col justify-center pb-20 sm:pb-24 md:pb-20 pt-8 sm:pt-12">
-        <div class="carousel-content max-w-3xl transform translate-y-6 opacity-0 transition-all duration-700 ease-out">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-secondary-fixed/90 text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-3 sm:mb-4 border border-secondary-fixed/20 shadow-sm">
-            NEMA FG-1 Certified
-          </span>
-          <h1 class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 sm:mb-6 leading-tight">
-            Industrial FRP <br class="hidden md:block"/>
-            <span class="text-tertiary-fixed-dim">Cable Trays</span>
-          </h1>
-          <p class="text-sm sm:text-body-lg text-primary-fixed mb-6 sm:mb-10 max-w-2xl">
-            Ladder & perforated non-conductive cable management systems. Perfect for shielding critical electrical systems in extreme acid & chemical fumes.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <a class="bg-secondary-fixed text-primary px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md border-b-2 border-secondary-fixed-dim hover:bg-secondary-fixed-dim transition-all shadow-sm flex items-center justify-center gap-2" href="products.html">
-              Explore Trays
-              <span class="material-symbols-outlined text-xl">arrow_forward</span>
-            </a>
-            <a class="bg-transparent text-on-primary border border-outline px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md hover:bg-surface/10 transition-all flex items-center justify-center" href="contact-us.html">
-              Contact Us
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Slide 3: PP FRP Chemical Storage Tanks -->
-    <div class="carousel-slide absolute inset-0 w-full h-full flex items-center transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none z-0">
-      <!-- Background Image -->
-      <div class="absolute inset-0 z-0 opacity-35 mix-blend-overlay">
-        <img alt="Dual laminated PP FRP Chemical storage tanks." class="carousel-img w-full h-full object-cover" src="assets/pp_frp_tanks.png"/>
-      </div>
-      <!-- Gradient Overlay -->
-      <div class="absolute inset-0 z-10 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
-      <!-- Diagonal Accent Element -->
-      <div class="absolute top-0 right-0 w-1/2 h-full bg-tertiary-fixed-dim/10 transform skew-x-[-15deg] translate-x-1/4 z-0"></div>
-      <!-- Content -->
-      <div class="relative z-20 max-w-max-width w-full mx-auto px-6 sm:px-20 md:px-24 lg:px-32 xl:px-40 h-full flex flex-col justify-center pb-20 sm:pb-24 md:pb-20 pt-8 sm:pt-12">
-        <div class="carousel-content max-w-3xl transform translate-y-6 opacity-0 transition-all duration-700 ease-out">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-secondary-fixed/90 text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-3 sm:mb-4 border border-secondary-fixed/20 shadow-sm">
-            ASME RTP-1 Compliance
-          </span>
-          <h1 class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 sm:mb-6 leading-tight">
-            PP FRP Chemical <br class="hidden md:block"/>
-            <span class="text-tertiary-fixed-dim">Storage Tanks</span>
-          </h1>
-          <p class="text-sm sm:text-body-lg text-primary-fixed mb-6 sm:mb-10 max-w-2xl">
-            Filament wound, corrosion-resistant dual-laminate vessels designed for storage of aggressive acids, alkalis, and heavy industrial chemicals.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <a class="bg-secondary-fixed text-primary px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md border-b-2 border-secondary-fixed-dim hover:bg-secondary-fixed-dim transition-all shadow-sm flex items-center justify-center gap-2" href="products.html">
-              View Vessels
-              <span class="material-symbols-outlined text-xl">arrow_forward</span>
-            </a>
-            <a class="bg-transparent text-on-primary border border-outline px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md hover:bg-surface/10 transition-all flex items-center justify-center" href="contact-us.html">
-              Contact Us
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 4: FRP Walkways & Structural sections -->
-    <div class="carousel-slide absolute inset-0 w-full h-full flex items-center transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none z-0">
-      <!-- Background Image -->
-      <div class="absolute inset-0 z-0 opacity-35 mix-blend-overlay">
-        <img alt="Pre-engineered FRP walkways and guardrails." class="carousel-img w-full h-full object-cover" src="assets/Walk%20Way-20260516T054832Z-3-001/Walk%20Way/WV.png"/>
-      </div>
-      <!-- Gradient Overlay -->
-      <div class="absolute inset-0 z-10 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
-      <!-- Diagonal Accent Element -->
-      <div class="absolute top-0 right-0 w-1/2 h-full bg-tertiary-fixed-dim/10 transform skew-x-[-15deg] translate-x-1/4 z-0"></div>
-      <!-- Content -->
-      <div class="relative z-20 max-w-max-width w-full mx-auto px-6 sm:px-20 md:px-24 lg:px-32 xl:px-40 h-full flex flex-col justify-center pb-20 sm:pb-24 md:pb-20 pt-8 sm:pt-12">
-        <div class="carousel-content max-w-3xl transform translate-y-6 opacity-0 transition-all duration-700 ease-out">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-secondary-fixed/90 text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-3 sm:mb-4 border border-secondary-fixed/20 shadow-sm">
-            Heavy-Duty Composite Structural
-          </span>
-          <h1 class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 sm:mb-6 leading-tight">
-            Walkways, Handrails & <br class="hidden md:block"/>
-            <span class="text-tertiary-fixed-dim">Custom Profiles</span>
-          </h1>
-          <p class="text-sm sm:text-body-lg text-primary-fixed mb-6 sm:mb-10 max-w-2xl">
-            Pultruded profiles, beams, poles, and handrails engineered as lightweight, high-strength structural replacements for steel and concrete.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <a class="bg-secondary-fixed text-primary px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md border-b-2 border-secondary-fixed-dim hover:bg-secondary-fixed-dim transition-all shadow-sm flex items-center justify-center gap-2" href="products.html">
-              Explore Profiles
-              <span class="material-symbols-outlined text-xl">arrow_forward</span>
-            </a>
-            <a class="bg-transparent text-on-primary border border-outline px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md hover:bg-surface/10 transition-all flex items-center justify-center" href="contact-us.html">
-              Contact Us
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Navigation Arrows -->
-  <button id="carousel-prev" aria-label="Previous slide" class="hidden sm:flex absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-white/10 hover:bg-secondary text-white hover:scale-105 border border-white/15 hover:border-secondary transition-all shadow-lg backdrop-blur-sm group">
-    <span class="material-symbols-outlined transition-transform group-hover:-translate-x-0.5">chevron_left</span>
-  </button>
-  <button id="carousel-next" aria-label="Next slide" class="hidden sm:flex absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-white/10 hover:bg-secondary text-white hover:scale-105 border border-white/15 hover:border-secondary transition-all shadow-lg backdrop-blur-sm group">
-    <span class="material-symbols-outlined transition-transform group-hover:translate-x-0.5">chevron_right</span>
-  </button>
-
-  <!-- Progress Bar Indicators -->
-  <div class="absolute bottom-8 sm:bottom-12 md:bottom-20 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3">
-    <button class="carousel-indicator w-12 md:w-16 h-1 rounded-full bg-white/20 overflow-hidden relative group" data-slide="0" aria-label="Go to slide 1">
-      <span class="indicator-progress absolute inset-y-0 left-0 w-0 bg-secondary transition-all"></span>
-    </button>
-    <button class="carousel-indicator w-12 md:w-16 h-1 rounded-full bg-white/20 overflow-hidden relative group" data-slide="1" aria-label="Go to slide 2">
-      <span class="indicator-progress absolute inset-y-0 left-0 w-0 bg-secondary transition-all"></span>
-    </button>
-    <button class="carousel-indicator w-12 md:w-16 h-1 rounded-full bg-white/20 overflow-hidden relative group" data-slide="2" aria-label="Go to slide 3">
-      <span class="indicator-progress absolute inset-y-0 left-0 w-0 bg-secondary transition-all"></span>
-    </button>
-    <button class="carousel-indicator w-12 md:w-16 h-1 rounded-full bg-white/20 overflow-hidden relative group" data-slide="3" aria-label="Go to slide 4">
-      <span class="indicator-progress absolute inset-y-0 left-0 w-0 bg-secondary transition-all"></span>
-    </button>
-    <button class="carousel-indicator w-12 md:w-16 h-1 rounded-full bg-white/20 overflow-hidden relative group" data-slide="4" aria-label="Go to slide 5">
-      <span class="indicator-progress absolute inset-y-0 left-0 w-0 bg-secondary transition-all"></span>
-    </button>
-  </div>
-</section>
-
-
-<!-- Company Overview Section -->
-<section class="py-24 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
-    <div class="space-y-6 reveal pr-0 lg:pr-12">
-      <span class="inline-block bg-secondary-fixed text-on-secondary-fixed font-label-sm px-3 py-1 rounded-sm uppercase tracking-wider">Our Profile</span>
-      <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-tight">
-        25+ Years of Engineering Legacy & Composite Mastery
-      </h2>
-      <p class="font-body-md text-body-md text-on-surface-variant">
-        KRIZA FRP PRODUCTS is a premier manufacturer specializing in high-performance Fiberglass Reinforced Polymer (FRP/GRP) composite solutions. We design, engineer, and manufacture structurally superior products tailored to withstand the most corrosive, heavy-duty industrial and offshore environments.
-      </p>
-      <p class="font-body-md text-body-md text-on-surface-variant">
-        From initial conceptual drawing and rigorous mechanical load engineering to automated pultrusion and turnkey site installation, we deliver absolute compliance with international ASTM, NEMA, ASME, and OSHA standards.
-      </p>
-      <div class="pt-6 grid grid-cols-2 gap-4">
-        <div class="border border-outline-variant rounded-lg p-4 bg-surface-container-lowest text-center bento-card">
-          <span class="font-headline-md text-headline-md text-secondary block font-bold">ISO 9001</span>
-          <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Certified Facility</span>
-        </div>
-        <div class="border border-outline-variant rounded-lg p-4 bg-surface-container-lowest text-center bento-card">
-          <span class="font-headline-md text-headline-md text-secondary block font-bold">Turnkey</span>
-          <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Design & Install</span>
-        </div>
-      </div>
-      <div class="pt-4">
-        <a class="inline-flex items-center gap-2 text-primary font-bold hover:text-secondary transition-colors group" href="about-us.html">
-          Read Our Full Story
-          <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
-        </a>
-      </div>
-    </div>
-    <div class="relative h-[400px] lg:h-[480px] reveal reveal-delay-1 mt-10 lg:mt-0">
-      <img alt="Advanced industrial machinery and precise composite material handling" class="w-full h-full object-cover rounded-xl border border-outline-variant shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw8FI3-8VQsbHp6pgqmKxexXyX6NBSnht2MsyaEG6ZUP9VSTH_qEDMYctOHz1cDe_JqLYsPmyU0OfLF-AV02Pglwnaty4TVN12OKAYwI1rTwLYtmi4uE64HAb2i_xTHnCjFKlBu9Ad0ruki8fUQPwVS8UmYxWm1OTwL7baWNw_tziVcQIO4d6oND5nQybVJ5QIBEdHmC17HNQTlKJN8tSjspTdjW8xPNmhr5zoTULzWxGrT83Ulu0lETuYnJuwhKwlIERDDYNqli7s" />
-      <div class="absolute -bottom-6 -right-6 w-32 h-32 border-2 border-secondary rounded-xl border-t-0 border-l-0 hidden lg:block z-[-1]"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Customer's Industry Segment Section -->
-<section class="py-24 bg-surface-container-lowest border-y border-outline-variant relative">
-  <div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
-    <div class="mb-16 text-center">
-      <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Customer's Industry Segment</h2>
-      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Kriza FRP Products serves a diverse range of critical industries.</p>
-    </div>
-    <div class="flex flex-wrap justify-center gap-4">
-      <div class="reveal bg-surface border border-outline-variant px-6 py-4 rounded-full font-headline-sm text-primary flex items-center gap-3 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-default">
-        <span class="material-symbols-outlined text-secondary-fixed">water_drop</span> Water & Waste Water Industry
-      </div>
-      <div class="reveal reveal-delay-1 bg-surface border border-outline-variant px-6 py-4 rounded-full font-headline-sm text-primary flex items-center gap-3 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-default">
-        <span class="material-symbols-outlined text-secondary-fixed">compost</span> Fertilizer
-      </div>
-      <div class="reveal reveal-delay-2 bg-surface border border-outline-variant px-6 py-4 rounded-full font-headline-sm text-primary flex items-center gap-3 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-default">
-        <span class="material-symbols-outlined text-secondary-fixed">agriculture</span> Dairy
-      </div>
-      <div class="reveal reveal-delay-3 bg-surface border border-outline-variant px-6 py-4 rounded-full font-headline-sm text-primary flex items-center gap-3 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-default">
-        <span class="material-symbols-outlined text-secondary-fixed">restaurant</span> F&B Industry
-      </div>
-      <div class="reveal bg-surface border border-outline-variant px-6 py-4 rounded-full font-headline-sm text-primary flex items-center gap-3 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-default">
-        <span class="material-symbols-outlined text-secondary-fixed">anchor</span> Marine & Offshore Application
-      </div>
-      <div class="reveal reveal-delay-1 bg-surface border border-outline-variant px-6 py-4 rounded-full font-headline-sm text-primary flex items-center gap-3 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-default">
-        <span class="material-symbols-outlined text-secondary-fixed">train</span> Railway
-      </div>
-      <div class="reveal reveal-delay-2 bg-surface border border-outline-variant px-6 py-4 rounded-full font-headline-sm text-primary flex items-center gap-3 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-default">
-        <span class="material-symbols-outlined text-secondary-fixed">bolt</span> Electrical & Insulator Manufacture
-      </div>
-      <div class="reveal reveal-delay-3 bg-surface border border-outline-variant px-6 py-4 rounded-full font-headline-sm text-primary flex items-center gap-3 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-default">
-        <span class="material-symbols-outlined text-secondary-fixed">account_balance</span> Municipal & Government
+      <!-- Progress Bar -->
+      <div class="w-40 h-[2px] bg-white/10 rounded-full mt-6 overflow-hidden opacity-0 animate-content-reveal-delay">
+        <div id="preloader-bar" class="w-0 h-full bg-[#fabd00] transition-all duration-300 ease-out"></div>
       </div>
     </div>
   </div>
-</section>
+  <script>
+    (function () {
+      let progress = 0;
+      let loaded = false;
+      const preloader = document.getElementById('preloader');
+      const progressBar = document.getElementById('preloader-bar');
+      const preloaderText = document.getElementById('preloader-text');
 
-<!-- Core Product Solutions Section -->
-<section class="py-24 bg-surface border-b border-outline-variant relative">
-  <div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
-    <div class="mb-16 text-center reveal">
-      <span class="inline-block bg-secondary-fixed text-on-secondary-fixed font-label-sm px-3 py-1 rounded-sm uppercase tracking-wider mb-4">Our Product Catalog</span>
-      <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">
-        Engineered Composite Solutions
-      </h2>
-      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-        High-performance fiberglass solutions designed to substitute traditional steel and concrete in heavy chemical, coastal, and structural environments.
-      </p>
-    </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Product 1: Gratings -->
-      <article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col relative bento-card reveal">
-        <div class="absolute top-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
-        <div class="h-48 bg-surface-variant relative overflow-hidden">
-          <img alt="FRP Molded Grating" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/frp_gratings.png" />
-          <div class="absolute top-4 right-4">
-            <span class="bg-primary/95 text-on-primary backdrop-blur-sm px-2 py-1 rounded-sm font-label-sm text-label-sm uppercase tracking-wider">OSHA Approved</span>
-          </div>
-        </div>
-        <div class="p-6 flex-grow flex flex-col justify-between">
-          <div>
-            <h3 class="font-headline-md text-primary text-[20px] mb-2 font-bold">FRP Gratings</h3>
-            <p class="text-on-surface-variant text-[14px] leading-relaxed">
-              Slip-resistant Molded and Pultruded gratings offering extreme structural stability for platforms, trench covers, and offshore walkways.
-            </p>
-          </div>
-        </div>
-      </article>
+      const statusMessages = [
+        "Injecting Liquid Polymer...",
+        "Aligning Glass Fiber Rovings...",
+        "Initiating Exothermic Cure...",
+        "Composite Matrix Solidified",
+        "Ready"
+      ];
 
-      <!-- Product 2: Cable Trays -->
-      <article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-1">
-        <div class="absolute top-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
-        <div class="h-48 bg-surface-variant relative overflow-hidden">
-          <img alt="FRP Cable Tray" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/frp_cable_trays.png" />
-          <div class="absolute top-4 right-4">
-            <span class="bg-primary/95 text-on-primary backdrop-blur-sm px-2 py-1 rounded-sm font-label-sm text-label-sm uppercase tracking-wider">NEMA FG-1</span>
-          </div>
-        </div>
-        <div class="p-6 flex-grow flex flex-col justify-between">
-          <div>
-            <h3 class="font-headline-md text-primary text-[20px] mb-2 font-bold">FRP Cable Trays</h3>
-            <p class="text-on-surface-variant text-[14px] leading-relaxed">
-              Ladder and Perforated non-conductive cable trays designed to protect high-voltage electrical runs from aggressive acid fumes and humidity.
-            </p>
-          </div>
-        </div>
-      </article>
-
-      <!-- Product 3: PP FRP Tanks -->
-      <article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-2">
-        <div class="absolute top-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
-        <div class="h-48 bg-surface-variant relative overflow-hidden">
-          <img alt="PP FRP Storage Tank" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/pp_frp_tanks.png" />
-          <div class="absolute top-4 right-4">
-            <span class="bg-primary/95 text-on-primary backdrop-blur-sm px-2 py-1 rounded-sm font-label-sm text-label-sm uppercase tracking-wider">ASME RTP 1</span>
-          </div>
-        </div>
-        <div class="p-6 flex-grow flex flex-col justify-between">
-          <div>
-            <h3 class="font-headline-md text-primary text-[20px] mb-2 font-bold">PP FRP Tanks</h3>
-            <p class="text-on-surface-variant text-[14px] leading-relaxed">
-              Dual-laminated, chemically inert chemical storage and processing tanks engineered using advanced filament winding for extreme chemical storage.
-            </p>
-          </div>
-        </div>
-      </article>
-
-      <!-- Product 4: Profiles & Poles -->
-      <article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-3">
-        <div class="absolute top-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
-        <div class="h-48 bg-surface-variant relative overflow-hidden">
-          <img alt="FRP Structural Profiles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/frp_profiles.png" />
-          <div class="absolute top-4 right-4">
-            <span class="bg-primary/95 text-on-primary backdrop-blur-sm px-2 py-1 rounded-sm font-label-sm text-label-sm uppercase tracking-wider">Heavy Profile</span>
-          </div>
-        </div>
-        <div class="p-6 flex-grow flex flex-col justify-between">
-          <div>
-            <h3 class="font-headline-md text-primary text-[20px] mb-2 font-bold">FRP Custom Sections</h3>
-            <p class="text-on-surface-variant text-[14px] leading-relaxed">
-              Pultruded structural beams, angles, channels, non-corrosive poles, and pre-engineered pedestrian walkways designed for absolute life-safety.
-            </p>
-          </div>
-        </div>
-      </article>
-    </div>
-    
-    <div class="mt-16 text-center reveal">
-      <a class="bg-primary text-on-primary px-8 py-4 rounded font-headline-md text-headline-md hover:bg-primary-container border-b-2 border-primary-container transition-all shadow-md inline-flex items-center gap-2" href="products.html">
-        Explore Complete Catalog
-        <span class="material-symbols-outlined text-xl">arrow_forward</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Advantages of FRP/GRP Products Section -->
-<section class="py-24 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
-  <div class="mb-16 text-center">
-    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Advantages of FRP/GRP Products</h2>
-    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Engineered for environments where traditional materials fail. Discover why industry leaders choose Fibre-Reinforced Plastic.</p>
-  </div>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-    <div class="bento-card reveal bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
-      <div class="w-16 h-16 rounded-full bg-red-500/10 text-red-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-        <span class="material-symbols-outlined text-3xl">local_fire_department</span>
-      </div>
-      <h3 class="font-headline-sm text-headline-sm text-primary">Fire Retardant</h3>
-    </div>
-    <div class="bento-card reveal reveal-delay-1 bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
-      <div class="w-16 h-16 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-        <span class="material-symbols-outlined text-3xl">fitness_center</span>
-      </div>
-      <h3 class="font-headline-sm text-headline-sm text-primary">High Strength</h3>
-    </div>
-    <div class="bento-card reveal reveal-delay-2 bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
-      <div class="w-16 h-16 rounded-full bg-orange-500/10 text-orange-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-        <span class="material-symbols-outlined text-3xl">water_drop</span>
-      </div>
-      <h3 class="font-headline-sm text-headline-sm text-primary">Corrosion & Chemical Resistance</h3>
-    </div>
-    <div class="bento-card reveal reveal-delay-3 bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
-      <div class="w-16 h-16 rounded-full bg-green-500/10 text-green-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-        <span class="material-symbols-outlined text-3xl">feather</span>
-      </div>
-      <h3 class="font-headline-sm text-headline-sm text-primary">Light in Weight</h3>
-    </div>
-    <div class="bento-card reveal bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
-      <div class="w-16 h-16 rounded-full bg-purple-500/10 text-purple-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-        <span class="material-symbols-outlined text-3xl">power_off</span>
-      </div>
-      <h3 class="font-headline-sm text-headline-sm text-primary">Thermal & Electrical Non-conductor</h3>
-    </div>
-    <div class="bento-card reveal reveal-delay-1 bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
-      <div class="w-16 h-16 rounded-full bg-teal-500/10 text-teal-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-        <span class="material-symbols-outlined text-3xl">build</span>
-      </div>
-      <h3 class="font-headline-sm text-headline-sm text-primary">Easy to Install</h3>
-    </div>
-    <div class="bento-card reveal reveal-delay-2 bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
-      <div class="w-16 h-16 rounded-full bg-indigo-500/10 text-indigo-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-        <span class="material-symbols-outlined text-3xl">flash_off</span>
-      </div>
-      <h3 class="font-headline-sm text-headline-sm text-primary">Anti-Static</h3>
-    </div>
-    <div class="bento-card reveal reveal-delay-3 bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
-      <div class="w-16 h-16 rounded-full bg-yellow-500/10 text-yellow-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-        <span class="material-symbols-outlined text-3xl">light_mode</span>
-      </div>
-      <h3 class="font-headline-sm text-headline-sm text-primary">UV Resistant</h3>
-    </div>
-  </div>
-</section>
-
-<!-- Turnkey Process Cycle Section -->
-<section class="py-24 bg-surface-container-lowest border-t border-outline-variant relative overflow-hidden">
-  <div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
-    <div class="mb-16 text-center reveal">
-      <span class="inline-block bg-secondary-fixed text-on-secondary-fixed font-label-sm px-3 py-1 rounded-sm uppercase tracking-wider mb-4">Our Methodology</span>
-      <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">
-        End-to-End Composite Engineering
-      </h2>
-      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-        From conceptual drawing to chemical installation, our robust execution cycle ensures standard-compliant excellence.
-      </p>
-    </div>
-
-    <!-- Timeline Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-      <!-- Connection line for desktop -->
-      <div class="hidden md:block absolute top-12 left-8 right-8 h-[2px] bg-outline-variant/60 z-0"></div>
-
-      <!-- Step 1 -->
-      <div class="reveal relative z-10 bg-surface-container-low border border-outline-variant rounded-xl p-6 group hover:bg-surface-container-highest transition-all duration-300">
-        <div class="w-12 h-12 rounded-full bg-primary text-on-primary font-bold text-headline-sm flex items-center justify-center mb-6 border-4 border-surface shadow-md group-hover:bg-secondary transition-colors">
-          01
-        </div>
-        <h3 class="font-headline-sm text-[18px] text-primary mb-2 font-bold flex items-center gap-2">
-          <span class="material-symbols-outlined text-secondary text-[20px]">architecture</span>
-          Engineering & Design
-        </h3>
-        <p class="text-on-surface-variant text-[14px] leading-relaxed">
-          Detailed CAD layout drafting and structural finite-element load calculations to ensure mechanical compatibility with specific sites.
-        </p>
-      </div>
-
-      <!-- Step 2 -->
-      <div class="reveal reveal-delay-1 relative z-10 bg-surface-container-low border border-outline-variant rounded-xl p-6 group hover:bg-surface-container-highest transition-all duration-300">
-        <div class="w-12 h-12 rounded-full bg-primary text-on-primary font-bold text-headline-sm flex items-center justify-center mb-6 border-4 border-surface shadow-md group-hover:bg-secondary transition-colors">
-          02
-        </div>
-        <h3 class="font-headline-sm text-[18px] text-primary mb-2 font-bold flex items-center gap-2">
-          <span class="material-symbols-outlined text-secondary text-[20px]">factory</span>
-          Advanced Fabrication
-        </h3>
-        <p class="text-on-surface-variant text-[14px] leading-relaxed">
-          State-of-the-art production including high-capacity Pultrusion, automated Filament Winding, and chemical-optimized Hand Lay-up techniques.
-        </p>
-      </div>
-
-      <!-- Step 3 -->
-      <div class="reveal reveal-delay-2 relative z-10 bg-surface-container-low border border-outline-variant rounded-xl p-6 group hover:bg-surface-container-highest transition-all duration-300">
-        <div class="w-12 h-12 rounded-full bg-primary text-on-primary font-bold text-headline-sm flex items-center justify-center mb-6 border-4 border-surface shadow-md group-hover:bg-secondary transition-colors">
-          03
-        </div>
-        <h3 class="font-headline-sm text-[18px] text-primary mb-2 font-bold flex items-center gap-2">
-          <span class="material-symbols-outlined text-secondary text-[20px]">fact_check</span>
-          Quality & Testing
-        </h3>
-        <p class="text-on-surface-variant text-[14px] leading-relaxed">
-          Rigorous physical testing of resin-viscosity, laminate glass-to-resin ratio, ASTM D638 tensile force, and Class 1 fire retardancy.
-        </p>
-      </div>
-
-      <!-- Step 4 -->
-      <div class="reveal reveal-delay-3 relative z-10 bg-surface-container-low border border-outline-variant rounded-xl p-6 group hover:bg-surface-container-highest transition-all duration-300">
-        <div class="w-12 h-12 rounded-full bg-primary text-on-primary font-bold text-headline-sm flex items-center justify-center mb-6 border-4 border-surface shadow-md group-hover:bg-secondary transition-colors">
-          04
-        </div>
-        <h3 class="font-headline-sm text-[18px] text-primary mb-2 font-bold flex items-center gap-2">
-          <span class="material-symbols-outlined text-secondary text-[20px]">local_shipping</span>
-          Turnkey Field Delivery
-        </h3>
-        <p class="text-on-surface-variant text-[14px] leading-relaxed">
-          Safe shipping and complete, secure site installation overseen by certified field engineers, backed by robust after-sales guarantee.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Call to Action (CTA) Section -->
-<section class="bg-primary text-on-primary py-20 relative overflow-hidden">
-  <!-- Diagonal Accent Element (matching the header/hero aesthetic) -->
-  <div class="absolute top-0 right-0 w-1/3 h-full bg-secondary-fixed/10 transform skew-x-[-15deg] translate-x-1/4 z-0"></div>
-  <!-- Abstract structural pattern overlay -->
-  <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 1px, transparent 1px, transparent 24px);"></div>
-  
-  <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10 text-center">
-    <div class="max-w-3xl mx-auto space-y-6 reveal">
-      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-secondary-fixed/90 text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-2 border border-secondary-fixed/20 shadow-sm">
-        Partner With Us
-      </span>
-      <h2 class="font-display-lg text-3xl sm:text-4xl md:text-5xl text-white leading-tight">
-        Ready to Build with <br class="block sm:hidden"/>
-        <span class="text-secondary-fixed">Uncompromised Strength?</span>
-      </h2>
-      <p class="text-sm sm:text-body-lg text-primary-fixed-dim max-w-2xl mx-auto leading-relaxed">
-        From customized pultruded profiles to complex dual-laminate chemical storage tanks, our engineers are ready to design and deliver certified composite solutions for your specific industry application.
-      </p>
-      <div class="pt-6 flex flex-col sm:flex-row justify-center gap-4">
-        <a class="bg-secondary-fixed text-white px-8 py-4 rounded font-headline-md text-headline-md border-b-2 border-secondary-fixed-dim hover:bg-secondary-fixed-dim transition-all shadow-md flex items-center justify-center gap-2 group active:scale-95" href="contact-us.html">
-          Contact Us Today
-          <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
-        </a>
-        <a class="bg-transparent text-on-primary border border-outline px-8 py-4 rounded font-headline-md text-headline-md hover:bg-surface/10 transition-all flex items-center justify-center gap-2 active:scale-95" href="products.html">
-          Explore Products
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Footer -->
-<footer class="bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-on-surface font-body-md text-body-md w-full py-12 border-t-4 border-secondary-fixed">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto mb-12">
-<div class="col-span-1 md:col-span-2 lg:col-span-1">
-<a href="index.html" class="inline-block font-headline-md text-headline-md font-bold text-secondary-fixed mb-4 uppercase hover:opacity-90 transition-opacity">
-                    <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo" class="h-12 md:h-16 w-auto object-contain drop-shadow-sm" />
-                </a>
-<p class="text-on-primary-container dark:text-on-surface-variant text-[14px] pr-4">
-                    Delivering unparalleled structural integrity and corrosion resistance through advanced composite engineering for industrial applications worldwide.
-                </p>
-</div>
-<div>
-      <h4 class="font-bold mb-4 text-white">Quick Links</h4>
-      <ul class="space-y-3">
-        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="index.html">Home</a></li>
-        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="about-us.html">About Us</a></li>
-        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">Products</a></li>
-        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="contact-us.html">Contact Us</a></li>
-      </ul>
-    </div>
-<div>
-<h4 class="font-bold mb-4 text-white">Products</h4>
-<ul class="space-y-3">
-<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">FRP Gratings</a></li>
-<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">FRP Cable Trays</a></li>
-<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">PP FRP Tanks</a></li>
-<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">FRP Profiles &amp; Poles</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold mb-4 text-white">Contact</h4>
-<ul class="space-y-3">
-        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="contact-us.html">Contact Support</a></li>
-        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="contact-us.html">Contact Us</a></li>
-<li class="flex items-start gap-2 text-on-primary-container mt-4">
-<span class="material-symbols-outlined text-[18px] mt-0.5">location_on</span>
-<span>Halol, Chandrapura, Gujarat</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto border-t border-primary-container pt-8 flex flex-col md:flex-row justify-between items-center text-[12px] text-on-primary-container">
-<div>© 2024 Kriza FRP Products. Complete Composite Solution. All Rights Reserved.</div>
-<div class="flex gap-4 mt-4 md:mt-0">
-<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
-</div>
-</div>
-</footer>
-
-<script>
-  // --- Mobile hamburger ---
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    mobileMenu.classList.toggle('open');
-  });
-
-  // --- Scroll-reveal with IntersectionObserver ---
-  const revealEls = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.05 });
-  revealEls.forEach(el => observer.observe(el));
-
-  // --- Hero Carousel Controller ---
-  const carousel = document.getElementById('hero-carousel');
-  if (carousel) {
-    const slides = carousel.querySelectorAll('.carousel-slide');
-    const prevBtn = document.getElementById('carousel-prev');
-    const nextBtn = document.getElementById('carousel-next');
-    const indicators = carousel.querySelectorAll('.carousel-indicator');
-    
-    let currentSlide = 0;
-    const slideDuration = 6000; // 6 seconds per slide
-    let carouselInterval = null;
-    let slideTimeout = null;
-    
-    function showSlide(index) {
-      // Clear any pending transition animations to prevent overlaps
-      if (slideTimeout) {
-        clearTimeout(slideTimeout);
-        slideTimeout = null;
-      }
-
-      // Clean up current active slide animations
-      const prevActiveSlide = slides[currentSlide];
-      const prevImage = prevActiveSlide.querySelector('.carousel-img');
-      const prevContent = prevActiveSlide.querySelector('.carousel-content');
-      
-      if (prevImage) {
-        prevImage.classList.remove('animate-kenburns');
-      }
-      if (prevContent) {
-        prevContent.classList.remove('translate-y-0', 'opacity-100');
-        prevContent.classList.add('translate-y-6', 'opacity-0');
-      }
-      
-      // Reset active slide visibility
-      prevActiveSlide.classList.remove('opacity-100', 'pointer-events-auto', 'z-10');
-      prevActiveSlide.classList.add('opacity-0', 'pointer-events-none', 'z-0');
-      
-      // Reset progress bars
-      indicators.forEach((indicator) => {
-        const progress = indicator.querySelector('.indicator-progress');
-        if (progress) {
-          progress.style.transition = 'none';
-          progress.style.width = '0%';
-        }
-      });
-
-      // Update current index (safely handling negative values)
-      currentSlide = ((index % slides.length) + slides.length) % slides.length;
-      
-      const activeSlide = slides[currentSlide];
-      const activeImage = activeSlide.querySelector('.carousel-img');
-      const activeContent = activeSlide.querySelector('.carousel-content');
-      
-      // Show slide
-      activeSlide.classList.remove('opacity-0', 'pointer-events-none', 'z-0');
-      activeSlide.classList.add('opacity-100', 'pointer-events-auto', 'z-10');
-      
-      // Capture the target index in local scope to prevent out-of-sync indicators
-      const targetIndex = currentSlide;
-
-      // Start animations after a microscopic delay to ensure state reset triggers the animation
-      slideTimeout = setTimeout(() => {
-        if (activeImage) {
-          activeImage.classList.add('animate-kenburns');
-        }
-        if (activeContent) {
-          activeContent.classList.remove('translate-y-6', 'opacity-0');
-          activeContent.classList.add('translate-y-0', 'opacity-100');
-        }
-        
-        // Start progress bar animation for active slide
-        const activeProgress = indicators[targetIndex].querySelector('.indicator-progress');
-        if (activeProgress) {
-          activeProgress.style.transition = `width ${slideDuration}ms linear`;
-          activeProgress.style.width = '100%';
-        }
-      }, 50);
-    }
-    
-    function startAutoplay() {
-      stopAutoplay();
-      carouselInterval = setInterval(() => {
-        showSlide(currentSlide + 1);
-      }, slideDuration);
-    }
-    
-    function stopAutoplay() {
-      if (carouselInterval) {
-        clearInterval(carouselInterval);
-        carouselInterval = null;
-      }
-    }
-    
-    // Event listeners for prev/next buttons
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        showSlide(currentSlide - 1);
-        startAutoplay(); // Reset autoplay timer
-      });
-    }
-    
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        showSlide(currentSlide + 1);
-        startAutoplay(); // Reset autoplay timer
-      });
-    }
-    
-    // Indicators clicking
-    indicators.forEach((indicator, idx) => {
-      indicator.addEventListener('click', () => {
-        showSlide(idx);
-        startAutoplay(); // Reset autoplay timer
-      });
-    });
-
-    // Pause on hover (only for real mouse pointers on desktop, ignoring touch/pen)
-    carousel.addEventListener('pointerenter', (e) => {
-      if (e.pointerType !== 'touch' && e.pointerType !== 'pen') {
-        stopAutoplay();
-      }
-    });
-    carousel.addEventListener('pointerleave', (e) => {
-      if (e.pointerType !== 'touch' && e.pointerType !== 'pen') {
-        startAutoplay();
-      }
-    });
-    
-    // Touch support (swipe)
-    let startX = 0;
-    carousel.addEventListener('touchstart', (e) => {
-      startX = e.touches[0].clientX;
-      stopAutoplay();
-    }, { passive: true });
-    
-    carousel.addEventListener('touchend', (e) => {
-      const endX = e.changedTouches[0].clientX;
-      const diffX = startX - endX;
-      
-      if (Math.abs(diffX) > 50) { // Swipe threshold
-        if (diffX > 0) {
-          // Swipe left -> Next slide
-          showSlide(currentSlide + 1);
+      const interval = setInterval(() => {
+        if (!loaded) {
+          progress += Math.floor(Math.random() * 8) + 3;
+          if (progress > 90) progress = 90;
         } else {
-          // Swipe right -> Prev slide
-          showSlide(currentSlide - 1);
+          progress += Math.floor(Math.random() * 15) + 15;
+          if (progress > 100) progress = 100;
+        }
+
+        progressBar.style.width = `${progress}%`;
+        const msgIdx = Math.min(Math.floor((progress / 100) * statusMessages.length), statusMessages.length - 1);
+        preloaderText.textContent = statusMessages[msgIdx];
+
+        if (progress >= 100) {
+          clearInterval(interval);
+          setTimeout(() => {
+            preloader.classList.add('opacity-0', 'pointer-events-none');
+            const preloaderContent = preloader.querySelector('.flex');
+            if (preloaderContent) {
+              preloaderContent.style.transform = 'scale(0.95)';
+              preloaderContent.style.transition = 'transform 0.6s ease-in-out';
+            }
+            setTimeout(() => preloader.remove(), 700);
+          }, 300);
+        }
+      }, 80);
+
+      window.addEventListener('load', () => {
+        loaded = true;
+      });
+
+      setTimeout(() => {
+        loaded = true;
+      }, 3000);
+    })();
+  </script>
+  <!-- TopNavBar -->
+  <nav
+    class="bg-surface/90 dark:bg-primary/90 backdrop-blur-md fixed top-0 left-0 w-full z-50 border-b border-outline-variant dark:border-primary-container shadow-sm">
+    <!-- Top Info Bar -->
+    <div class="bg-primary text-primary-fixed-dim text-[10px] md:text-xs py-1.5 border-b border-primary-container/40">
+      <div
+        class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex flex-row justify-center md:justify-end items-center gap-4 sm:gap-6">
+        <div class="flex items-center gap-1 text-primary-fixed-dim">
+          <span class="material-symbols-outlined text-[13px] md:text-sm text-secondary-fixed">phone</span>
+          <span>Mobile:
+            <a href="tel:+918128519480" class="hover:text-white transition-colors text-white font-semibold">+91 81285
+              19480</a> /
+            <a href="tel:+919898972016" class="hover:text-white transition-colors text-white font-semibold">+91 98989
+              72016</a>
+          </span>
+        </div>
+        <span class="text-outline-variant/40">|</span>
+        <a href="mailto:info@krizafrp.co.in" class="hover:text-white transition-colors flex items-center gap-1">
+          <span class="material-symbols-outlined text-[13px] md:text-sm text-secondary-fixed">mail</span>
+          <span>E-Mail: <strong class="text-white">info@krizafrp.co.in</strong></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="relative flex items-center justify-between px-margin-mobile md:px-8 py-3 w-full mx-auto">
+      <a href="index.html"
+        class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-black tracking-tighter text-primary dark:text-secondary-fixed uppercase flex items-center gap-2 hover:opacity-90 transition-opacity">
+        <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo"
+          class="h-10 md:h-12 w-auto object-contain drop-shadow-sm" style="max-height: 48px;" />
+      </a>
+      <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center space-x-8">
+        <a class="text-primary dark:text-secondary-fixed border-b-2 border-secondary-fixed pb-1 hover:text-secondary transition-all duration-300 font-bold"
+          href="index.html">Home</a>
+        <a class="text-on-surface-variant font-medium hover:text-secondary transition-all duration-300"
+          href="about-us.html">About Us</a>
+        <a class="text-on-surface-variant font-medium hover:text-secondary transition-all duration-300"
+          href="products.html">Products</a>
+        <a class="text-on-surface-variant font-medium hover:text-secondary transition-all duration-300"
+          href="contact-us.html">Contact Us</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="hamburger" aria-label="Toggle menu" class="md:hidden flex flex-col gap-[6px] p-2 text-primary">
+          <span class="ham-bar"></span>
+          <span class="ham-bar"></span>
+          <span class="ham-bar"></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden bg-surface border-t border-outline-variant">
+      <div class="flex flex-col px-margin-mobile py-4 gap-4">
+        <a class="text-primary font-bold hover:text-secondary transition-colors" href="index.html">Home</a>
+        <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors" href="about-us.html">About
+          Us</a>
+        <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors"
+          href="products.html">Products</a>
+        <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors"
+          href="contact-us.html">Contact Us</a>
+
+      </div>
+    </div>
+  </nav>
+  <!-- Hero Section (Carousel) -->
+  <section id="hero-carousel"
+    class="relative bg-primary text-on-primary overflow-hidden clip-diagonal h-[80vh] min-h-[460px] sm:h-[80vh] sm:min-h-[520px] md:h-[85vh] md:min-h-[660px] lg:h-[85vh] lg:min-h-[740px]">
+    <!-- Slides Container -->
+    <div class="relative w-full h-full overflow-hidden">
+
+      <!-- Slide 0: General Overview -->
+      <div
+        class="carousel-slide absolute inset-0 w-full h-full flex items-center transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none z-0">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0 opacity-40 mix-blend-overlay">
+          <img alt="Advanced industrial manufacturing facility bathed in bright, cold lighting."
+            class="carousel-img w-full h-full object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCScvQWgBJv8ciOJ6DmgUjfKb-nQlWBKL4liW35Ia19XSgo-KyAYzGAlJPw5FnLDEezXr4UsbgEw_EFiFFQroh7a_KTLGyVaDAwB8XXgpAoa1790ahBykvrpbaA7NTF6i4zIATVXsn2aYLDeI-_amcWkSP5P9-I08ctdjsPXE71UL2rtm-DDkit3ymoaVnrynl5brR3kskLg1lW8YewDajZsw_oy0LDGzxOqKArRxCc8tpbTNu8p0bw-V4i43zp67AwHf7c8O-kCTx1" />
+        </div>
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 z-10 bg-gradient-to-r from-primary via-primary/75 to-transparent"></div>
+        <!-- Diagonal Accent Element -->
+        <div
+          class="absolute top-0 right-0 w-1/2 h-full bg-tertiary-fixed-dim/10 transform skew-x-[-15deg] translate-x-1/4 z-0">
+        </div>
+        <!-- Content -->
+        <div
+          class="relative z-20 max-w-max-width w-full mx-auto px-6 sm:px-20 md:px-24 lg:px-32 xl:px-40 h-full flex flex-col justify-center pb-20 sm:pb-24 md:pb-20 pt-8 sm:pt-12">
+          <div
+            class="carousel-content max-w-3xl transform translate-y-6 opacity-0 transition-all duration-700 ease-out">
+            <span
+              class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-secondary-fixed/90 text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-3 sm:mb-4 border border-secondary-fixed/20 shadow-sm">
+              Composite Excellence
+            </span>
+            <h1
+              class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 sm:mb-6 leading-tight">
+              Beyond <span class="text-secondary-fixed block md:inline">Quality,</span> <br class="hidden md:block" />
+              Proud <span class="text-tertiary-fixed-dim">Workmanship</span>
+            </h1>
+            <p class="text-sm sm:text-body-lg text-primary-fixed mb-6 sm:mb-10 max-w-2xl">
+              Complete Composite Solution for Modern Industry. Delivering high-performance, corrosion-resistant FRP
+              structures engineered for ultimate durability.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <a class="bg-secondary-fixed text-primary px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md border-b-2 border-secondary-fixed-dim hover:bg-secondary-fixed-dim transition-all shadow-sm flex items-center justify-center gap-2"
+                href="products.html">
+                View Products
+                <span class="material-symbols-outlined text-xl">arrow_forward</span>
+              </a>
+              <a class="bg-transparent text-on-primary border border-outline px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md hover:bg-surface/10 transition-all flex items-center justify-center"
+                href="contact-us.html">
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 1: FRP Gratings -->
+      <div
+        class="carousel-slide absolute inset-0 w-full h-full flex items-center transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none z-0">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0 opacity-35 mix-blend-overlay">
+          <img alt="High-strength FRP molded gratings installation." class="carousel-img w-full h-full object-cover"
+            src="assets/frp_gratings.png" />
+        </div>
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 z-10 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+        <!-- Diagonal Accent Element -->
+        <div
+          class="absolute top-0 right-0 w-1/2 h-full bg-tertiary-fixed-dim/10 transform skew-x-[-15deg] translate-x-1/4 z-0">
+        </div>
+        <!-- Content -->
+        <div
+          class="relative z-20 max-w-max-width w-full mx-auto px-6 sm:px-20 md:px-24 lg:px-32 xl:px-40 h-full flex flex-col justify-center pb-20 sm:pb-24 md:pb-20 pt-8 sm:pt-12">
+          <div
+            class="carousel-content max-w-3xl transform translate-y-6 opacity-0 transition-all duration-700 ease-out">
+            <span
+              class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-secondary-fixed/90 text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-3 sm:mb-4 border border-secondary-fixed/20 shadow-sm">
+              OSHA & ASTM Compliant
+            </span>
+            <h1
+              class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 sm:mb-6 leading-tight">
+              FRP Molded & <br class="hidden md:block" />
+              <span class="text-tertiary-fixed-dim">Pultruded Gratings</span>
+            </h1>
+            <p class="text-sm sm:text-body-lg text-primary-fixed mb-6 sm:mb-10 max-w-2xl">
+              High slip resistance, maximum structural stability, and absolute corrosion resistance for industrial
+              platforms, trench covers, and offshore walkways.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <a class="bg-secondary-fixed text-primary px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md border-b-2 border-secondary-fixed-dim hover:bg-secondary-fixed-dim transition-all shadow-sm flex items-center justify-center gap-2"
+                href="products.html">
+                Inquire Now
+                <span class="material-symbols-outlined text-xl">arrow_forward</span>
+              </a>
+              <a class="bg-transparent text-on-primary border border-outline px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md hover:bg-surface/10 transition-all flex items-center justify-center"
+                href="contact-us.html">
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: FRP Cable Trays -->
+      <div
+        class="carousel-slide absolute inset-0 w-full h-full flex items-center transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none z-0">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0 opacity-35 mix-blend-overlay">
+          <img alt="Heavy duty FRP cable trays." class="carousel-img w-full h-full object-cover"
+            src="assets/frp_cable_trays.png" />
+        </div>
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 z-10 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+        <!-- Diagonal Accent Element -->
+        <div
+          class="absolute top-0 right-0 w-1/2 h-full bg-tertiary-fixed-dim/10 transform skew-x-[-15deg] translate-x-1/4 z-0">
+        </div>
+        <!-- Content -->
+        <div
+          class="relative z-20 max-w-max-width w-full mx-auto px-6 sm:px-20 md:px-24 lg:px-32 xl:px-40 h-full flex flex-col justify-center pb-20 sm:pb-24 md:pb-20 pt-8 sm:pt-12">
+          <div
+            class="carousel-content max-w-3xl transform translate-y-6 opacity-0 transition-all duration-700 ease-out">
+            <span
+              class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-secondary-fixed/90 text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-3 sm:mb-4 border border-secondary-fixed/20 shadow-sm">
+              NEMA FG-1 Certified
+            </span>
+            <h1
+              class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 sm:mb-6 leading-tight">
+              Industrial FRP <br class="hidden md:block" />
+              <span class="text-tertiary-fixed-dim">Cable Trays</span>
+            </h1>
+            <p class="text-sm sm:text-body-lg text-primary-fixed mb-6 sm:mb-10 max-w-2xl">
+              Ladder & perforated non-conductive cable management systems. Perfect for shielding critical electrical
+              systems in extreme acid & chemical fumes.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <a class="bg-secondary-fixed text-primary px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md border-b-2 border-secondary-fixed-dim hover:bg-secondary-fixed-dim transition-all shadow-sm flex items-center justify-center gap-2"
+                href="products.html">
+                Explore Trays
+                <span class="material-symbols-outlined text-xl">arrow_forward</span>
+              </a>
+              <a class="bg-transparent text-on-primary border border-outline px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md hover:bg-surface/10 transition-all flex items-center justify-center"
+                href="contact-us.html">
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: PP FRP Chemical Storage Tanks -->
+      <div
+        class="carousel-slide absolute inset-0 w-full h-full flex items-center transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none z-0">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0 opacity-35 mix-blend-overlay">
+          <img alt="Dual laminated PP FRP Chemical storage tanks." class="carousel-img w-full h-full object-cover"
+            src="assets/pp_frp_tanks.png" />
+        </div>
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 z-10 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+        <!-- Diagonal Accent Element -->
+        <div
+          class="absolute top-0 right-0 w-1/2 h-full bg-tertiary-fixed-dim/10 transform skew-x-[-15deg] translate-x-1/4 z-0">
+        </div>
+        <!-- Content -->
+        <div
+          class="relative z-20 max-w-max-width w-full mx-auto px-6 sm:px-20 md:px-24 lg:px-32 xl:px-40 h-full flex flex-col justify-center pb-20 sm:pb-24 md:pb-20 pt-8 sm:pt-12">
+          <div
+            class="carousel-content max-w-3xl transform translate-y-6 opacity-0 transition-all duration-700 ease-out">
+            <span
+              class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-secondary-fixed/90 text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-3 sm:mb-4 border border-secondary-fixed/20 shadow-sm">
+              ASME RTP-1 Compliance
+            </span>
+            <h1
+              class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 sm:mb-6 leading-tight">
+              PP FRP Chemical <br class="hidden md:block" />
+              <span class="text-tertiary-fixed-dim">Storage Tanks</span>
+            </h1>
+            <p class="text-sm sm:text-body-lg text-primary-fixed mb-6 sm:mb-10 max-w-2xl">
+              Filament wound, corrosion-resistant dual-laminate vessels designed for storage of aggressive acids,
+              alkalis, and heavy industrial chemicals.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <a class="bg-secondary-fixed text-primary px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md border-b-2 border-secondary-fixed-dim hover:bg-secondary-fixed-dim transition-all shadow-sm flex items-center justify-center gap-2"
+                href="products.html">
+                View Vessels
+                <span class="material-symbols-outlined text-xl">arrow_forward</span>
+              </a>
+              <a class="bg-transparent text-on-primary border border-outline px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md hover:bg-surface/10 transition-all flex items-center justify-center"
+                href="contact-us.html">
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: FRP Walkways & Structural sections -->
+      <div
+        class="carousel-slide absolute inset-0 w-full h-full flex items-center transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none z-0">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0 opacity-35 mix-blend-overlay">
+          <img alt="Pre-engineered FRP walkways and guardrails." class="carousel-img w-full h-full object-cover"
+            src="assets/Walk%20Way-20260516T054832Z-3-001/Walk%20Way/WV.png" />
+        </div>
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 z-10 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+        <!-- Diagonal Accent Element -->
+        <div
+          class="absolute top-0 right-0 w-1/2 h-full bg-tertiary-fixed-dim/10 transform skew-x-[-15deg] translate-x-1/4 z-0">
+        </div>
+        <!-- Content -->
+        <div
+          class="relative z-20 max-w-max-width w-full mx-auto px-6 sm:px-20 md:px-24 lg:px-32 xl:px-40 h-full flex flex-col justify-center pb-20 sm:pb-24 md:pb-20 pt-8 sm:pt-12">
+          <div
+            class="carousel-content max-w-3xl transform translate-y-6 opacity-0 transition-all duration-700 ease-out">
+            <span
+              class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-secondary-fixed/90 text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-3 sm:mb-4 border border-secondary-fixed/20 shadow-sm">
+              Heavy-Duty Composite Structural
+            </span>
+            <h1
+              class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 sm:mb-6 leading-tight">
+              Walkways, Handrails & <br class="hidden md:block" />
+              <span class="text-tertiary-fixed-dim">Custom Profiles</span>
+            </h1>
+            <p class="text-sm sm:text-body-lg text-primary-fixed mb-6 sm:mb-10 max-w-2xl">
+              Pultruded profiles, beams, poles, and handrails engineered as lightweight, high-strength structural
+              replacements for steel and concrete.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <a class="bg-secondary-fixed text-primary px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md border-b-2 border-secondary-fixed-dim hover:bg-secondary-fixed-dim transition-all shadow-sm flex items-center justify-center gap-2"
+                href="products.html">
+                Explore Profiles
+                <span class="material-symbols-outlined text-xl">arrow_forward</span>
+              </a>
+              <a class="bg-transparent text-on-primary border border-outline px-5 py-3 md:px-8 md:py-4 rounded font-headline-md text-[15px] md:text-headline-md hover:bg-surface/10 transition-all flex items-center justify-center"
+                href="contact-us.html">
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button id="carousel-prev" aria-label="Previous slide"
+      class="hidden sm:flex absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-white/10 hover:bg-secondary text-white hover:scale-105 border border-white/15 hover:border-secondary transition-all shadow-lg backdrop-blur-sm group">
+      <span class="material-symbols-outlined transition-transform group-hover:-translate-x-0.5">chevron_left</span>
+    </button>
+    <button id="carousel-next" aria-label="Next slide"
+      class="hidden sm:flex absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-white/10 hover:bg-secondary text-white hover:scale-105 border border-white/15 hover:border-secondary transition-all shadow-lg backdrop-blur-sm group">
+      <span class="material-symbols-outlined transition-transform group-hover:translate-x-0.5">chevron_right</span>
+    </button>
+
+    <!-- Progress Bar Indicators -->
+    <div class="absolute bottom-8 sm:bottom-12 md:bottom-20 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3">
+      <button class="carousel-indicator w-12 md:w-16 h-1 rounded-full bg-white/20 overflow-hidden relative group"
+        data-slide="0" aria-label="Go to slide 1">
+        <span class="indicator-progress absolute inset-y-0 left-0 w-0 bg-secondary transition-all"></span>
+      </button>
+      <button class="carousel-indicator w-12 md:w-16 h-1 rounded-full bg-white/20 overflow-hidden relative group"
+        data-slide="1" aria-label="Go to slide 2">
+        <span class="indicator-progress absolute inset-y-0 left-0 w-0 bg-secondary transition-all"></span>
+      </button>
+      <button class="carousel-indicator w-12 md:w-16 h-1 rounded-full bg-white/20 overflow-hidden relative group"
+        data-slide="2" aria-label="Go to slide 3">
+        <span class="indicator-progress absolute inset-y-0 left-0 w-0 bg-secondary transition-all"></span>
+      </button>
+      <button class="carousel-indicator w-12 md:w-16 h-1 rounded-full bg-white/20 overflow-hidden relative group"
+        data-slide="3" aria-label="Go to slide 4">
+        <span class="indicator-progress absolute inset-y-0 left-0 w-0 bg-secondary transition-all"></span>
+      </button>
+      <button class="carousel-indicator w-12 md:w-16 h-1 rounded-full bg-white/20 overflow-hidden relative group"
+        data-slide="4" aria-label="Go to slide 5">
+        <span class="indicator-progress absolute inset-y-0 left-0 w-0 bg-secondary transition-all"></span>
+      </button>
+    </div>
+  </section>
+
+
+  <!-- Company Overview Section -->
+  <section class="py-24 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+      <div class="space-y-6 reveal pr-0 lg:pr-12">
+        <span
+          class="inline-block bg-secondary-fixed text-on-secondary-fixed font-label-sm px-3 py-1 rounded-sm uppercase tracking-wider">Our
+          Profile</span>
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-tight">
+          25+ Years of Engineering Legacy & Composite Mastery
+        </h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">
+          KRIZA FRP PRODUCTS is a premier manufacturer specializing in high-performance Fiberglass Reinforced Polymer
+          (FRP/GRP) composite solutions. We design, engineer, and manufacture structurally superior products tailored to
+          withstand the most corrosive, heavy-duty industrial and offshore environments.
+        </p>
+        <p class="font-body-md text-body-md text-on-surface-variant">
+          From initial conceptual drawing and rigorous mechanical load engineering to automated pultrusion and turnkey
+          site installation, we deliver absolute compliance with international ASTM, NEMA, ASME, and OSHA standards.
+        </p>
+        <div class="pt-6 grid grid-cols-2 gap-4">
+          <div class="border border-outline-variant rounded-lg p-4 bg-surface-container-lowest text-center bento-card">
+            <span class="font-headline-md text-headline-md text-secondary block font-bold">ISO 9001</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Certified
+              Facility</span>
+          </div>
+          <div class="border border-outline-variant rounded-lg p-4 bg-surface-container-lowest text-center bento-card">
+            <span class="font-headline-md text-headline-md text-secondary block font-bold">Turnkey</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Design &
+              Install</span>
+          </div>
+        </div>
+        <div class="pt-4">
+          <a class="inline-flex items-center gap-2 text-primary font-bold hover:text-secondary transition-colors group"
+            href="about-us.html">
+            Read Our Full Story
+            <span
+              class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+      <div class="relative h-[400px] lg:h-[480px] reveal reveal-delay-1 mt-10 lg:mt-0">
+        <img alt="Advanced industrial machinery and precise composite material handling"
+          class="w-full h-full object-cover rounded-xl border border-outline-variant shadow-lg"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw8FI3-8VQsbHp6pgqmKxexXyX6NBSnht2MsyaEG6ZUP9VSTH_qEDMYctOHz1cDe_JqLYsPmyU0OfLF-AV02Pglwnaty4TVN12OKAYwI1rTwLYtmi4uE64HAb2i_xTHnCjFKlBu9Ad0ruki8fUQPwVS8UmYxWm1OTwL7baWNw_tziVcQIO4d6oND5nQybVJ5QIBEdHmC17HNQTlKJN8tSjspTdjW8xPNmhr5zoTULzWxGrT83Ulu0lETuYnJuwhKwlIERDDYNqli7s" />
+        <div
+          class="absolute -bottom-6 -right-6 w-32 h-32 border-2 border-secondary rounded-xl border-t-0 border-l-0 hidden lg:block z-[-1]">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer's Industry Segment Section -->
+  <section class="py-24 bg-surface-container-lowest border-y border-outline-variant relative">
+    <div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+      <div class="mb-16 text-center">
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Customer's Industry
+          Segment</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Kriza FRP Products serves a
+          diverse range of critical industries.</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4">
+        <div
+          class="reveal bg-surface border border-outline-variant px-6 py-4 rounded-full font-headline-sm text-primary flex items-center gap-3 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-default">
+          <span class="material-symbols-outlined text-secondary-fixed">water_drop</span> Water & Waste Water Industry
+        </div>
+        <div
+          class="reveal reveal-delay-1 bg-surface border border-outline-variant px-6 py-4 rounded-full font-headline-sm text-primary flex items-center gap-3 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-default">
+          <span class="material-symbols-outlined text-secondary-fixed">compost</span> Fertilizer
+        </div>
+        <div
+          class="reveal reveal-delay-2 bg-surface border border-outline-variant px-6 py-4 rounded-full font-headline-sm text-primary flex items-center gap-3 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-default">
+          <span class="material-symbols-outlined text-secondary-fixed">agriculture</span> Dairy
+        </div>
+        <div
+          class="reveal reveal-delay-3 bg-surface border border-outline-variant px-6 py-4 rounded-full font-headline-sm text-primary flex items-center gap-3 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-default">
+          <span class="material-symbols-outlined text-secondary-fixed">restaurant</span> F&B Industry
+        </div>
+        <div
+          class="reveal bg-surface border border-outline-variant px-6 py-4 rounded-full font-headline-sm text-primary flex items-center gap-3 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-default">
+          <span class="material-symbols-outlined text-secondary-fixed">anchor</span> Marine & Offshore Application
+        </div>
+        <div
+          class="reveal reveal-delay-1 bg-surface border border-outline-variant px-6 py-4 rounded-full font-headline-sm text-primary flex items-center gap-3 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-default">
+          <span class="material-symbols-outlined text-secondary-fixed">train</span> Railway
+        </div>
+        <div
+          class="reveal reveal-delay-2 bg-surface border border-outline-variant px-6 py-4 rounded-full font-headline-sm text-primary flex items-center gap-3 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-default">
+          <span class="material-symbols-outlined text-secondary-fixed">bolt</span> Electrical & Insulator Manufacture
+        </div>
+        <div
+          class="reveal reveal-delay-3 bg-surface border border-outline-variant px-6 py-4 rounded-full font-headline-sm text-primary flex items-center gap-3 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-default">
+          <span class="material-symbols-outlined text-secondary-fixed">account_balance</span> Municipal & Government
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Product Solutions Section -->
+  <section class="py-24 bg-surface border-b border-outline-variant relative">
+    <div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+      <div class="mb-16 text-center reveal">
+        <span
+          class="inline-block bg-secondary-fixed text-on-secondary-fixed font-label-sm px-3 py-1 rounded-sm uppercase tracking-wider mb-4">Our
+          Product Catalog</span>
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">
+          Engineered Composite Solutions
+        </h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+          High-performance fiberglass solutions designed to substitute traditional steel and concrete in heavy chemical,
+          coastal, and structural environments.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Product 1: Gratings -->
+        <article
+          class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col relative bento-card reveal">
+          <div
+            class="absolute top-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10">
+          </div>
+          <div class="h-48 bg-surface-variant relative overflow-hidden">
+            <img alt="FRP Molded Grating"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="assets/frp_gratings.png" />
+            <div class="absolute top-4 right-4">
+              <span
+                class="bg-primary/95 text-on-primary backdrop-blur-sm px-2 py-1 rounded-sm font-label-sm text-label-sm uppercase tracking-wider">OSHA
+                Approved</span>
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="font-headline-md text-primary text-[20px] mb-2 font-bold">FRP Gratings</h3>
+              <p class="text-on-surface-variant text-[14px] leading-relaxed">
+                Slip-resistant Molded and Pultruded gratings offering extreme structural stability for platforms, trench
+                covers, and offshore walkways.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 2: Cable Trays -->
+        <article
+          class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-1">
+          <div
+            class="absolute top-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10">
+          </div>
+          <div class="h-48 bg-surface-variant relative overflow-hidden">
+            <img alt="FRP Cable Tray"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="assets/frp_cable_trays.png" />
+            <div class="absolute top-4 right-4">
+              <span
+                class="bg-primary/95 text-on-primary backdrop-blur-sm px-2 py-1 rounded-sm font-label-sm text-label-sm uppercase tracking-wider">NEMA
+                FG-1</span>
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="font-headline-md text-primary text-[20px] mb-2 font-bold">FRP Cable Trays</h3>
+              <p class="text-on-surface-variant text-[14px] leading-relaxed">
+                Ladder and Perforated non-conductive cable trays designed to protect high-voltage electrical runs from
+                aggressive acid fumes and humidity.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 3: PP FRP Tanks -->
+        <article
+          class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-2">
+          <div
+            class="absolute top-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10">
+          </div>
+          <div class="h-48 bg-surface-variant relative overflow-hidden">
+            <img alt="PP FRP Storage Tank"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="assets/pp_frp_tanks.png" />
+            <div class="absolute top-4 right-4">
+              <span
+                class="bg-primary/95 text-on-primary backdrop-blur-sm px-2 py-1 rounded-sm font-label-sm text-label-sm uppercase tracking-wider">ASME
+                RTP 1</span>
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="font-headline-md text-primary text-[20px] mb-2 font-bold">PP FRP Tanks</h3>
+              <p class="text-on-surface-variant text-[14px] leading-relaxed">
+                Dual-laminated, chemically inert chemical storage and processing tanks engineered using advanced
+                filament winding for extreme chemical storage.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 4: Profiles & Poles -->
+        <article
+          class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-3">
+          <div
+            class="absolute top-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10">
+          </div>
+          <div class="h-48 bg-surface-variant relative overflow-hidden">
+            <img alt="FRP Structural Profiles"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="assets/frp_profiles.png" />
+            <div class="absolute top-4 right-4">
+              <span
+                class="bg-primary/95 text-on-primary backdrop-blur-sm px-2 py-1 rounded-sm font-label-sm text-label-sm uppercase tracking-wider">Heavy
+                Profile</span>
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="font-headline-md text-primary text-[20px] mb-2 font-bold">FRP Custom Sections</h3>
+              <p class="text-on-surface-variant text-[14px] leading-relaxed">
+                Pultruded structural beams, angles, channels, non-corrosive poles, and pre-engineered pedestrian
+                walkways designed for absolute life-safety.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="mt-16 text-center reveal">
+        <a class="bg-primary text-on-primary px-8 py-4 rounded font-headline-md text-headline-md hover:bg-primary-container border-b-2 border-primary-container transition-all shadow-md inline-flex items-center gap-2"
+          href="products.html">
+          Explore Complete Catalog
+          <span class="material-symbols-outlined text-xl">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advantages of FRP/GRP Products Section -->
+  <section class="py-24 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="mb-16 text-center">
+      <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Advantages of FRP/GRP
+        Products</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Engineered for environments where
+        traditional materials fail. Discover why industry leaders choose Fibre-Reinforced Plastic.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div
+        class="bento-card reveal bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
+        <div
+          class="w-16 h-16 rounded-full bg-red-500/10 text-red-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-3xl">local_fire_department</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary">Fire Retardant</h3>
+      </div>
+      <div
+        class="bento-card reveal reveal-delay-1 bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
+        <div
+          class="w-16 h-16 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-3xl">fitness_center</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary">High Strength</h3>
+      </div>
+      <div
+        class="bento-card reveal reveal-delay-2 bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
+        <div
+          class="w-16 h-16 rounded-full bg-orange-500/10 text-orange-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-3xl">water_drop</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary">Corrosion & Chemical Resistance</h3>
+      </div>
+      <div
+        class="bento-card reveal reveal-delay-3 bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
+        <div
+          class="w-16 h-16 rounded-full bg-green-500/10 text-green-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-3xl">feather</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary">Light in Weight</h3>
+      </div>
+      <div
+        class="bento-card reveal bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
+        <div
+          class="w-16 h-16 rounded-full bg-purple-500/10 text-purple-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-3xl">power_off</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary">Thermal & Electrical Non-conductor</h3>
+      </div>
+      <div
+        class="bento-card reveal reveal-delay-1 bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
+        <div
+          class="w-16 h-16 rounded-full bg-teal-500/10 text-teal-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-3xl">build</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary">Easy to Install</h3>
+      </div>
+      <div
+        class="bento-card reveal reveal-delay-2 bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
+        <div
+          class="w-16 h-16 rounded-full bg-indigo-500/10 text-indigo-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-3xl">flash_off</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary">Anti-Static</h3>
+      </div>
+      <div
+        class="bento-card reveal reveal-delay-3 bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
+        <div
+          class="w-16 h-16 rounded-full bg-yellow-500/10 text-yellow-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-3xl">light_mode</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary">UV Resistant</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Turnkey Process Cycle Section -->
+  <section class="py-24 bg-surface-container-lowest border-t border-outline-variant relative overflow-hidden">
+    <div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+      <div class="mb-16 text-center reveal">
+        <span
+          class="inline-block bg-secondary-fixed text-on-secondary-fixed font-label-sm px-3 py-1 rounded-sm uppercase tracking-wider mb-4">Our
+          Methodology</span>
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">
+          End-to-End Composite Engineering
+        </h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+          From conceptual drawing to chemical installation, our robust execution cycle ensures standard-compliant
+          excellence.
+        </p>
+      </div>
+
+      <!-- Timeline Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+        <!-- Connection line for desktop -->
+        <div class="hidden md:block absolute top-12 left-8 right-8 h-[2px] bg-outline-variant/60 z-0"></div>
+
+        <!-- Step 1 -->
+        <div
+          class="reveal relative z-10 bg-surface-container-low border border-outline-variant rounded-xl p-6 group hover:bg-surface-container-highest transition-all duration-300">
+          <div
+            class="w-12 h-12 rounded-full bg-primary text-on-primary font-bold text-headline-sm flex items-center justify-center mb-6 border-4 border-surface shadow-md group-hover:bg-secondary transition-colors">
+            01
+          </div>
+          <h3 class="font-headline-sm text-[18px] text-primary mb-2 font-bold flex items-center gap-2">
+            <span class="material-symbols-outlined text-secondary text-[20px]">architecture</span>
+            Engineering & Design
+          </h3>
+          <p class="text-on-surface-variant text-[14px] leading-relaxed">
+            Detailed CAD layout drafting and structural finite-element load calculations to ensure mechanical
+            compatibility with specific sites.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div
+          class="reveal reveal-delay-1 relative z-10 bg-surface-container-low border border-outline-variant rounded-xl p-6 group hover:bg-surface-container-highest transition-all duration-300">
+          <div
+            class="w-12 h-12 rounded-full bg-primary text-on-primary font-bold text-headline-sm flex items-center justify-center mb-6 border-4 border-surface shadow-md group-hover:bg-secondary transition-colors">
+            02
+          </div>
+          <h3 class="font-headline-sm text-[18px] text-primary mb-2 font-bold flex items-center gap-2">
+            <span class="material-symbols-outlined text-secondary text-[20px]">factory</span>
+            Advanced Fabrication
+          </h3>
+          <p class="text-on-surface-variant text-[14px] leading-relaxed">
+            State-of-the-art production including high-capacity Pultrusion, automated Filament Winding, and
+            chemical-optimized Hand Lay-up techniques.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div
+          class="reveal reveal-delay-2 relative z-10 bg-surface-container-low border border-outline-variant rounded-xl p-6 group hover:bg-surface-container-highest transition-all duration-300">
+          <div
+            class="w-12 h-12 rounded-full bg-primary text-on-primary font-bold text-headline-sm flex items-center justify-center mb-6 border-4 border-surface shadow-md group-hover:bg-secondary transition-colors">
+            03
+          </div>
+          <h3 class="font-headline-sm text-[18px] text-primary mb-2 font-bold flex items-center gap-2">
+            <span class="material-symbols-outlined text-secondary text-[20px]">fact_check</span>
+            Quality & Testing
+          </h3>
+          <p class="text-on-surface-variant text-[14px] leading-relaxed">
+            Rigorous physical testing of resin-viscosity, laminate glass-to-resin ratio, ASTM D638 tensile force, and
+            Class 1 fire retardancy.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div
+          class="reveal reveal-delay-3 relative z-10 bg-surface-container-low border border-outline-variant rounded-xl p-6 group hover:bg-surface-container-highest transition-all duration-300">
+          <div
+            class="w-12 h-12 rounded-full bg-primary text-on-primary font-bold text-headline-sm flex items-center justify-center mb-6 border-4 border-surface shadow-md group-hover:bg-secondary transition-colors">
+            04
+          </div>
+          <h3 class="font-headline-sm text-[18px] text-primary mb-2 font-bold flex items-center gap-2">
+            <span class="material-symbols-outlined text-secondary text-[20px]">local_shipping</span>
+            Turnkey Field Delivery
+          </h3>
+          <p class="text-on-surface-variant text-[14px] leading-relaxed">
+            Safe shipping and complete, secure site installation overseen by certified field engineers, backed by robust
+            after-sales guarantee.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action (CTA) Section -->
+  <section class="bg-primary text-on-primary py-20 relative overflow-hidden">
+    <!-- Diagonal Accent Element (matching the header/hero aesthetic) -->
+    <div
+      class="absolute top-0 right-0 w-1/3 h-full bg-secondary-fixed/10 transform skew-x-[-15deg] translate-x-1/4 z-0">
+    </div>
+    <!-- Abstract structural pattern overlay -->
+    <div class="absolute inset-0 opacity-5"
+      style="background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 1px, transparent 1px, transparent 24px);">
+    </div>
+
+    <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10 text-center">
+      <div class="max-w-3xl mx-auto space-y-6 reveal">
+        <span
+          class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-secondary-fixed/90 text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-2 border border-secondary-fixed/20 shadow-sm">
+          Partner With Us
+        </span>
+        <h2 class="font-display-lg text-3xl sm:text-4xl md:text-5xl text-white leading-tight">
+          Ready to Build with <br class="block sm:hidden" />
+          <span class="text-secondary-fixed">Uncompromised Strength?</span>
+        </h2>
+        <p class="text-sm sm:text-body-lg text-primary-fixed-dim max-w-2xl mx-auto leading-relaxed">
+          From customized pultruded profiles to complex dual-laminate chemical storage tanks, our engineers are ready to
+          design and deliver certified composite solutions for your specific industry application.
+        </p>
+        <div class="pt-6 flex flex-col sm:flex-row justify-center gap-4">
+          <a class="bg-secondary-fixed text-white px-8 py-4 rounded font-headline-md text-headline-md border-b-2 border-secondary-fixed-dim hover:bg-secondary-fixed-dim transition-all shadow-md flex items-center justify-center gap-2 group active:scale-95"
+            href="contact-us.html">
+            Contact Us Today
+            <span
+              class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+          <a class="bg-transparent text-on-primary border border-outline px-8 py-4 rounded font-headline-md text-headline-md hover:bg-surface/10 transition-all flex items-center justify-center gap-2 active:scale-95"
+            href="products.html">
+            Explore Products
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer
+    class="bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-on-surface font-body-md text-body-md w-full py-12 border-t-4 border-secondary-fixed">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto mb-12">
+      <div class="col-span-1 md:col-span-2 lg:col-span-1">
+        <a href="index.html"
+          class="inline-block font-headline-md text-headline-md font-bold text-secondary-fixed mb-4 uppercase hover:opacity-90 transition-opacity">
+          <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo"
+            class="h-12 md:h-16 w-auto object-contain drop-shadow-sm" />
+        </a>
+        <p class="text-on-primary-container dark:text-on-surface-variant text-[14px] pr-4">
+          Delivering unparalleled structural integrity and corrosion resistance through advanced composite engineering
+          for industrial applications worldwide.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-white">Quick Links</h4>
+        <ul class="space-y-3">
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="index.html">Home</a></li>
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="about-us.html">About Us</a></li>
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="products.html">Products</a></li>
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="work-process.html">Technical Process</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-white">Products</h4>
+        <ul class="space-y-3">
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="products.html">FRP Gratings</a></li>
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="products.html">FRP Cable Trays</a></li>
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="products.html">PP FRP Tanks</a></li>
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="products.html">FRP Profiles &amp; Poles</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-white">Contact</h4>
+        <ul class="space-y-3">
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="contact-us.html">Contact Support</a></li>
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="product-inquiry.html">Product inquiry</a></li>
+          <li class="flex items-start gap-2 text-on-primary-container mt-4">
+            <span class="material-symbols-outlined text-[18px] mt-0.5">location_on</span>
+            <span>Halol, Chandrapura, Gujarat</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto border-t border-primary-container pt-8 flex flex-col md:flex-row justify-between items-center text-[12px] text-on-primary-container">
+      <div>© 2024 Kriza FRP Products. Complete Composite Solution. All Rights Reserved.</div>
+      <div class="flex gap-4 mt-4 md:mt-0">
+        <a class="hover:text-white transition-colors" href="privacy-policy.html">Privacy Policy</a>
+        <a class="hover:text-white transition-colors" href="terms-of-service.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // --- Mobile hamburger ---
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('open');
+    });
+
+    // --- Scroll-reveal with IntersectionObserver ---
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.05 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // --- Hero Carousel Controller ---
+    const carousel = document.getElementById('hero-carousel');
+    if (carousel) {
+      const slides = carousel.querySelectorAll('.carousel-slide');
+      const prevBtn = document.getElementById('carousel-prev');
+      const nextBtn = document.getElementById('carousel-next');
+      const indicators = carousel.querySelectorAll('.carousel-indicator');
+
+      let currentSlide = 0;
+      const slideDuration = 6000; // 6 seconds per slide
+      let carouselInterval = null;
+      let slideTimeout = null;
+
+      function showSlide(index) {
+        // Clear any pending transition animations to prevent overlaps
+        if (slideTimeout) {
+          clearTimeout(slideTimeout);
+          slideTimeout = null;
+        }
+
+        // Clean up current active slide animations
+        const prevActiveSlide = slides[currentSlide];
+        const prevImage = prevActiveSlide.querySelector('.carousel-img');
+        const prevContent = prevActiveSlide.querySelector('.carousel-content');
+
+        if (prevImage) {
+          prevImage.classList.remove('animate-kenburns');
+        }
+        if (prevContent) {
+          prevContent.classList.remove('translate-y-0', 'opacity-100');
+          prevContent.classList.add('translate-y-6', 'opacity-0');
+        }
+
+        // Reset active slide visibility
+        prevActiveSlide.classList.remove('opacity-100', 'pointer-events-auto', 'z-10');
+        prevActiveSlide.classList.add('opacity-0', 'pointer-events-none', 'z-0');
+
+        // Reset progress bars
+        indicators.forEach((indicator) => {
+          const progress = indicator.querySelector('.indicator-progress');
+          if (progress) {
+            progress.style.transition = 'none';
+            progress.style.width = '0%';
+          }
+        });
+
+        // Update current index (safely handling negative values)
+        currentSlide = ((index % slides.length) + slides.length) % slides.length;
+
+        const activeSlide = slides[currentSlide];
+        const activeImage = activeSlide.querySelector('.carousel-img');
+        const activeContent = activeSlide.querySelector('.carousel-content');
+
+        // Show slide
+        activeSlide.classList.remove('opacity-0', 'pointer-events-none', 'z-0');
+        activeSlide.classList.add('opacity-100', 'pointer-events-auto', 'z-10');
+
+        // Capture the target index in local scope to prevent out-of-sync indicators
+        const targetIndex = currentSlide;
+
+        // Start animations after a microscopic delay to ensure state reset triggers the animation
+        slideTimeout = setTimeout(() => {
+          if (activeImage) {
+            activeImage.classList.add('animate-kenburns');
+          }
+          if (activeContent) {
+            activeContent.classList.remove('translate-y-6', 'opacity-0');
+            activeContent.classList.add('translate-y-0', 'opacity-100');
+          }
+
+          // Start progress bar animation for active slide
+          const activeProgress = indicators[targetIndex].querySelector('.indicator-progress');
+          if (activeProgress) {
+            activeProgress.style.transition = `width ${slideDuration}ms linear`;
+            activeProgress.style.width = '100%';
+          }
+        }, 50);
+      }
+
+      function startAutoplay() {
+        stopAutoplay();
+        carouselInterval = setInterval(() => {
+          showSlide(currentSlide + 1);
+        }, slideDuration);
+      }
+
+      function stopAutoplay() {
+        if (carouselInterval) {
+          clearInterval(carouselInterval);
+          carouselInterval = null;
         }
       }
-      startAutoplay();
-    }, { passive: true });
 
-    // Resume autoplay if touch interaction is cancelled by scrolling
-    carousel.addEventListener('touchcancel', () => {
-      startAutoplay();
-    }, { passive: true });
+      // Event listeners for prev/next buttons
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          showSlide(currentSlide - 1);
+          startAutoplay(); // Reset autoplay timer
+        });
+      }
 
-    // Pause autoplay when tab goes to background, resume when tab is active
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) {
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          showSlide(currentSlide + 1);
+          startAutoplay(); // Reset autoplay timer
+        });
+      }
+
+      // Indicators clicking
+      indicators.forEach((indicator, idx) => {
+        indicator.addEventListener('click', () => {
+          showSlide(idx);
+          startAutoplay(); // Reset autoplay timer
+        });
+      });
+
+      // Pause on hover (only for real mouse pointers on desktop, ignoring touch/pen)
+      carousel.addEventListener('pointerenter', (e) => {
+        if (e.pointerType !== 'touch' && e.pointerType !== 'pen') {
+          stopAutoplay();
+        }
+      });
+      carousel.addEventListener('pointerleave', (e) => {
+        if (e.pointerType !== 'touch' && e.pointerType !== 'pen') {
+          startAutoplay();
+        }
+      });
+
+      // Touch support (swipe)
+      let startX = 0;
+      carousel.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
         stopAutoplay();
-      } else {
+      }, { passive: true });
+
+      carousel.addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX;
+        const diffX = startX - endX;
+
+        if (Math.abs(diffX) > 50) { // Swipe threshold
+          if (diffX > 0) {
+            // Swipe left -> Next slide
+            showSlide(currentSlide + 1);
+          } else {
+            // Swipe right -> Prev slide
+            showSlide(currentSlide - 1);
+          }
+        }
+        startAutoplay();
+      }, { passive: true });
+
+      // Resume autoplay if touch interaction is cancelled by scrolling
+      carousel.addEventListener('touchcancel', () => {
+        startAutoplay();
+      }, { passive: true });
+
+      // Pause autoplay when tab goes to background, resume when tab is active
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          stopAutoplay();
+        } else {
+          startAutoplay();
+        }
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        // Check if carousel is in viewport to prevent page-wide hijacking
+        const rect = carousel.getBoundingClientRect();
+        const inViewport = (rect.top >= -rect.height && rect.bottom <= window.innerHeight + rect.height);
+        if (!inViewport) return;
+
+        if (e.key === 'ArrowLeft') {
+          showSlide(currentSlide - 1);
+          startAutoplay();
+        } else if (e.key === 'ArrowRight') {
+          showSlide(currentSlide + 1);
+          startAutoplay();
+        }
+      });
+
+      // Initialize first slide
+      showSlide(0);
+      if (!document.hidden) {
         startAutoplay();
       }
-    });
-    
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-      // Check if carousel is in viewport to prevent page-wide hijacking
-      const rect = carousel.getBoundingClientRect();
-      const inViewport = (rect.top >= -rect.height && rect.bottom <= window.innerHeight + rect.height);
-      if (!inViewport) return;
-
-      if (e.key === 'ArrowLeft') {
-        showSlide(currentSlide - 1);
-        startAutoplay();
-      } else if (e.key === 'ArrowRight') {
-        showSlide(currentSlide + 1);
-        startAutoplay();
-      }
-    });
-
-    // Initialize first slide
-    showSlide(0);
-    if (!document.hidden) {
-      startAutoplay();
     }
-  }
 
-  // --- Navbar scroll shadow ---
-  const nav = document.querySelector('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('shadow-lg', window.scrollY > 20);
-  });
-</script>
-</body></html>
+    // --- Navbar scroll shadow ---
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('shadow-lg', window.scrollY > 20);
+    });
+  </script>
+</body>
+
+</html>

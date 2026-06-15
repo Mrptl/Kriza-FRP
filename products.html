@@ -1,943 +1,1204 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>KRIZA FRP Products - Our Products</title>
-<link rel="stylesheet" href="style.css" />
-<link rel="icon" type="image/png" href="assets/favicon.png" />
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700;900&amp;display=swap" rel="stylesheet"/>
-<style>
-  /* Scoped styles for clean product grid list */
-  #products-grid article {
-    cursor: pointer;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  #products-grid article:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-  }
-  /* Hide details and inquiry buttons inside the cards on the main grid list */
-  #products-grid article p,
-  #products-grid article .grid-cols-2,
-  #products-grid article .border-t {
-    display: none !important;
-  }
-  /* Center and format the titles inside the card text wrappers */
-  #products-grid article h2 {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 0 !important;
-    font-size: 1.05rem;
-    line-height: 1.4rem;
-    font-weight: 700;
-  }
-  /* Standardize padding and sizing of card titles */
-  #products-grid article .p-6.flex-grow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 0;
-    height: 64px;
-    padding: 0.75rem !important;
-  }
-  
-</style>
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>KRIZA FRP Products - Our Products</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    /* Scoped styles for clean product grid list */
+    #products-grid article {
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    #products-grid article:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Hide details and inquiry buttons inside the cards on the main grid list */
+    #products-grid article p,
+    #products-grid article .grid-cols-2,
+    #products-grid article .border-t {
+      display: none !important;
+    }
+
+    /* Center and format the titles inside the card text wrappers */
+    #products-grid article h2 {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 0 !important;
+      font-size: 1.05rem;
+      line-height: 1.4rem;
+      font-weight: 700;
+    }
+
+    /* Standardize padding and sizing of card titles */
+    #products-grid article .p-6.flex-grow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 0;
+      height: 64px;
+      padding: 0.75rem !important;
+    }
+  </style>
 </head>
+
 <body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col pt-[92px] md:pt-[100px]">
-<!-- Preloader -->
-<div id="preloader" class="fixed inset-0 z-[9999] bg-[#181c2c] flex flex-col items-center justify-center transition-all duration-700 ease-in-out">
-  <div class="flex flex-col items-center max-w-xs px-4 text-center">
-    <!-- SVG Animation (Isometric Grating Panel Weaving & Curing) -->
-    <div class="relative w-28 h-28 mb-6 flex items-center justify-center preloader-glow">
-      <svg class="w-full h-full text-secondary" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Curing cells (polygons) -->
-        <!-- Row 0 -->
-        <polygon class="resin-cell" points="50,15 60,23.75 50,32.5 40,23.75" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;"></polygon>
-        <polygon class="resin-cell" points="60,23.75 70,32.5 60,41.25 50,32.5" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.55s forwards;"></polygon>
-        <polygon class="resin-cell" points="70,32.5 80,41.25 70,50 60,41.25" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.7s forwards;"></polygon>
-        <polygon class="resin-cell" points="80,41.25 90,50 80,58.75 70,50" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.85s forwards;"></polygon>
-        
-        <!-- Row 1 -->
-        <polygon class="resin-cell" points="40,23.75 50,32.5 40,41.25 30,32.5" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.55s forwards;"></polygon>
-        <polygon class="resin-cell" points="50,32.5 60,41.25 50,50 40,41.25" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.7s forwards;"></polygon>
-        <polygon class="resin-cell" points="60,41.25 70,50 60,58.75 50,50" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.85s forwards;"></polygon>
-        <polygon class="resin-cell" points="70,50 80,58.75 70,67.5 60,58.75" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.0s forwards;"></polygon>
-        
-        <!-- Row 2 -->
-        <polygon class="resin-cell" points="30,32.5 40,41.25 30,50 20,41.25" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.7s forwards;"></polygon>
-        <polygon class="resin-cell" points="40,41.25 50,50 40,58.75 30,50" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.85s forwards;"></polygon>
-        <polygon class="resin-cell" points="50,50 60,58.75 50,67.5 40,58.75" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.0s forwards;"></polygon>
-        <polygon class="resin-cell" points="60,58.75 70,67.5 60,76.25 50,67.5" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.15s forwards;"></polygon>
-        
-        <!-- Row 3 -->
-        <polygon class="resin-cell" points="20,41.25 30,50 20,58.75 10,50" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.85s forwards;"></polygon>
-        <polygon class="resin-cell" points="30,50 40,58.75 30,67.5 20,58.75" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.0s forwards;"></polygon>
-        <polygon class="resin-cell" points="40,58.75 50,67.5 40,76.25 30,67.5" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.15s forwards;"></polygon>
-        <polygon class="resin-cell" points="50,67.5 60,76.25 50,85 40,76.25" style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.3s forwards;"></polygon>
+  <!-- Preloader -->
+  <div id="preloader"
+    class="fixed inset-0 z-[9999] bg-[#181c2c] flex flex-col items-center justify-center transition-all duration-700 ease-in-out">
+    <div class="flex flex-col items-center max-w-xs px-4 text-center">
+      <!-- SVG Animation (Isometric Grating Panel Weaving & Curing) -->
+      <div class="relative w-28 h-28 mb-6 flex items-center justify-center preloader-glow">
+        <svg class="w-full h-full text-secondary" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Curing cells (polygons) -->
+          <!-- Row 0 -->
+          <polygon class="resin-cell" points="50,15 60,23.75 50,32.5 40,23.75"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;"></polygon>
+          <polygon class="resin-cell" points="60,23.75 70,32.5 60,41.25 50,32.5"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.55s forwards;"></polygon>
+          <polygon class="resin-cell" points="70,32.5 80,41.25 70,50 60,41.25"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.7s forwards;"></polygon>
+          <polygon class="resin-cell" points="80,41.25 90,50 80,58.75 70,50"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.85s forwards;"></polygon>
 
-        <!-- Grid lines (fiberglass reinforcement) -->
-        <!-- Top-left to bottom-right -->
-        <line x1="10" y1="50" x2="50" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;"></line>
-        <line x1="20" y1="58.75" x2="60" y2="23.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;"></line>
-        <line x1="30" y1="67.5" x2="70" y2="32.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;"></line>
-        <line x1="40" y1="76.25" x2="80" y2="41.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;"></line>
-        <line x1="50" y1="85" x2="90" y2="50" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;"></line>
-        
-        <!-- Top-right to bottom-left -->
-        <line x1="50" y1="15" x2="90" y2="50" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;"></line>
-        <line x1="40" y1="23.75" x2="80" y2="58.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;"></line>
-        <line x1="30" y1="32.5" x2="70" y2="67.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;"></line>
-        <line x1="20" y1="41.25" x2="60" y2="76.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;"></line>
-        <line x1="10" y1="50" x2="50" y2="85" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;"></line>
-      </svg>
-    </div>
-    
-    <!-- Company Info (Logo-free text) -->
-    <div class="opacity-0 translate-y-2 animate-content-reveal">
-      <h1 class="font-headline-lg font-extrabold text-2xl tracking-[0.2em] text-white uppercase mb-1">KRIZA FRP</h1>
-      <span class="block text-[10px] uppercase tracking-[0.2em] text-[#fabd00] font-semibold mb-4">Complete Composite Solution</span>
-      <span class="block text-[10px] uppercase tracking-[0.15em] text-[#c2c5db] opacity-75 font-medium leading-none" id="preloader-text">Injecting Liquid Polymer...</span>
-    </div>
+          <!-- Row 1 -->
+          <polygon class="resin-cell" points="40,23.75 50,32.5 40,41.25 30,32.5"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.55s forwards;"></polygon>
+          <polygon class="resin-cell" points="50,32.5 60,41.25 50,50 40,41.25"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.7s forwards;"></polygon>
+          <polygon class="resin-cell" points="60,41.25 70,50 60,58.75 50,50"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.85s forwards;"></polygon>
+          <polygon class="resin-cell" points="70,50 80,58.75 70,67.5 60,58.75"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.0s forwards;"></polygon>
 
-    <!-- Progress Bar -->
-    <div class="w-40 h-[2px] bg-white/10 rounded-full mt-6 overflow-hidden opacity-0 animate-content-reveal-delay">
-      <div id="preloader-bar" class="w-0 h-full bg-[#fabd00] transition-all duration-300 ease-out"></div>
+          <!-- Row 2 -->
+          <polygon class="resin-cell" points="30,32.5 40,41.25 30,50 20,41.25"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.7s forwards;"></polygon>
+          <polygon class="resin-cell" points="40,41.25 50,50 40,58.75 30,50"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.85s forwards;"></polygon>
+          <polygon class="resin-cell" points="50,50 60,58.75 50,67.5 40,58.75"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.0s forwards;"></polygon>
+          <polygon class="resin-cell" points="60,58.75 70,67.5 60,76.25 50,67.5"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.15s forwards;"></polygon>
+
+          <!-- Row 3 -->
+          <polygon class="resin-cell" points="20,41.25 30,50 20,58.75 10,50"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.85s forwards;"></polygon>
+          <polygon class="resin-cell" points="30,50 40,58.75 30,67.5 20,58.75"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.0s forwards;"></polygon>
+          <polygon class="resin-cell" points="40,58.75 50,67.5 40,76.25 30,67.5"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.15s forwards;"></polygon>
+          <polygon class="resin-cell" points="50,67.5 60,76.25 50,85 40,76.25"
+            style="animation: cureResin 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.3s forwards;"></polygon>
+
+          <!-- Grid lines (fiberglass reinforcement) -->
+          <!-- Top-left to bottom-right -->
+          <line x1="10" y1="50" x2="50" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;">
+          </line>
+          <line x1="20" y1="58.75" x2="60" y2="23.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;">
+          </line>
+          <line x1="30" y1="67.5" x2="70" y2="32.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;">
+          </line>
+          <line x1="40" y1="76.25" x2="80" y2="41.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;">
+          </line>
+          <line x1="50" y1="85" x2="90" y2="50" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;">
+          </line>
+
+          <!-- Top-right to bottom-left -->
+          <line x1="50" y1="15" x2="90" y2="50" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;">
+          </line>
+          <line x1="40" y1="23.75" x2="80" y2="58.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;">
+          </line>
+          <line x1="30" y1="32.5" x2="70" y2="67.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;">
+          </line>
+          <line x1="20" y1="41.25" x2="60" y2="76.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;">
+          </line>
+          <line x1="10" y1="50" x2="50" y2="85" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            style="stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawGridLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;">
+          </line>
+        </svg>
+      </div>
+
+      <!-- Company Info (Logo-free text) -->
+      <div class="opacity-0 translate-y-2 animate-content-reveal">
+        <h1 class="font-headline-lg font-extrabold text-2xl tracking-[0.2em] text-white uppercase mb-1">KRIZA FRP</h1>
+        <span class="block text-[10px] uppercase tracking-[0.2em] text-[#fabd00] font-semibold mb-4">Complete Composite
+          Solution</span>
+        <span class="block text-[10px] uppercase tracking-[0.15em] text-[#c2c5db] opacity-75 font-medium leading-none"
+          id="preloader-text">Injecting Liquid Polymer...</span>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="w-40 h-[2px] bg-white/10 rounded-full mt-6 overflow-hidden opacity-0 animate-content-reveal-delay">
+        <div id="preloader-bar" class="w-0 h-full bg-[#fabd00] transition-all duration-300 ease-out"></div>
+      </div>
     </div>
   </div>
-</div>
-<script>
-  (function() {
-    let progress = 0;
-    let loaded = false;
-    const preloader = document.getElementById('preloader');
-    const progressBar = document.getElementById('preloader-bar');
-    const preloaderText = document.getElementById('preloader-text');
-    
-    const statusMessages = [
-      "Injecting Liquid Polymer...",
-      "Aligning Glass Fiber Rovings...",
-      "Initiating Exothermic Cure...",
-      "Composite Matrix Solidified",
-      "Ready"
-    ];
-    
-    const interval = setInterval(() => {
-      if (!loaded) {
-        progress += Math.floor(Math.random() * 8) + 3;
-        if (progress > 90) progress = 90;
-      } else {
-        progress += Math.floor(Math.random() * 15) + 15;
-        if (progress > 100) progress = 100;
-      }
-      
-      progressBar.style.width = `${progress}%`;
-      const msgIdx = Math.min(Math.floor((progress / 100) * statusMessages.length), statusMessages.length - 1);
-      preloaderText.textContent = statusMessages[msgIdx];
-      
-      if (progress >= 100) {
-        clearInterval(interval);
-        setTimeout(() => {
-          preloader.classList.add('opacity-0', 'pointer-events-none');
-          const preloaderContent = preloader.querySelector('.flex');
-          if (preloaderContent) {
-            preloaderContent.style.transform = 'scale(0.95)';
-            preloaderContent.style.transition = 'transform 0.6s ease-in-out';
-          }
-          setTimeout(() => preloader.remove(), 700);
-        }, 300);
-      }
-    }, 80);
-    
-    window.addEventListener('load', () => {
-      loaded = true;
-    });
-    
-    setTimeout(() => {
-      loaded = true;
-    }, 3000);
-  })();
-</script>
-<!-- TopNavBar -->
-<nav class="bg-surface/90 dark:bg-primary/90 backdrop-blur-md fixed top-0 left-0 w-full z-50 border-b border-outline-variant dark:border-primary-container shadow-sm">
-  <!-- Top Info Bar -->
-  <div class="bg-primary text-primary-fixed-dim text-[10px] md:text-xs py-1.5 border-b border-primary-container/40">
-    <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex flex-row justify-center md:justify-end items-center gap-4 sm:gap-6">
-      <div class="flex items-center gap-1 text-primary-fixed-dim">
-        <span class="material-symbols-outlined text-[13px] md:text-sm text-secondary-fixed">phone</span>
-        <span>Mobile: 
-          <a href="tel:+918128519480" class="hover:text-white transition-colors text-white font-semibold">+91 81285 19480</a> / 
-          <a href="tel:+919898972016" class="hover:text-white transition-colors text-white font-semibold">+91 98989 72016</a>
-        </span>
+  <script>
+    (function () {
+      let progress = 0;
+      let loaded = false;
+      const preloader = document.getElementById('preloader');
+      const progressBar = document.getElementById('preloader-bar');
+      const preloaderText = document.getElementById('preloader-text');
+
+      const statusMessages = [
+        "Injecting Liquid Polymer...",
+        "Aligning Glass Fiber Rovings...",
+        "Initiating Exothermic Cure...",
+        "Composite Matrix Solidified",
+        "Ready"
+      ];
+
+      const interval = setInterval(() => {
+        if (!loaded) {
+          progress += Math.floor(Math.random() * 8) + 3;
+          if (progress > 90) progress = 90;
+        } else {
+          progress += Math.floor(Math.random() * 15) + 15;
+          if (progress > 100) progress = 100;
+        }
+
+        progressBar.style.width = `${progress}%`;
+        const msgIdx = Math.min(Math.floor((progress / 100) * statusMessages.length), statusMessages.length - 1);
+        preloaderText.textContent = statusMessages[msgIdx];
+
+        if (progress >= 100) {
+          clearInterval(interval);
+          setTimeout(() => {
+            preloader.classList.add('opacity-0', 'pointer-events-none');
+            const preloaderContent = preloader.querySelector('.flex');
+            if (preloaderContent) {
+              preloaderContent.style.transform = 'scale(0.95)';
+              preloaderContent.style.transition = 'transform 0.6s ease-in-out';
+            }
+            setTimeout(() => preloader.remove(), 700);
+          }, 300);
+        }
+      }, 80);
+
+      window.addEventListener('load', () => {
+        loaded = true;
+      });
+
+      setTimeout(() => {
+        loaded = true;
+      }, 3000);
+    })();
+  </script>
+  <!-- TopNavBar -->
+  <nav
+    class="bg-surface/90 dark:bg-primary/90 backdrop-blur-md fixed top-0 left-0 w-full z-50 border-b border-outline-variant dark:border-primary-container shadow-sm">
+    <!-- Top Info Bar -->
+    <div class="bg-primary text-primary-fixed-dim text-[10px] md:text-xs py-1.5 border-b border-primary-container/40">
+      <div
+        class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex flex-row justify-center md:justify-end items-center gap-4 sm:gap-6">
+        <div class="flex items-center gap-1 text-primary-fixed-dim">
+          <span class="material-symbols-outlined text-[13px] md:text-sm text-secondary-fixed">phone</span>
+          <span>Mobile:
+            <a href="tel:+918128519480" class="hover:text-white transition-colors text-white font-semibold">+91 81285
+              19480</a> /
+            <a href="tel:+919898972016" class="hover:text-white transition-colors text-white font-semibold">+91 98989
+              72016</a>
+          </span>
+        </div>
+        <span class="text-outline-variant/40">|</span>
+        <a href="mailto:info@krizafrp.co.in" class="hover:text-white transition-colors flex items-center gap-1">
+          <span class="material-symbols-outlined text-[13px] md:text-sm text-secondary-fixed">mail</span>
+          <span>E-Mail: <strong class="text-white">info@krizafrp.co.in</strong></span>
+        </a>
       </div>
-      <span class="text-outline-variant/40">|</span>
-      <a href="mailto:info@krizafrp.co.in" class="hover:text-white transition-colors flex items-center gap-1">
-        <span class="material-symbols-outlined text-[13px] md:text-sm text-secondary-fixed">mail</span>
-        <span>E-Mail: <strong class="text-white">info@krizafrp.co.in</strong></span>
+    </div>
+
+    <div class="relative flex items-center justify-between px-margin-mobile md:px-8 py-3 w-full mx-auto">
+      <a href="index.html"
+        class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-black tracking-tighter text-primary dark:text-secondary-fixed uppercase flex items-center gap-2 hover:opacity-90 transition-opacity">
+        <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo"
+          class="h-10 md:h-12 w-auto object-contain drop-shadow-sm" style="max-height: 48px;" />
       </a>
-    </div>
-  </div>
-
-  <div class="relative flex items-center justify-between px-margin-mobile md:px-8 py-3 w-full mx-auto">
-    <a href="index.html" class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-black tracking-tighter text-primary dark:text-secondary-fixed uppercase flex items-center gap-2 hover:opacity-90 transition-opacity">
-      <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo" class="h-10 md:h-12 w-auto object-contain drop-shadow-sm" style="max-height: 48px;" />
-    </a>
-    <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center space-x-8">
-      <a class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-all duration-300 active:scale-95 transition-transform" href="index.html">Home</a>
-      <a class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-all duration-300 active:scale-95 transition-transform" href="about-us.html">About Us</a>
-      <a class="text-primary dark:text-secondary-fixed border-b-2 border-secondary-fixed pb-1 hover:text-secondary dark:hover:text-secondary-fixed-dim transition-all duration-300 font-bold" href="products.html">Products</a>
-      <a class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-all duration-300 active:scale-95 transition-transform" href="contact-us.html">Contact Us</a>
-    </div>
-    <div class="flex items-center gap-3">
-      <button id="hamburger" aria-label="Toggle menu" class="md:hidden flex flex-col gap-[6px] p-2 text-primary">
-        <span class="ham-bar"></span>
-        <span class="ham-bar"></span>
-        <span class="ham-bar"></span>
-      </button>
-    </div>
-  </div>
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden bg-surface border-t border-outline-variant">
-    <div class="flex flex-col px-margin-mobile py-4 gap-4">
-      <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors" href="index.html">Home</a>
-      <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors" href="about-us.html">About Us</a>
-      <a class="text-primary font-bold hover:text-secondary transition-colors" href="products.html">Products</a>
-      <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors" href="contact-us.html">Contact Us</a>
-
-    </div>
-  </div>
-</nav>
-<!-- Page Header Hero (Structural Theme) -->
-<section class="relative bg-primary text-on-primary py-16 md:py-24 overflow-hidden structural-clip reveal">
-<!-- Abstract structural pattern overlay -->
-<div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 1px, transparent 1px, transparent 24px);"></div>
-<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
-<div class="max-w-2xl">
-<h1 class="font-display-lg text-display-lg mb-4 text-white">Our Products</h1>
-<p class="font-body-lg text-body-lg text-primary-fixed-dim mb-8">Beyond Quality, Proud Workmanship. Explore our complete range of engineered Fibre-reinforced Plastic solutions designed for structural integrity and harsh environments.</p>
-</div>
-</div>
-<!-- Angular accent piece -->
-<div class="absolute top-0 right-0 w-1/3 h-full bg-secondary-fixed opacity-90 transform skew-x-[15deg] translate-x-1/4 -z-0 hidden md:block"></div>
-</section>
-<!-- Main Content Layout -->
-<main class="flex-grow max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-8 w-full">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-<!-- Sidebar Navigation & Filters -->
-<aside class="lg:col-span-3 space-y-8 reveal reveal-delay-1">
-<!-- Industry Filters -->
-<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT p-6 shadow-[0_4px_4px_rgba(0,0,0,0.02)]">
-<div class="flex justify-between items-center lg:block cursor-pointer lg:cursor-default" id="category-toggle">
-<h3 class="font-headline-md text-headline-md text-primary border-b-0 lg:border-b border-surface-variant pb-0 lg:pb-3 mb-0 lg:mb-2 flex items-center justify-between w-full">
-  <span>Categories</span>
-</h3>
-<span class="material-symbols-outlined lg:hidden text-primary transition-transform duration-300" id="category-toggle-icon">expand_more</span>
-</div>
-<div class="hidden lg:block mt-4 lg:mt-0" id="category-list-container">
-<div class="flex justify-between items-center text-[11px] text-secondary-fixed mb-4 border-b border-surface-variant/40 pb-2">
-<button id="filter-select-all" class="hover:text-primary transition-colors font-bold uppercase tracking-wider focus:outline-none">Select All</button>
-<span class="text-outline-variant/40">|</span>
-<button id="filter-clear-all" class="hover:text-primary transition-colors font-bold uppercase tracking-wider focus:outline-none">Clear All</button>
-</div>
-<ul class="space-y-3">
-<li>
-<label class="flex items-center gap-3 cursor-pointer group">
-<input checked="" data-category="frp-cable-trays" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
-<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP Cable Trays</span>
-</label>
-</li>
-<li>
-<label class="flex items-center gap-3 cursor-pointer group">
-<input checked="" data-category="frp-gratings" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
-<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP Gratings</span>
-</label>
-</li>
-<li>
-<label class="flex items-center gap-3 cursor-pointer group">
-<input checked="" data-category="pp-frp-tanks" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
-<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">PP FRP Tanks</span>
-</label>
-</li>
-<li>
-<label class="flex items-center gap-3 cursor-pointer group">
-<input checked="" data-category="frp-profiles" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
-<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP Profiles</span>
-</label>
-</li>
-<li>
-<label class="flex items-center gap-3 cursor-pointer group">
-<input checked="" data-category="frp-walkways" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
-<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP Walkways</span>
-</label>
-</li>
-<li>
-<label class="flex items-center gap-3 cursor-pointer group">
-<input checked="" data-category="frp-pipes" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
-<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP Pipes</span>
-</label>
-</li>
-<li>
-<label class="flex items-center gap-3 cursor-pointer group">
-<input checked="" data-category="frp-poles" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
-<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP Poles</span>
-</label>
-</li>
-<li>
-<label class="flex items-center gap-3 cursor-pointer group">
-<input checked="" data-category="frp-sheets" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
-<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP Sheets</span>
-</label>
-</li>
-<li>
-<label class="flex items-center gap-3 cursor-pointer group">
-<input checked="" data-category="frp-canopies" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
-<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP Canopies</span>
-</label>
-</li>
-<li>
-<label class="flex items-center gap-3 cursor-pointer group">
-<input checked="" data-category="frp-rods" class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest" type="checkbox"/>
-<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP Rods</span>
-</label>
-</li>
-</ul>
-</div>
-</div>
-<!-- Quality Assurance Highlight -->
-<div class="bg-primary text-on-primary rounded-DEFAULT p-6 border-l-4 border-secondary-fixed relative overflow-hidden">
-<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-6xl text-white/10" style="font-variation-settings: 'FILL' 1;">verified</span>
-<h3 class="font-headline-md text-headline-md text-secondary-fixed mb-2 flex items-center gap-2">
-<span class="material-symbols-outlined">shield</span> Quality Assurance
-                    </h3>
-<p class="font-body-md text-body-md text-primary-fixed mb-4">All products adhere to stringent international standards for mechanical strength and chemical resistance.</p>
-<a class="inline-flex items-center font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed hover:text-white transition-colors" href="#">
-                        View Certifications <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
-</a>
-</div>
-</aside>
-<!-- Product Grid Section -->
-<div class="lg:col-span-9 reveal reveal-delay-2">
-<!-- Search Bar -->
-<div class="bg-surface-container-low p-4 rounded-DEFAULT border border-outline-variant mb-6">
-<div class="relative w-full sm:max-w-xs md:max-w-sm">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
-<input id="product-search" class="w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT py-2 pl-10 pr-4 focus:border-primary focus:ring-1 focus:ring-primary font-body-md text-body-md placeholder-on-surface-variant hover:border-primary/50 transition-all duration-300 shadow-sm" placeholder="Search products..." type="text"/>
-</div>
-</div>
-<!-- No Products Message -->
-<div id="no-products-message" class="hidden col-span-full py-12 text-center bg-surface-container-lowest border border-outline-variant rounded-DEFAULT shadow-sm">
-  <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2">search_off</span>
-  <p class="font-headline-md text-headline-md text-primary mb-1">No Products Found</p>
-  <p class="font-body-md text-body-md text-on-surface-variant">Try adjusting your filters or search terms.</p>
-</div>
-<!-- The Grid (Bento style inspiration for industrial products) -->
-<div id="products-grid" class="grid grid-cols-2 xl:grid-cols-3 gap-6">
-
-    <!-- Product Card 1: FRP Cable Trays -->
-    <article data-category="frp-cable-trays" data-id="1" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-1">
-      <div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
-      <div class="h-48 bg-surface-variant relative overflow-hidden">
-        <img alt="FRP Cable Tray" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/frp_cable_trays.png"/>
+      <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center space-x-8">
+        <a class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-all duration-300 active:scale-95 transition-transform"
+          href="index.html">Home</a>
+        <a class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-all duration-300 active:scale-95 transition-transform"
+          href="about-us.html">About Us</a>
+        <a class="text-primary dark:text-secondary-fixed border-b-2 border-secondary-fixed pb-1 hover:text-secondary dark:hover:text-secondary-fixed-dim transition-all duration-300 font-bold"
+          href="products.html">Products</a>
+        <a class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-all duration-300 active:scale-95 transition-transform"
+          href="contact-us.html">Contact Us</a>
       </div>
-      <div class="p-6 flex-grow flex flex-col">
-        <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Cable Trays</h2>
-        <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Ladder and Perforated type cable management systems offering excellent electrical insulation. Compliant with NEMA FG-1-1993 for electrical and instrumentation cable laying in power, telecom, and chemical sectors.</p>
-        <div class="flex items-center justify-between border-t border-surface-variant pt-4">
-          <button class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
-            Inquire Now <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </button>
-        </div>
-      </div>
-    </article>
-
-    <!-- Product Card 2: FRP Gratings -->
-    <article data-category="frp-gratings" data-id="2" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-2">
-      <div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
-      <div class="h-48 bg-surface-variant relative overflow-hidden">
-        <img alt="Industrial FRP Grating" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/frp_gratings.png"/>
-        <div class="absolute top-4 right-4 flex gap-2">
-          <span class="bg-primary/90 text-on-primary backdrop-blur-sm px-2 py-1 rounded-sm font-label-sm text-label-sm uppercase tracking-wider">Fire Retardant</span>
-        </div>
-      </div>
-      <div class="p-6 flex-grow flex flex-col">
-        <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Gratings</h2>
-        <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">High-strength, corrosion-resistant Molded and Pultruded gratings engineered for walkways, trench covers, and platforms. Compliant with OSHA standards for chemical, petrochemical, and pharmaceutical industries.</p>
-        <div class="flex items-center justify-between border-t border-surface-variant pt-4">
-          <button class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
-            Inquire Now <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </button>
-        </div>
-      </div>
-    </article>
-
-    <!-- Product Card 3: PP FRP Tanks -->
-    <article data-category="pp-frp-tanks" data-id="3" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-3">
-      <div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
-      <div class="h-48 bg-surface-variant relative overflow-hidden">
-        <img alt="PP FRP Tank" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/pp_frp_tanks.png"/>
-        <div class="absolute top-4 right-4 flex gap-2">
-          <span class="bg-primary/90 text-on-primary backdrop-blur-sm px-2 py-1 rounded-sm font-label-sm text-label-sm uppercase tracking-wider">Heavy Duty</span>
-        </div>
-      </div>
-      <div class="p-6 flex-grow flex flex-col">
-        <h2 class="font-headline-md text-headline-md text-primary mb-2">PP FRP Tanks</h2>
-        <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Custom-engineered storage tanks in PP-FRP, PVC-FRP, and HDPE-FRP. Designed to ASME RTP 1 and BS-EN-13121-3 standards for maximum durability in acid, chemical, and water treatment applications.</p>
-        <div class="flex items-center justify-between border-t border-surface-variant pt-4">
-          <button class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
-            Inquire Now <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </button>
-        </div>
-      </div>
-    </article>
-
-    <!-- Product Card 4: FRP Profiles -->
-    <article data-category="frp-profiles" data-id="4" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-1">
-      <div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
-      <div class="h-48 bg-surface-variant relative overflow-hidden">
-        <img alt="FRP Profiles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/frp_profiles.png"/>
-      </div>
-      <div class="p-6 flex-grow flex flex-col">
-        <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Profiles</h2>
-        <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Pultruded structural sections offering high strength-to-weight ratios for custom fabrications, platforms, and skids. Manufactured to ANSI and OSHA standards for demanding industrial environments.</p>
-        <div class="flex items-center justify-between border-t border-surface-variant pt-4">
-          <button class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
-            Inquire Now <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </button>
-        </div>
-      </div>
-    </article>
-
-    <!-- Product Card 5: FRP Walkways & Platforms -->
-    <article data-category="frp-walkways" data-id="5" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-2">
-      <div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
-      <div class="h-48 bg-surface-variant relative overflow-hidden bg-white">
-        <img alt="FRP Walk Way" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="assets/Walk%20Way-20260516T054832Z-3-001/Walk%20Way/WV.png"/>
-        <div class="absolute top-4 right-4 flex gap-2">
-          <span class="bg-primary/90 text-on-primary backdrop-blur-sm px-2 py-1 rounded-sm font-label-sm text-label-sm uppercase tracking-wider">Featured</span>
-        </div>
-      </div>
-      <div class="p-6 flex-grow flex flex-col">
-        <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Walkways &amp; Platforms</h2>
-        <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Complete structural walkway, staircase, and safety railing systems built with FRP materials. Ensuring OSHA-compliant safety, slip resistance, and absolute immunity to corrosion.</p>
-        <div class="flex items-center justify-between border-t border-surface-variant pt-4">
-          <button class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
-            Inquire Now <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </button>
-        </div>
-      </div>
-    </article>
-
-    <!-- Product Card 6: FRP Pipes & Fittings -->
-    <article data-category="frp-pipes" data-id="6" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-3">
-      <div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
-      <div class="h-48 bg-surface-variant relative overflow-hidden">
-        <img alt="FRP Pipe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/frp_pipe.png"/>
-      </div>
-      <div class="p-6 flex-grow flex flex-col">
-        <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Pipes &amp; Fittings</h2>
-        <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Filament-wound fiberglass reinforced pipes designed to handle corrosive chemicals, sewage, industrial effluents, and high-pressure water transmission. Built to ASME and ASTM standards.</p>
-        <div class="flex items-center justify-between border-t border-surface-variant pt-4">
-          <button class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
-            Inquire Now <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </button>
-        </div>
-      </div>
-    </article>
-
-    <!-- Product Card 7: FRP Poles -->
-    <article data-category="frp-poles" data-id="7" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-1">
-      <div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
-      <div class="h-48 bg-[#e5efff] relative overflow-hidden">
-        <img alt="FRP Poles" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="assets/frp_poles.png"/>
-      </div>
-      <div class="p-6 flex-grow flex flex-col">
-        <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Poles</h2>
-        <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Non-conductive, maintenance-free FRP/GRP Light Poles. Built to ANSI C 136 and BS EN 40-7 standards to withstand extreme coastal and offshore weather conditions without rusting.</p>
-        <div class="flex items-center justify-between border-t border-surface-variant pt-4">
-          <button class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
-            Inquire Now <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </button>
-        </div>
-      </div>
-    </article>
-
-    <!-- Product Card 8: FRP Sheets -->
-    <article data-category="frp-sheets" data-id="8" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-2">
-      <div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
-      <div class="h-48 bg-surface-variant relative overflow-hidden">
-        <img alt="FRP Sheets" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/frp_sheets.png"/>
-      </div>
-      <div class="p-6 flex-grow flex flex-col">
-        <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Sheets</h2>
-        <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Corrosion-proof, weather-resistant, and high-strength FRP sheets. Available in corrugated, flat, and gritted profiles for industrial roofing, cladding, partition walls, and protective linings.</p>
-        <div class="flex items-center justify-between border-t border-surface-variant pt-4">
-          <button class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
-            Inquire Now <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </button>
-        </div>
-      </div>
-    </article>
-
-    <!-- Product Card 9: FRP Canopies -->
-    <article data-category="frp-canopies" data-id="9" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-3">
-      <div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
-      <div class="h-48 bg-surface-variant relative overflow-hidden">
-        <img alt="FRP Canopy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/frp_canopy.png"/>
-      </div>
-      <div class="p-6 flex-grow flex flex-col">
-        <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Canopies</h2>
-        <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Heavy-duty protective canopies designed to shelter outdoor industrial equipment, instruments, push buttons, and motors from extreme weather, UV exposure, and corrosive chemical drops.</p>
-        <div class="flex items-center justify-between border-t border-surface-variant pt-4">
-          <button class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
-            Inquire Now <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </button>
-        </div>
-      </div>
-    </article>
-
-    <!-- Product Card 10: FRP Rods -->
-    <article data-category="frp-rods" data-id="10" class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-1">
-      <div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10"></div>
-      <div class="h-48 bg-surface-variant relative overflow-hidden">
-        <img alt="FRP Rod" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/frp_rods.png"/>
-      </div>
-      <div class="p-6 flex-grow flex flex-col">
-        <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Rods</h2>
-        <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">High-performance pultruded solid FRP rods engineered for structural reinforcement, electrical insulation, and high tensile strength. Ideal for antennas, transformer spacer rods, utility poles, and marine structures.</p>
-        <div class="flex items-center justify-between border-t border-surface-variant pt-4">
-          <button class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
-            Inquire Now <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </button>
-        </div>
-      </div>
-    </article>
-
-</div>
-</div>
-</div>
-</main>
-
-<!-- Product Details Modal Container -->
-<div id="product-modal" class="fixed inset-0 z-[10000] flex items-center justify-center p-4 bg-primary/80 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
-  <!-- Modal Card -->
-  <div class="bg-surface-container-lowest border border-outline-variant rounded-xl max-w-4xl w-full max-h-[90vh] flex flex-col md:flex-row overflow-hidden shadow-2xl relative translate-y-4 scale-95 transition-all duration-300" id="modal-card">
-    
-    <!-- Close Button (Mobile Floating) -->
-    <button id="modal-close-btn" class="absolute top-4 right-4 z-50 w-10 h-10 flex items-center justify-center bg-surface/80 hover:bg-surface border border-outline-variant rounded-full text-on-surface hover:text-primary transition-all duration-300 focus:outline-none shadow-md" aria-label="Close details">
-      <span class="material-symbols-outlined text-xl">close</span>
-    </button>
-
-    <!-- Left side: Product Image -->
-    <div class="w-full md:w-1/2 bg-surface-container-low flex items-center justify-center p-6 relative min-h-[200px] md:min-h-0 border-b md:border-b-0 md:border-r border-outline-variant">
-      <img id="modal-img" src="" alt="" class="w-full h-full max-h-[280px] md:max-h-[400px] object-contain transition-transform duration-500 hover:scale-105" />
-      <div class="absolute top-4 left-4 flex flex-col gap-2" id="modal-badges">
-        <!-- Dynamically injected badges -->
-      </div>
-    </div>
-
-    <!-- Right side: Content Details -->
-    <div class="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between overflow-y-auto max-h-[50vh] md:max-h-[90vh]">
-      <div class="flex-grow">
-        <div class="flex items-center gap-2 mb-3">
-          <span class="bg-secondary/10 text-secondary dark:bg-secondary/20 dark:text-secondary px-2.5 py-1 rounded font-label-sm text-[11px] uppercase tracking-wider font-bold" id="modal-category-badge">
-            Category
-          </span>
-          <span class="text-on-surface-variant font-label-sm text-[11px] uppercase tracking-wider opacity-60" id="modal-ref-code">
-            REF: KRZ-GR-500
-          </span>
-        </div>
-        
-        <h2 class="font-headline-lg text-2xl md:text-3xl text-primary mb-4 leading-tight font-extrabold uppercase" id="modal-title">
-          Product Title
-        </h2>
-        
-        <p class="font-body-md text-on-surface-variant mb-6 leading-relaxed text-sm md:text-base" id="modal-desc">
-          Detailed product description goes here.
-        </p>
-        
-        <div class="border-t border-surface-variant pt-6 mb-6">
-          <h4 class="font-label-sm text-xs uppercase tracking-wider text-primary font-bold mb-4 flex items-center gap-1.5">
-            <span class="material-symbols-outlined text-sm text-secondary">checklist</span> Key Specifications & Features
-          </h4>
-          <ul class="space-y-3" id="modal-specs">
-            <!-- Dynamically injected specs list -->
-          </ul>
-        </div>
-      </div>
-
-      <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-surface-variant mt-auto">
-        <button id="modal-inquiry-btn" class="flex-grow bg-primary text-on-primary text-center px-6 py-3.5 rounded font-label-sm text-label-sm uppercase tracking-wider font-bold hover:bg-surface-tint active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 shadow-sm">
-          <span class="material-symbols-outlined text-lg">edit_note</span> Inquire Now
+      <div class="flex items-center gap-3">
+        <button id="hamburger" aria-label="Toggle menu" class="md:hidden flex flex-col gap-[6px] p-2 text-primary">
+          <span class="ham-bar"></span>
+          <span class="ham-bar"></span>
+          <span class="ham-bar"></span>
         </button>
       </div>
     </div>
-  </div>
-</div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden bg-surface border-t border-outline-variant">
+      <div class="flex flex-col px-margin-mobile py-4 gap-4">
+        <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors" href="index.html">Home</a>
+        <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors" href="about-us.html">About
+          Us</a>
+        <a class="text-primary font-bold hover:text-secondary transition-colors" href="products.html">Products</a>
+        <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors"
+          href="contact-us.html">Contact Us</a>
 
-<!-- Footer -->
-<footer class="bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-on-surface font-body-md text-body-md w-full py-12 border-t-4 border-secondary-fixed">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto mb-12">
-<div class="col-span-1 md:col-span-2 lg:col-span-1">
-<a href="index.html" class="inline-block font-headline-md text-headline-md font-bold text-secondary-fixed mb-4 uppercase hover:opacity-90 transition-opacity">
-                    <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo" class="h-12 md:h-16 w-auto object-contain drop-shadow-sm" />
-                </a>
-<p class="text-on-primary-container dark:text-on-surface-variant text-[14px] pr-4">
-                    Delivering unparalleled structural integrity and corrosion resistance through advanced composite engineering for industrial applications worldwide.
-                </p>
-</div>
-<div>
-      <h4 class="font-bold mb-4 text-white">Quick Links</h4>
-      <ul class="space-y-3">
-        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="index.html">Home</a></li>
-        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="about-us.html">About Us</a></li>
-        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">Products</a></li>
-        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="contact-us.html">Contact Us</a></li>
-      </ul>
+      </div>
     </div>
-<div>
-<h4 class="font-bold mb-4 text-white">Products</h4>
-<ul class="space-y-3">
-<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">FRP Gratings</a></li>
-<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">FRP Cable Trays</a></li>
-<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">PP FRP Tanks</a></li>
-<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="products.html">FRP Profiles &amp; Poles</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold mb-4 text-white">Contact</h4>
-<ul class="space-y-3">
-        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="contact-us.html">Contact Us</a></li>
-        <li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors" href="contact-us.html">Contact Us</a></li>
-<li class="flex items-start gap-2 text-on-primary-container mt-4">
-<span class="material-symbols-outlined text-[18px] mt-0.5">location_on</span>
-<span>Halol, Chandrapura, Gujarat</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto border-t border-primary-container pt-8 flex flex-col md:flex-row justify-between items-center text-[12px] text-on-primary-container">
-<div>© 2024 Kriza FRP Products. Complete Composite Solution. All Rights Reserved.</div>
-<div class="flex gap-4 mt-4 md:mt-0">
-<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
-</div>
-</div>
-</footer>
-<script>
-  // --- Mobile hamburger ---
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    mobileMenu.classList.toggle('open');
-  });
+  </nav>
+  <!-- Page Header Hero (Structural Theme) -->
+  <section class="relative bg-primary text-on-primary py-16 md:py-24 overflow-hidden structural-clip reveal">
+    <!-- Abstract structural pattern overlay -->
+    <div class="absolute inset-0 opacity-10"
+      style="background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 1px, transparent 1px, transparent 24px);">
+    </div>
+    <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+      <div class="max-w-2xl">
+        <h1 class="font-display-lg text-display-lg mb-4 text-white">Our Products</h1>
+        <p class="font-body-lg text-body-lg text-primary-fixed-dim mb-8">Beyond Quality, Proud Workmanship. Explore our
+          complete range of engineered Fibre-reinforced Plastic solutions designed for structural integrity and harsh
+          environments.</p>
+      </div>
+    </div>
+    <!-- Angular accent piece -->
+    <div
+      class="absolute top-0 right-0 w-1/3 h-full bg-secondary-fixed opacity-90 transform skew-x-[15deg] translate-x-1/4 -z-0 hidden md:block">
+    </div>
+  </section>
+  <!-- Main Content Layout -->
+  <main class="flex-grow max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-8 w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+      <!-- Sidebar Navigation & Filters -->
+      <aside class="lg:col-span-3 space-y-8 reveal reveal-delay-1">
+        <!-- Industry Filters -->
+        <div
+          class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT p-6 shadow-[0_4px_4px_rgba(0,0,0,0.02)]">
+          <div class="flex justify-between items-center lg:block cursor-pointer lg:cursor-default" id="category-toggle">
+            <h3
+              class="font-headline-md text-headline-md text-primary border-b-0 lg:border-b border-surface-variant pb-0 lg:pb-3 mb-0 lg:mb-2 flex items-center justify-between w-full">
+              <span>Categories</span>
+            </h3>
+            <span class="material-symbols-outlined lg:hidden text-primary transition-transform duration-300"
+              id="category-toggle-icon">expand_more</span>
+          </div>
+          <div class="hidden lg:block mt-4 lg:mt-0" id="category-list-container">
+            <div
+              class="flex justify-between items-center text-[11px] text-secondary-fixed mb-4 border-b border-surface-variant/40 pb-2">
+              <button id="filter-select-all"
+                class="hover:text-primary transition-colors font-bold uppercase tracking-wider focus:outline-none">Select
+                All</button>
+              <span class="text-outline-variant/40">|</span>
+              <button id="filter-clear-all"
+                class="hover:text-primary transition-colors font-bold uppercase tracking-wider focus:outline-none">Clear
+                All</button>
+            </div>
+            <ul class="space-y-3">
+              <li>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input checked="" data-category="frp-cable-trays"
+                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
+                    type="checkbox" />
+                  <span
+                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP
+                    Cable Trays</span>
+                </label>
+              </li>
+              <li>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input checked="" data-category="frp-gratings"
+                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
+                    type="checkbox" />
+                  <span
+                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP
+                    Gratings</span>
+                </label>
+              </li>
+              <li>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input checked="" data-category="pp-frp-tanks"
+                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
+                    type="checkbox" />
+                  <span
+                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">PP
+                    FRP Tanks</span>
+                </label>
+              </li>
+              <li>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input checked="" data-category="frp-profiles"
+                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
+                    type="checkbox" />
+                  <span
+                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP
+                    Profiles</span>
+                </label>
+              </li>
+              <li>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input checked="" data-category="frp-walkways"
+                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
+                    type="checkbox" />
+                  <span
+                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP
+                    Walkways</span>
+                </label>
+              </li>
+              <li>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input checked="" data-category="frp-pipes"
+                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
+                    type="checkbox" />
+                  <span
+                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP
+                    Pipes</span>
+                </label>
+              </li>
+              <li>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input checked="" data-category="frp-poles"
+                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
+                    type="checkbox" />
+                  <span
+                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP
+                    Poles</span>
+                </label>
+              </li>
+              <li>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input checked="" data-category="frp-sheets"
+                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
+                    type="checkbox" />
+                  <span
+                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP
+                    Sheets</span>
+                </label>
+              </li>
+              <li>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input checked="" data-category="frp-canopies"
+                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
+                    type="checkbox" />
+                  <span
+                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP
+                    Canopies</span>
+                </label>
+              </li>
+              <li>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input checked="" data-category="frp-rods"
+                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
+                    type="checkbox" />
+                  <span
+                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP
+                    Rods</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Quality Assurance Highlight -->
+        <div
+          class="bg-primary text-on-primary rounded-DEFAULT p-6 border-l-4 border-secondary-fixed relative overflow-hidden">
+          <span class="material-symbols-outlined absolute -bottom-4 -right-4 text-6xl text-white/10"
+            style="font-variation-settings: 'FILL' 1;">verified</span>
+          <h3 class="font-headline-md text-headline-md text-secondary-fixed mb-2 flex items-center gap-2">
+            <span class="material-symbols-outlined">shield</span> Quality Assurance
+          </h3>
+          <p class="font-body-md text-body-md text-primary-fixed mb-4">All products adhere to stringent international
+            standards for mechanical strength and chemical resistance.</p>
+          <a class="inline-flex items-center font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed hover:text-white transition-colors"
+            href="#">
+            View Certifications <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+          </a>
+        </div>
+      </aside>
+      <!-- Product Grid Section -->
+      <div class="lg:col-span-9 reveal reveal-delay-2">
+        <!-- Search Bar -->
+        <div class="bg-surface-container-low p-4 rounded-DEFAULT border border-outline-variant mb-6">
+          <div class="relative w-full sm:max-w-xs md:max-w-sm">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+            <input id="product-search"
+              class="w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT py-2 pl-10 pr-4 focus:border-primary focus:ring-1 focus:ring-primary font-body-md text-body-md placeholder-on-surface-variant hover:border-primary/50 transition-all duration-300 shadow-sm"
+              placeholder="Search products..." type="text" />
+          </div>
+        </div>
+        <!-- No Products Message -->
+        <div id="no-products-message"
+          class="hidden col-span-full py-12 text-center bg-surface-container-lowest border border-outline-variant rounded-DEFAULT shadow-sm">
+          <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2">search_off</span>
+          <p class="font-headline-md text-headline-md text-primary mb-1">No Products Found</p>
+          <p class="font-body-md text-body-md text-on-surface-variant">Try adjusting your filters or search terms.</p>
+        </div>
+        <!-- The Grid (Bento style inspiration for industrial products) -->
+        <div id="products-grid" class="grid grid-cols-2 xl:grid-cols-3 gap-6">
 
-  // --- Scroll-reveal with IntersectionObserver ---
-  const revealEls = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
+          <!-- Product Card 1: FRP Cable Trays -->
+          <article data-category="frp-cable-trays" data-id="1"
+            class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-1">
+            <div
+              class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10">
+            </div>
+            <div class="h-48 bg-surface-variant relative overflow-hidden">
+              <img alt="FRP Cable Tray"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="assets/frp_cable_trays.png" />
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Cable Trays</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Ladder and Perforated type
+                cable management systems offering excellent electrical insulation. Compliant with NEMA FG-1-1993 for
+                electrical and instrumentation cable laying in power, telecom, and chemical sectors.</p>
+              <div class="flex items-center justify-between border-t border-surface-variant pt-4">
+                <button
+                  class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
+                  Inquire Now <span
+                    class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 2: FRP Gratings -->
+          <article data-category="frp-gratings" data-id="2"
+            class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-2">
+            <div
+              class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10">
+            </div>
+            <div class="h-48 bg-surface-variant relative overflow-hidden">
+              <img alt="Industrial FRP Grating"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="assets/frp_gratings.png" />
+              <div class="absolute top-4 right-4 flex gap-2">
+                <span
+                  class="bg-primary/90 text-on-primary backdrop-blur-sm px-2 py-1 rounded-sm font-label-sm text-label-sm uppercase tracking-wider">Fire
+                  Retardant</span>
+              </div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Gratings</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">High-strength,
+                corrosion-resistant Molded and Pultruded gratings engineered for walkways, trench covers, and platforms.
+                Compliant with OSHA standards for chemical, petrochemical, and pharmaceutical industries.</p>
+              <div class="flex items-center justify-between border-t border-surface-variant pt-4">
+                <button
+                  class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
+                  Inquire Now <span
+                    class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 3: PP FRP Tanks -->
+          <article data-category="pp-frp-tanks" data-id="3"
+            class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-3">
+            <div
+              class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10">
+            </div>
+            <div class="h-48 bg-surface-variant relative overflow-hidden">
+              <img alt="PP FRP Tank"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="assets/pp_frp_tanks.png" />
+              <div class="absolute top-4 right-4 flex gap-2">
+                <span
+                  class="bg-primary/90 text-on-primary backdrop-blur-sm px-2 py-1 rounded-sm font-label-sm text-label-sm uppercase tracking-wider">Heavy
+                  Duty</span>
+              </div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <h2 class="font-headline-md text-headline-md text-primary mb-2">PP FRP Tanks</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Custom-engineered storage
+                tanks in PP-FRP, PVC-FRP, and HDPE-FRP. Designed to ASME RTP 1 and BS-EN-13121-3 standards for maximum
+                durability in acid, chemical, and water treatment applications.</p>
+              <div class="flex items-center justify-between border-t border-surface-variant pt-4">
+                <button
+                  class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
+                  Inquire Now <span
+                    class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 4: FRP Profiles -->
+          <article data-category="frp-profiles" data-id="4"
+            class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-1">
+            <div
+              class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10">
+            </div>
+            <div class="h-48 bg-surface-variant relative overflow-hidden">
+              <img alt="FRP Profiles"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="assets/frp_profiles.png" />
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Profiles</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Pultruded structural sections
+                offering high strength-to-weight ratios for custom fabrications, platforms, and skids. Manufactured to
+                ANSI and OSHA standards for demanding industrial environments.</p>
+              <div class="flex items-center justify-between border-t border-surface-variant pt-4">
+                <button
+                  class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
+                  Inquire Now <span
+                    class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 5: FRP Walkways & Platforms -->
+          <article data-category="frp-walkways" data-id="5"
+            class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-2">
+            <div
+              class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10">
+            </div>
+            <div class="h-48 bg-surface-variant relative overflow-hidden bg-white">
+              <img alt="FRP Walk Way"
+                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                src="assets/Walk%20Way-20260516T054832Z-3-001/Walk%20Way/WV.png" />
+              <div class="absolute top-4 right-4 flex gap-2">
+                <span
+                  class="bg-primary/90 text-on-primary backdrop-blur-sm px-2 py-1 rounded-sm font-label-sm text-label-sm uppercase tracking-wider">Featured</span>
+              </div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Walkways &amp; Platforms</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Complete structural walkway,
+                staircase, and safety railing systems built with FRP materials. Ensuring OSHA-compliant safety, slip
+                resistance, and absolute immunity to corrosion.</p>
+              <div class="flex items-center justify-between border-t border-surface-variant pt-4">
+                <button
+                  class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
+                  Inquire Now <span
+                    class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 6: FRP Pipes & Fittings -->
+          <article data-category="frp-pipes" data-id="6"
+            class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-3">
+            <div
+              class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10">
+            </div>
+            <div class="h-48 bg-surface-variant relative overflow-hidden">
+              <img alt="FRP Pipe"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="assets/frp_pipe.png" />
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Pipes &amp; Fittings</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Filament-wound fiberglass
+                reinforced pipes designed to handle corrosive chemicals, sewage, industrial effluents, and high-pressure
+                water transmission. Built to ASME and ASTM standards.</p>
+              <div class="flex items-center justify-between border-t border-surface-variant pt-4">
+                <button
+                  class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
+                  Inquire Now <span
+                    class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 7: FRP Poles -->
+          <article data-category="frp-poles" data-id="7"
+            class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-1">
+            <div
+              class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10">
+            </div>
+            <div class="h-48 bg-[#e5efff] relative overflow-hidden">
+              <img alt="FRP Poles"
+                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                src="assets/frp_poles.png" />
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Poles</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Non-conductive,
+                maintenance-free FRP/GRP Light Poles. Built to ANSI C 136 and BS EN 40-7 standards to withstand extreme
+                coastal and offshore weather conditions without rusting.</p>
+              <div class="flex items-center justify-between border-t border-surface-variant pt-4">
+                <button
+                  class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
+                  Inquire Now <span
+                    class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 8: FRP Sheets -->
+          <article data-category="frp-sheets" data-id="8"
+            class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-2">
+            <div
+              class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10">
+            </div>
+            <div class="h-48 bg-surface-variant relative overflow-hidden">
+              <img alt="FRP Sheets"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="assets/frp_sheets.png" />
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Sheets</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Corrosion-proof,
+                weather-resistant, and high-strength FRP sheets. Available in corrugated, flat, and gritted profiles for
+                industrial roofing, cladding, partition walls, and protective linings.</p>
+              <div class="flex items-center justify-between border-t border-surface-variant pt-4">
+                <button
+                  class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
+                  Inquire Now <span
+                    class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 9: FRP Canopies -->
+          <article data-category="frp-canopies" data-id="9"
+            class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-3">
+            <div
+              class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10">
+            </div>
+            <div class="h-48 bg-surface-variant relative overflow-hidden">
+              <img alt="FRP Canopy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="assets/frp_canopy.png" />
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Canopies</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Heavy-duty protective canopies
+                designed to shelter outdoor industrial equipment, instruments, push buttons, and motors from extreme
+                weather, UV exposure, and corrosive chemical drops.</p>
+              <div class="flex items-center justify-between border-t border-surface-variant pt-4">
+                <button
+                  class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
+                  Inquire Now <span
+                    class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 10: FRP Rods -->
+          <article data-category="frp-rods" data-id="10"
+            class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:shadow-[0_8px_16px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col relative bento-card reveal reveal-delay-1">
+            <div
+              class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-10">
+            </div>
+            <div class="h-48 bg-surface-variant relative overflow-hidden">
+              <img alt="FRP Rod"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="assets/frp_rods.png" />
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <h2 class="font-headline-md text-headline-md text-primary mb-2">FRP Rods</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">High-performance pultruded
+                solid FRP rods engineered for structural reinforcement, electrical insulation, and high tensile
+                strength. Ideal for antennas, transformer spacer rods, utility poles, and marine structures.</p>
+              <div class="flex items-center justify-between border-t border-surface-variant pt-4">
+                <button
+                  class="text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 group-hover:text-secondary transition-colors">
+                  Inquire Now <span
+                    class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Product Details Modal Container -->
+  <div id="product-modal"
+    class="fixed inset-0 z-[10000] flex items-center justify-center p-4 bg-primary/80 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
+    <!-- Modal Card -->
+    <div
+      class="bg-surface-container-lowest border border-outline-variant rounded-xl max-w-4xl w-full max-h-[90vh] flex flex-col md:flex-row overflow-hidden shadow-2xl relative translate-y-4 scale-95 transition-all duration-300"
+      id="modal-card">
+
+      <!-- Close Button (Mobile Floating) -->
+      <button id="modal-close-btn"
+        class="absolute top-4 right-4 z-50 w-10 h-10 flex items-center justify-center bg-surface/80 hover:bg-surface border border-outline-variant rounded-full text-on-surface hover:text-primary transition-all duration-300 focus:outline-none shadow-md"
+        aria-label="Close details">
+        <span class="material-symbols-outlined text-xl">close</span>
+      </button>
+
+      <!-- Left side: Product Image -->
+      <div
+        class="w-full md:w-1/2 bg-surface-container-low flex items-center justify-center p-6 relative min-h-[200px] md:min-h-0 border-b md:border-b-0 md:border-r border-outline-variant">
+        <img id="modal-img" src="" alt=""
+          class="w-full h-full max-h-[280px] md:max-h-[400px] object-contain transition-transform duration-500 hover:scale-105" />
+        <div class="absolute top-4 left-4 flex flex-col gap-2" id="modal-badges">
+          <!-- Dynamically injected badges -->
+        </div>
+      </div>
+
+      <!-- Right side: Content Details -->
+      <div
+        class="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between overflow-y-auto max-h-[50vh] md:max-h-[90vh]">
+        <div class="flex-grow">
+          <div class="flex items-center gap-2 mb-3">
+            <span
+              class="bg-secondary/10 text-secondary dark:bg-secondary/20 dark:text-secondary px-2.5 py-1 rounded font-label-sm text-[11px] uppercase tracking-wider font-bold"
+              id="modal-category-badge">
+              Category
+            </span>
+            <span class="text-on-surface-variant font-label-sm text-[11px] uppercase tracking-wider opacity-60"
+              id="modal-ref-code">
+              REF: KRZ-GR-500
+            </span>
+          </div>
+
+          <h2 class="font-headline-lg text-2xl md:text-3xl text-primary mb-4 leading-tight font-extrabold uppercase"
+            id="modal-title">
+            Product Title
+          </h2>
+
+          <p class="font-body-md text-on-surface-variant mb-6 leading-relaxed text-sm md:text-base" id="modal-desc">
+            Detailed product description goes here.
+          </p>
+
+          <div class="border-t border-surface-variant pt-6 mb-6">
+            <h4
+              class="font-label-sm text-xs uppercase tracking-wider text-primary font-bold mb-4 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-sm text-secondary">checklist</span> Key Specifications &
+              Features
+            </h4>
+            <ul class="space-y-3" id="modal-specs">
+              <!-- Dynamically injected specs list -->
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-surface-variant mt-auto">
+          <button id="modal-inquiry-btn"
+            class="flex-grow bg-primary text-on-primary text-center px-6 py-3.5 rounded font-label-sm text-label-sm uppercase tracking-wider font-bold hover:bg-surface-tint active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 shadow-sm">
+            <span class="material-symbols-outlined text-lg">edit_note</span> Inquire Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer
+    class="bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-on-surface font-body-md text-body-md w-full py-12 border-t-4 border-secondary-fixed">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto mb-12">
+      <div class="col-span-1 md:col-span-2 lg:col-span-1">
+        <a href="index.html"
+          class="inline-block font-headline-md text-headline-md font-bold text-secondary-fixed mb-4 uppercase hover:opacity-90 transition-opacity">
+          <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo"
+            class="h-12 md:h-16 w-auto object-contain drop-shadow-sm" />
+        </a>
+        <p class="text-on-primary-container dark:text-on-surface-variant text-[14px] pr-4">
+          Delivering unparalleled structural integrity and corrosion resistance through advanced composite engineering
+          for industrial applications worldwide.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-white">Quick Links</h4>
+        <ul class="space-y-3">
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="index.html">Home</a></li>
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="about-us.html">About Us</a></li>
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="products.html">Products</a></li>
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="work-process.html">Technical Process</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-white">Products</h4>
+        <ul class="space-y-3">
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="products.html">FRP Gratings</a></li>
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="products.html">FRP Cable Trays</a></li>
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="products.html">PP FRP Tanks</a></li>
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="products.html">FRP Profiles &amp; Poles</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-white">Contact</h4>
+        <ul class="space-y-3">
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="contact-us.html">Contact Us</a></li>
+          <li><a
+              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
+              href="product-inquiry.html">Product Inquiry</a></li>
+          <li class="flex items-start gap-2 text-on-primary-container mt-4">
+            <span class="material-symbols-outlined text-[18px] mt-0.5">location_on</span>
+            <span>Halol, Chandrapura, Gujarat</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto border-t border-primary-container pt-8 flex flex-col md:flex-row justify-between items-center text-[12px] text-on-primary-container">
+      <div>© 2024 Kriza FRP Products. Complete Composite Solution. All Rights Reserved.</div>
+      <div class="flex gap-4 mt-4 md:mt-0">
+        <a class="hover:text-white transition-colors" href="privacy-policy.html">Privacy Policy</a>
+        <a class="hover:text-white transition-colors" href="terms-of-service.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // --- Mobile hamburger ---
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('open');
     });
-  }, { threshold: 0.05 });
-  revealEls.forEach(el => observer.observe(el));
 
-  // --- Navbar scroll shadow ---
-  const nav = document.querySelector('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('shadow-lg', window.scrollY > 20);
-  });
+    // --- Scroll-reveal with IntersectionObserver ---
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.05 });
+    revealEls.forEach(el => observer.observe(el));
 
-  // --- Product details and specifications ---
-  document.addEventListener('DOMContentLoaded', () => {
-    // --- Mobile toggle for categories sidebar ---
-    const categoryToggle = document.getElementById('category-toggle');
-    const categoryListContainer = document.getElementById('category-list-container');
-    const categoryToggleIcon = document.getElementById('category-toggle-icon');
-    
-    if (categoryToggle && categoryListContainer) {
-      categoryToggle.addEventListener('click', () => {
-        if (window.innerWidth < 1024) {
-          const isHidden = categoryListContainer.classList.contains('hidden');
-          if (isHidden) {
+    // --- Navbar scroll shadow ---
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('shadow-lg', window.scrollY > 20);
+    });
+
+    // --- Product details and specifications ---
+    document.addEventListener('DOMContentLoaded', () => {
+      // --- Mobile toggle for categories sidebar ---
+      const categoryToggle = document.getElementById('category-toggle');
+      const categoryListContainer = document.getElementById('category-list-container');
+      const categoryToggleIcon = document.getElementById('category-toggle-icon');
+
+      if (categoryToggle && categoryListContainer) {
+        categoryToggle.addEventListener('click', () => {
+          if (window.innerWidth < 1024) {
+            const isHidden = categoryListContainer.classList.contains('hidden');
+            if (isHidden) {
+              categoryListContainer.classList.remove('hidden');
+              categoryToggleIcon.style.transform = 'rotate(180deg)';
+            } else {
+              categoryListContainer.classList.add('hidden');
+              categoryToggleIcon.style.transform = '';
+            }
+          }
+        });
+
+        window.addEventListener('resize', () => {
+          if (window.innerWidth >= 1024) {
             categoryListContainer.classList.remove('hidden');
-            categoryToggleIcon.style.transform = 'rotate(180deg)';
-          } else {
-            categoryListContainer.classList.add('hidden');
             categoryToggleIcon.style.transform = '';
           }
-        }
-      });
-      
-      window.addEventListener('resize', () => {
-        if (window.innerWidth >= 1024) {
-          categoryListContainer.classList.remove('hidden');
-          categoryToggleIcon.style.transform = '';
-        }
-      });
-    }
+        });
+      }
 
-    // --- Checkbox and Search Filtering ---
-    const checkboxes = document.querySelectorAll('input[data-category]');
-    const searchInput = document.getElementById('product-search');
-    const grid = document.getElementById('products-grid');
-    const noProductsMsg = document.getElementById('no-products-message');
-    
-    function filterProducts() {
-      if (!grid) return;
-      const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
-      const activeCategories = Array.from(checkboxes)
-        .filter(cb => cb.checked)
-        .map(cb => cb.getAttribute('data-category'));
+      // --- Checkbox and Search Filtering ---
+      const checkboxes = document.querySelectorAll('input[data-category]');
+      const searchInput = document.getElementById('product-search');
+      const grid = document.getElementById('products-grid');
+      const noProductsMsg = document.getElementById('no-products-message');
 
-      const cards = Array.from(grid.querySelectorAll('article[data-category]'));
-      let visibleCount = 0;
+      function filterProducts() {
+        if (!grid) return;
+        const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+        const activeCategories = Array.from(checkboxes)
+          .filter(cb => cb.checked)
+          .map(cb => cb.getAttribute('data-category'));
 
-      cards.forEach(card => {
-        const cardCategory = card.getAttribute('data-category');
-        const title = card.querySelector('h2').textContent.toLowerCase();
-        const desc = card.querySelector('p').textContent.toLowerCase();
-        
-        const matchesSearch = !query || title.includes(query) || desc.includes(query);
-        const matchesCategory = activeCategories.includes(cardCategory);
+        const cards = Array.from(grid.querySelectorAll('article[data-category]'));
+        let visibleCount = 0;
 
-        if (matchesSearch && matchesCategory) {
-          card.style.display = '';
-          card.classList.remove('hidden');
-          card.classList.add('visible');
-          visibleCount++;
-        } else {
-          card.style.display = 'none';
-          card.classList.add('hidden');
-        }
-      });
+        cards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          const title = card.querySelector('h2').textContent.toLowerCase();
+          const desc = card.querySelector('p').textContent.toLowerCase();
 
-      if (noProductsMsg) {
-        if (visibleCount === 0) {
-          noProductsMsg.classList.remove('hidden');
-        } else {
-          noProductsMsg.classList.add('hidden');
+          const matchesSearch = !query || title.includes(query) || desc.includes(query);
+          const matchesCategory = activeCategories.includes(cardCategory);
+
+          if (matchesSearch && matchesCategory) {
+            card.style.display = '';
+            card.classList.remove('hidden');
+            card.classList.add('visible');
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+            card.classList.add('hidden');
+          }
+        });
+
+        if (noProductsMsg) {
+          if (visibleCount === 0) {
+            noProductsMsg.classList.remove('hidden');
+          } else {
+            noProductsMsg.classList.add('hidden');
+          }
         }
       }
-    }
 
-    checkboxes.forEach(cb => {
-      cb.addEventListener('change', filterProducts);
-    });
-
-    if (searchInput) {
-      searchInput.addEventListener('input', filterProducts);
-    }
-
-    const selectAllBtn = document.getElementById('filter-select-all');
-    const clearAllBtn = document.getElementById('filter-clear-all');
-
-    if (selectAllBtn) {
-      selectAllBtn.addEventListener('click', () => {
-        checkboxes.forEach(cb => cb.checked = true);
-        filterProducts();
+      checkboxes.forEach(cb => {
+        cb.addEventListener('change', filterProducts);
       });
-    }
 
-    if (clearAllBtn) {
-      clearAllBtn.addEventListener('click', () => {
-        checkboxes.forEach(cb => cb.checked = false);
-        filterProducts();
-      });
-    }
-
-    const productSpecs = {
-      "1": {
-        ref: "KRZ-CT-200",
-        specs: [
-          "Excellent electrical insulation and non-conductive safety properties.",
-          "High structural integrity under heavy cables, matching NEMA FG-1-1993 standard.",
-          "UV-stabilized resin formulation prevents cracking and sun damage.",
-          "Highly resistant to petrochemical fumes, sulfur, and acidic atmospheres.",
-          "Easy to cut, drill, and install on-site without welding or hot permits."
-        ]
-      },
-      "2": {
-        ref: "KRZ-GR-500",
-        specs: [
-          "Slip-resistant surface (gritted, concave, or smooth options) for safety.",
-          "High strength-to-weight ratio compared to traditional steel gratings.",
-          "Exceptional corrosion resistance in harsh acid, chemical, and alkaline conditions.",
-          "Class 1 fire retardant and self-extinguishing rating per ASTM E84.",
-          "Virtually maintenance-free with an operational lifespan of 25+ years."
-        ]
-      },
-      "3": {
-        ref: "KRZ-TK-300",
-        specs: [
-          "Dual laminate design with chemically inert PP-H thermoplastic internal liner.",
-          "Continuous structural glass filament winding (FRP) outer shell.",
-          "Designed and fabricated to ASME RTP-1 and BS-EN-13121-3 standards.",
-          "100% leak-proof joints and nozzles, fully customized per chemical storage needs.",
-          "Superior corrosion immunity for storing acids, caustic soda, and chlorine."
-        ]
-      },
-      "4": {
-        ref: "KRZ-PR-600",
-        specs: [
-          "Wide selection of pultruded sections: I-beams, channels, box tubes, and angles.",
-          "Continuous glass fibers provide structural load capacities equal to structural steel.",
-          "Non-magnetic, electromagnetically transparent, and radar friendly.",
-          "Low thermal conductivity prevents sweating and cold-bridging.",
-          "Can be fabricated on-site using standard carbon-tipped woodworking tools."
-        ]
-      },
-      "5": {
-        ref: "KRZ-WP-700",
-        specs: [
-          "Custom structural solutions tailored exactly to industrial plant layouts.",
-          "Slip-resistant grating walkway floors with integrated toe plates.",
-          "Complete corrosion immunity for elevated walkways in sulfur/acid rooms.",
-          "Includes heavy-duty pultruded handrails, stairs, and safety cages.",
-          "OSHA-compliant structural safety factors for walk-over industrial spans."
-        ]
-      },
-      "6": {
-        ref: "KRZ-PP-100",
-        specs: [
-          "High-pressure filament wound pipes for industrial water and chemical piping.",
-          "Smooth glass-like internal surface reduces fluid friction and pumping power.",
-          "Highly resistant to aggressive chemical effluents, sewage, and municipal water.",
-          "Custom manufactured bends, tees, reducers, and blind flanges available.",
-          "No scaling, paraffin accumulation, or rust buildup over decades of use."
-        ]
-      },
-      "7": {
-        ref: "KRZ-PL-150",
-        specs: [
-          "Non-conductive structure eliminates grounding requirements for maximum safety.",
-          "High wind load resistance engineered per BS EN 40-7 and ANSI C136 criteria.",
-          "Rust-proof and rot-proof, suited for offshore platforms and coastal marine drives.",
-          "Lightweight profile reduces installation costs, heavy cranes are not required.",
-          "Integral colored resins are pigmented into the composite matrix, no painting needed."
-        ]
-      },
-      "8": {
-        ref: "KRZ-SH-800",
-        specs: [
-          "Available in corrugated, flat, textured, and custom gritted profiles.",
-          "Excellent light-diffusing skylight sheets or high-opacity protective cladding.",
-          "Shatter-proof structural behavior under heavy wind loads or hail impact.",
-          "Coated with protective films preventing UV discoloration and yellowing.",
-          "Immune to rust and degradation caused by chemical condensation."
-        ]
-      },
-      "9": {
-        ref: "KRZ-CN-900",
-        specs: [
-          "Specially molded protective shelters for push-buttons, transmitters, and motors.",
-          "Heavy-duty composite design shields devices from UV degradation and rain.",
-          "Single-piece seamless shell guarantees 100% waterproof protection.",
-          "Highly fire-retardant grade resin with high mechanical impact resistance.",
-          "Supplied with chemical-resistant stainless steel mounting brackets."
-        ]
-      },
-      "10": {
-        ref: "KRZ-RD-850",
-        specs: [
-          "Excellent electrical insulation and non-magnetic properties for high-voltage environments.",
-          "Extremely high tensile strength-to-weight ratio, outperforming traditional steel bars.",
-          "100% corrosion-resistant against acids, salts, and harsh industrial chemical exposure.",
-          "UV-resistant coating prevents degradation and fading under direct sunlight.",
-          "Lightweight structure for cost-effective handling and rapid field installation."
-        ]
+      if (searchInput) {
+        searchInput.addEventListener('input', filterProducts);
       }
-    };
 
-    const productCards = document.querySelectorAll('#products-grid article');
-    const modal = document.getElementById('product-modal');
-    const modalCard = document.getElementById('modal-card');
-    const modalCloseBtn = document.getElementById('modal-close-btn');
-    const modalImg = document.getElementById('modal-img');
-    const modalTitle = document.getElementById('modal-title');
-    const modalDesc = document.getElementById('modal-desc');
-    const modalCategoryBadge = document.getElementById('modal-category-badge');
-    const modalRefCode = document.getElementById('modal-ref-code');
-    const modalBadges = document.getElementById('modal-badges');
-    const modalSpecs = document.getElementById('modal-specs');
-    const modalInquiryBtn = document.getElementById('modal-inquiry-btn');
+      const selectAllBtn = document.getElementById('filter-select-all');
+      const clearAllBtn = document.getElementById('filter-clear-all');
 
-    function openModal(card) {
-      const productId = card.getAttribute('data-id');
-      const category = card.getAttribute('data-category');
-      const title = card.querySelector('h2').textContent.trim();
-      const desc = card.querySelector('p').textContent.trim();
-      const img = card.querySelector('img');
-      const imgSrc = img ? img.getAttribute('src') : '';
-      const imgAlt = img ? img.getAttribute('alt') : '';
-      
-      const badgeContainer = card.querySelector('.absolute.top-4.right-4, .absolute.top-4.left-4');
-      const badgesHTML = badgeContainer ? badgeContainer.innerHTML : '';
-      
-      const specData = productSpecs[productId] || { ref: 'KRZ-GEN-100', specs: ['High performance composite construction.'] };
-      
-      modalImg.setAttribute('src', imgSrc);
-      modalImg.setAttribute('alt', imgAlt);
-      modalTitle.textContent = title;
-      modalDesc.textContent = desc;
-      modalCategoryBadge.textContent = category.replace(/-/g, ' ');
-      modalRefCode.textContent = `REF: ${specData.ref}`;
-      modalBadges.innerHTML = badgesHTML;
-      
-      modalSpecs.innerHTML = specData.specs.map(spec => `
+      if (selectAllBtn) {
+        selectAllBtn.addEventListener('click', () => {
+          checkboxes.forEach(cb => cb.checked = true);
+          filterProducts();
+        });
+      }
+
+      if (clearAllBtn) {
+        clearAllBtn.addEventListener('click', () => {
+          checkboxes.forEach(cb => cb.checked = false);
+          filterProducts();
+        });
+      }
+
+      const productSpecs = {
+        "1": {
+          ref: "KRZ-CT-200",
+          specs: [
+            "Excellent electrical insulation and non-conductive safety properties.",
+            "High structural integrity under heavy cables, matching NEMA FG-1-1993 standard.",
+            "UV-stabilized resin formulation prevents cracking and sun damage.",
+            "Highly resistant to petrochemical fumes, sulfur, and acidic atmospheres.",
+            "Easy to cut, drill, and install on-site without welding or hot permits."
+          ]
+        },
+        "2": {
+          ref: "KRZ-GR-500",
+          specs: [
+            "Slip-resistant surface (gritted, concave, or smooth options) for safety.",
+            "High strength-to-weight ratio compared to traditional steel gratings.",
+            "Exceptional corrosion resistance in harsh acid, chemical, and alkaline conditions.",
+            "Class 1 fire retardant and self-extinguishing rating per ASTM E84.",
+            "Virtually maintenance-free with an operational lifespan of 25+ years."
+          ]
+        },
+        "3": {
+          ref: "KRZ-TK-300",
+          specs: [
+            "Dual laminate design with chemically inert PP-H thermoplastic internal liner.",
+            "Continuous structural glass filament winding (FRP) outer shell.",
+            "Designed and fabricated to ASME RTP-1 and BS-EN-13121-3 standards.",
+            "100% leak-proof joints and nozzles, fully customized per chemical storage needs.",
+            "Superior corrosion immunity for storing acids, caustic soda, and chlorine."
+          ]
+        },
+        "4": {
+          ref: "KRZ-PR-600",
+          specs: [
+            "Wide selection of pultruded sections: I-beams, channels, box tubes, and angles.",
+            "Continuous glass fibers provide structural load capacities equal to structural steel.",
+            "Non-magnetic, electromagnetically transparent, and radar friendly.",
+            "Low thermal conductivity prevents sweating and cold-bridging.",
+            "Can be fabricated on-site using standard carbon-tipped woodworking tools."
+          ]
+        },
+        "5": {
+          ref: "KRZ-WP-700",
+          specs: [
+            "Custom structural solutions tailored exactly to industrial plant layouts.",
+            "Slip-resistant grating walkway floors with integrated toe plates.",
+            "Complete corrosion immunity for elevated walkways in sulfur/acid rooms.",
+            "Includes heavy-duty pultruded handrails, stairs, and safety cages.",
+            "OSHA-compliant structural safety factors for walk-over industrial spans."
+          ]
+        },
+        "6": {
+          ref: "KRZ-PP-100",
+          specs: [
+            "High-pressure filament wound pipes for industrial water and chemical piping.",
+            "Smooth glass-like internal surface reduces fluid friction and pumping power.",
+            "Highly resistant to aggressive chemical effluents, sewage, and municipal water.",
+            "Custom manufactured bends, tees, reducers, and blind flanges available.",
+            "No scaling, paraffin accumulation, or rust buildup over decades of use."
+          ]
+        },
+        "7": {
+          ref: "KRZ-PL-150",
+          specs: [
+            "Non-conductive structure eliminates grounding requirements for maximum safety.",
+            "High wind load resistance engineered per BS EN 40-7 and ANSI C136 criteria.",
+            "Rust-proof and rot-proof, suited for offshore platforms and coastal marine drives.",
+            "Lightweight profile reduces installation costs, heavy cranes are not required.",
+            "Integral colored resins are pigmented into the composite matrix, no painting needed."
+          ]
+        },
+        "8": {
+          ref: "KRZ-SH-800",
+          specs: [
+            "Available in corrugated, flat, textured, and custom gritted profiles.",
+            "Excellent light-diffusing skylight sheets or high-opacity protective cladding.",
+            "Shatter-proof structural behavior under heavy wind loads or hail impact.",
+            "Coated with protective films preventing UV discoloration and yellowing.",
+            "Immune to rust and degradation caused by chemical condensation."
+          ]
+        },
+        "9": {
+          ref: "KRZ-CN-900",
+          specs: [
+            "Specially molded protective shelters for push-buttons, transmitters, and motors.",
+            "Heavy-duty composite design shields devices from UV degradation and rain.",
+            "Single-piece seamless shell guarantees 100% waterproof protection.",
+            "Highly fire-retardant grade resin with high mechanical impact resistance.",
+            "Supplied with chemical-resistant stainless steel mounting brackets."
+          ]
+        },
+        "10": {
+          ref: "KRZ-RD-850",
+          specs: [
+            "Excellent electrical insulation and non-magnetic properties for high-voltage environments.",
+            "Extremely high tensile strength-to-weight ratio, outperforming traditional steel bars.",
+            "100% corrosion-resistant against acids, salts, and harsh industrial chemical exposure.",
+            "UV-resistant coating prevents degradation and fading under direct sunlight.",
+            "Lightweight structure for cost-effective handling and rapid field installation."
+          ]
+        }
+      };
+
+      const productCards = document.querySelectorAll('#products-grid article');
+      const modal = document.getElementById('product-modal');
+      const modalCard = document.getElementById('modal-card');
+      const modalCloseBtn = document.getElementById('modal-close-btn');
+      const modalImg = document.getElementById('modal-img');
+      const modalTitle = document.getElementById('modal-title');
+      const modalDesc = document.getElementById('modal-desc');
+      const modalCategoryBadge = document.getElementById('modal-category-badge');
+      const modalRefCode = document.getElementById('modal-ref-code');
+      const modalBadges = document.getElementById('modal-badges');
+      const modalSpecs = document.getElementById('modal-specs');
+      const modalInquiryBtn = document.getElementById('modal-inquiry-btn');
+
+      function openModal(card) {
+        const productId = card.getAttribute('data-id');
+        const category = card.getAttribute('data-category');
+        const title = card.querySelector('h2').textContent.trim();
+        const desc = card.querySelector('p').textContent.trim();
+        const img = card.querySelector('img');
+        const imgSrc = img ? img.getAttribute('src') : '';
+        const imgAlt = img ? img.getAttribute('alt') : '';
+
+        const badgeContainer = card.querySelector('.absolute.top-4.right-4, .absolute.top-4.left-4');
+        const badgesHTML = badgeContainer ? badgeContainer.innerHTML : '';
+
+        const specData = productSpecs[productId] || { ref: 'KRZ-GEN-100', specs: ['High performance composite construction.'] };
+
+        modalImg.setAttribute('src', imgSrc);
+        modalImg.setAttribute('alt', imgAlt);
+        modalTitle.textContent = title;
+        modalDesc.textContent = desc;
+        modalCategoryBadge.textContent = category.replace(/-/g, ' ');
+        modalRefCode.textContent = `REF: ${specData.ref}`;
+        modalBadges.innerHTML = badgesHTML;
+
+        modalSpecs.innerHTML = specData.specs.map(spec => `
         <li class="flex items-start gap-2.5">
           <span class="material-symbols-outlined text-secondary text-base mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
           <span class="font-body-md text-xs md:text-sm text-on-surface-variant">${spec}</span>
         </li>
       `).join('');
-      
-      modalInquiryBtn.onclick = () => {
-        window.location.href = `product-inquiry.html?product=${encodeURIComponent(title)}&ref=${encodeURIComponent(specData.ref)}`;
-      };
-      
-      modal.classList.remove('opacity-0', 'pointer-events-none');
-      setTimeout(() => {
-        modalCard.classList.remove('translate-y-4', 'scale-95');
-      }, 50);
-      
-      document.body.classList.add('overflow-hidden');
-    }
 
-    function closeModal() {
-      modalCard.classList.add('translate-y-4', 'scale-95');
-      modal.classList.add('opacity-0', 'pointer-events-none');
-      document.body.classList.remove('overflow-hidden');
-    }
+        modalInquiryBtn.onclick = () => {
+          window.location.href = `product-inquiry.html?product=${encodeURIComponent(title)}&ref=${encodeURIComponent(specData.ref)}`;
+        };
 
-    productCards.forEach(card => {
-      card.addEventListener('click', (e) => {
-        if (e.target.closest('button') || e.target.closest('a')) {
-          return;
-        }
-        openModal(card);
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        setTimeout(() => {
+          modalCard.classList.remove('translate-y-4', 'scale-95');
+        }, 50);
+
+        document.body.classList.add('overflow-hidden');
+      }
+
+      function closeModal() {
+        modalCard.classList.add('translate-y-4', 'scale-95');
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        document.body.classList.remove('overflow-hidden');
+      }
+
+      productCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+          if (e.target.closest('button') || e.target.closest('a')) {
+            return;
+          }
+          openModal(card);
+        });
       });
-    });
 
-    if (modalCloseBtn) {
-      modalCloseBtn.addEventListener('click', closeModal);
-    }
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        closeModal();
+      if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', closeModal);
       }
-    });
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
 
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !modal.classList.contains('opacity-0')) {
-        closeModal();
-      }
-    });
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('opacity-0')) {
+          closeModal();
+        }
+      });
 
-    // Run initial filtering
-    filterProducts();
-  });
-</script>
-</body></html>
+      // Run initial filtering
+      filterProducts();
+    });
+  </script>
+</body>
+
+</html>
