@@ -108,3 +108,54 @@
     }
 }
 
+/* Preloader Animations */
+@keyframes drawGridLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes cureResin {
+  0% {
+    fill-opacity: 0;
+    fill: #fabd00;
+  }
+  50% {
+    fill-opacity: 0.55;
+    fill: #fabd00;
+  }
+  100% {
+    fill-opacity: 0.85;
+    fill: #4E6700;
+  }
+}
+@keyframes contentReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px rgba(78, 103, 0, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(78, 103, 0, 0.7)) drop-shadow(0 0 24px rgba(250, 189, 0, 0.4));
+  }
+}
+.animate-content-reveal {
+  animation: contentReveal 0.8s cubic-bezier(.4,0,.2,1) 0.5s forwards;
+}
+.animate-content-reveal-delay {
+  animation: contentReveal 0.8s cubic-bezier(.4,0,.2,1) 0.8s forwards;
+}
+.preloader-glow {
+  animation: pulseGlow 3s ease-in-out infinite alternate;
+}
+.resin-cell {
+  fill: #fabd00;
+  fill-opacity: 0;
+  stroke: none;
+}
+
+
+
