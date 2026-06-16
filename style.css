@@ -2057,10 +2057,6 @@ input:where([type='file']):focus {
   padding-bottom: 5rem;
 }
 
-.pb-32 {
-  padding-bottom: 8rem;
-}
-
 .pl-10 {
   padding-left: 2.5rem;
 }
