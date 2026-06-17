@@ -440,8 +440,10 @@
         <!-- Search Bar -->
         <div class="bg-surface-container-low p-4 rounded-DEFAULT border border-outline-variant mb-6">
           <div class="relative w-full sm:max-w-xs md:max-w-sm">
-            <span
-              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-on-surface-variant">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
             <input id="product-search"
               class="w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT py-2 pl-10 pr-4 focus:border-primary focus:ring-1 focus:ring-primary font-body-md text-body-md placeholder-on-surface-variant hover:border-primary/50 transition-all duration-300 shadow-sm"
               placeholder="Search products..." type="text" />
@@ -450,7 +452,12 @@
         <!-- No Products Message -->
         <div id="no-products-message"
           class="hidden col-span-full py-12 text-center bg-surface-container-lowest border border-outline-variant rounded-DEFAULT shadow-sm">
-          <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2">search_off</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-on-surface-variant mb-2 mx-auto">
+            <path d="m2 2 20 20"></path>
+            <path d="M16.185 10.515a6 6 0 0 0-8.47-8.47"></path>
+            <path d="M13.735 18a6 6 0 0 1-5.735-6"></path>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
           <p class="font-headline-md text-headline-md text-primary mb-1">No Products Found</p>
           <p class="font-body-md text-body-md text-on-surface-variant">Try adjusting your filters or search terms.</p>
         </div>
