@@ -343,39 +343,52 @@
   <section class="py-16 bg-surface">
     <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
       <div class="text-center mb-12 reveal">
-        <span class="inline-block bg-secondary-fixed text-on-secondary-fixed font-label-sm px-3 py-1 rounded-sm uppercase tracking-wider mb-3">Statistics</span>
+        <span
+          class="inline-block bg-secondary-fixed text-on-secondary-fixed font-label-sm px-3 py-1 rounded-sm uppercase tracking-wider mb-3">Statistics</span>
         <h2 class="font-headline-lg text-headline-md md:text-headline-lg text-primary">Facts & Figures</h2>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8" id="facts-figures">
-        
-        <div class="flex flex-col items-center p-6 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant hover:-translate-y-1 transition-transform text-center bento-card reveal">
-          <div class="font-display-md text-4xl md:text-5xl text-secondary font-bold mb-3 flex items-center justify-center">
+
+        <div
+          class="flex flex-col items-center p-6 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant hover:-translate-y-1 transition-transform text-center bento-card reveal">
+          <div
+            class="font-display-md text-4xl md:text-5xl text-secondary font-bold mb-3 flex items-center justify-center">
             <span class="counter" data-target="50000">0</span>
           </div>
-          <span class="font-label-md text-on-surface-variant uppercase tracking-wider text-xs md:text-sm">sq ft manufacturing facility</span>
+          <span class="font-label-md text-on-surface font-bold uppercase tracking-wider text-xs md:text-sm">sq ft
+            manufacturing facility</span>
         </div>
 
-        <div class="flex flex-col items-center p-6 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant hover:-translate-y-1 transition-transform text-center bento-card reveal">
-          <div class="font-display-md text-4xl md:text-5xl text-secondary font-bold mb-3 flex items-center justify-center">
+        <div
+          class="flex flex-col items-center p-6 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant hover:-translate-y-1 transition-transform text-center bento-card reveal">
+          <div
+            class="font-display-md text-4xl md:text-5xl text-secondary font-bold mb-3 flex items-center justify-center">
             <span class="counter" data-target="20">0</span>+
           </div>
-          <span class="font-label-md text-on-surface-variant uppercase tracking-wider text-xs md:text-sm">trusted clients</span>
+          <span class="font-label-md text-on-surface font-bold uppercase tracking-wider text-xs md:text-sm">trusted
+            clients</span>
         </div>
 
-        <div class="flex flex-col items-center p-6 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant hover:-translate-y-1 transition-transform text-center bento-card reveal">
-          <div class="font-display-md text-4xl md:text-5xl text-secondary font-bold mb-3 flex items-center justify-center">
+        <div
+          class="flex flex-col items-center p-6 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant hover:-translate-y-1 transition-transform text-center bento-card reveal">
+          <div
+            class="font-display-md text-4xl md:text-5xl text-secondary font-bold mb-3 flex items-center justify-center">
             <span class="counter" data-target="15">0</span>+
           </div>
-          <span class="font-label-md text-on-surface-variant uppercase tracking-wider text-xs md:text-sm">products</span>
+          <span
+            class="font-label-md text-on-surface font-bold uppercase tracking-wider text-xs md:text-sm">products</span>
         </div>
 
-        <div class="flex flex-col items-center p-6 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant hover:-translate-y-1 transition-transform text-center bento-card reveal">
-          <div class="font-display-md text-4xl md:text-5xl text-secondary font-bold mb-3 flex items-center justify-center">
+        <div
+          class="flex flex-col items-center p-6 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant hover:-translate-y-1 transition-transform text-center bento-card reveal">
+          <div
+            class="font-display-md text-4xl md:text-5xl text-secondary font-bold mb-3 flex items-center justify-center">
             <span class="counter" data-target="99">0</span>%
           </div>
-          <span class="font-label-md text-on-surface-variant uppercase tracking-wider text-xs md:text-sm">ontime delivery</span>
+          <span class="font-label-md text-on-surface font-bold uppercase tracking-wider text-xs md:text-sm">ontime
+            delivery</span>
         </div>
-        
+
       </div>
     </div>
   </section>
@@ -388,7 +401,7 @@
           class="inline-block bg-secondary-fixed text-on-secondary-fixed font-label-sm px-3 py-1 rounded-sm uppercase tracking-wider">Our
           Profile</span>
         <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-tight">
-          25+ Years of Engineering Legacy & Composite Mastery
+          Engineering Legacy & Composite Mastery
         </h2>
         <p class="font-body-md text-body-md text-on-surface-variant">
           KRIZA FRP PRODUCTS is a premier manufacturer specializing in high-performance Fiberglass Reinforced Polymer
@@ -1226,7 +1239,7 @@
         if (entry.isIntersecting) {
           const counter = entry.target;
           const target = +counter.getAttribute('data-target');
-          
+
           const updateCount = () => {
             const count = +counter.innerText;
             const inc = target / speed;
@@ -1243,7 +1256,7 @@
         }
       });
     }, { threshold: 0.5 });
-    
+
     counters.forEach(counter => {
       counterObserver.observe(counter);
     });
