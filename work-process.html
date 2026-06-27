@@ -213,6 +213,7 @@
           href="contact-us.html">Contact Us</a>
       </div>
       <div class="flex items-center gap-3">
+        <button onclick="openCatalogModal()" class="hidden md:flex bg-secondary-fixed text-on-secondary-fixed font-bold py-2 px-4 rounded hover:bg-secondary-fixed-dim transition-colors text-sm items-center gap-2"><span class="material-symbols-outlined text-[18px]">download</span> Catalog</button>
         <button id="hamburger" aria-label="Toggle menu" class="md:hidden flex flex-col gap-[6px] p-2 text-primary">
           <span class="ham-bar"></span>
           <span class="ham-bar"></span>
@@ -231,6 +232,8 @@
         <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors"
           href="contact-us.html">Contact Us</a>
 
+      
+        <button onclick="openCatalogModal()" class="bg-secondary-fixed text-on-secondary-fixed font-bold py-2 px-4 rounded hover:bg-secondary-fixed-dim transition-colors text-left flex items-center gap-2 w-max mt-2"><span class="material-symbols-outlined text-[18px]">download</span> Download Catalog</button>
       </div>
     </div>
   </nav>
@@ -548,6 +551,86 @@
     window.addEventListener('scroll', () => {
       nav.classList.toggle('shadow-lg', window.scrollY > 20);
     });
+  </script>
+
+  <!-- Catalog Modal -->
+  <div id="catalogModal" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+    <div class="bg-surface-container-lowest text-on-surface rounded-xl shadow-lg w-full max-w-md mx-4 overflow-hidden transform scale-95 transition-transform duration-300" id="catalogModalContent">
+      <div class="flex justify-between items-center p-6 border-b border-outline-variant">
+        <h3 class="font-headline-sm text-headline-sm font-bold text-primary">Download Catalog</h3>
+        <button onclick="closeCatalogModal()" class="text-on-surface-variant hover:text-primary transition-colors">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <form class="p-6 space-y-4" onsubmit="submitCatalogForm(event)">
+        <p class="text-body-sm text-on-surface-variant mb-4">Please fill out this form to download our comprehensive product catalog.</p>
+        
+        <div>
+          <label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1" for="catalogCompany">Company Name *</label>
+          <input class="w-full bg-surface border border-outline-variant rounded p-2.5 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-sm" id="catalogCompany" placeholder="Your Company" type="text" required />
+        </div>
+        
+        <div>
+          <label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1" for="catalogPhone">Phone Number *</label>
+          <input class="w-full bg-surface border border-outline-variant rounded p-2.5 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-sm" id="catalogPhone" placeholder="+1 (555) 000-0000" type="tel" required />
+        </div>
+        
+        <div>
+          <label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1" for="catalogEmail">Email Address *</label>
+          <input class="w-full bg-surface border border-outline-variant rounded p-2.5 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-sm" id="catalogEmail" placeholder="you@company.com" type="email" required />
+        </div>
+        
+        <div>
+          <label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1" for="catalogDescription">Description *</label>
+          <textarea class="w-full bg-surface border border-outline-variant rounded p-2.5 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-sm resize-none" id="catalogDescription" placeholder="Briefly describe your requirements..." rows="3" required></textarea>
+        </div>
+        
+        <div class="pt-4">
+          <button class="w-full bg-secondary-fixed text-on-secondary-fixed font-headline-sm text-headline-sm font-bold py-3 px-4 rounded hover:bg-secondary-fixed-dim transition-colors flex justify-center items-center gap-2" type="submit">
+            Get Catalog
+            <span class="material-symbols-outlined">download</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openCatalogModal() {
+      const modal = document.getElementById('catalogModal');
+      const content = document.getElementById('catalogModalContent');
+      if(modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        setTimeout(() => {
+          modal.classList.remove('opacity-0');
+          content.classList.remove('scale-95');
+          content.classList.add('scale-100');
+        }, 10);
+      }
+    }
+    
+    function closeCatalogModal() {
+      const modal = document.getElementById('catalogModal');
+      const content = document.getElementById('catalogModalContent');
+      if(modal) {
+        modal.classList.add('opacity-0');
+        content.classList.remove('scale-100');
+        content.classList.add('scale-95');
+        setTimeout(() => {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }, 300);
+      }
+    }
+    
+    function submitCatalogForm(e) {
+      e.preventDefault();
+      // Logic for catalog download
+      alert('Thank you! Your catalog will begin downloading shortly.');
+      closeCatalogModal();
+      e.target.reset();
+    }
   </script>
 </body>
 
