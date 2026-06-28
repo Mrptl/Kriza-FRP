@@ -1040,12 +1040,12 @@ input:where([type='file']):focus {
   height: 2px;
 }
 
-.h-\[400px\] {
-  height: 400px;
+.h-\[30vh\] {
+  height: 30vh;
 }
 
-.h-\[80vh\] {
-  height: 80vh;
+.h-\[400px\] {
+  height: 400px;
 }
 
 .h-full {
@@ -1066,10 +1066,6 @@ input:where([type='file']):focus {
 
 .min-h-\[400px\] {
   min-height: 400px;
-}
-
-.min-h-\[460px\] {
-  min-height: 460px;
 }
 
 .min-h-\[48px\] {
@@ -2945,12 +2941,12 @@ input:where([type='file']):focus {
     height: 104px;
   }
 
-  .sm\:h-\[80vh\] {
-    height: 80vh;
+  .sm\:h-\[40vh\] {
+    height: 40vh;
   }
 
-  .sm\:min-h-\[520px\] {
-    min-height: 520px;
+  .sm\:min-h-\[350px\] {
+    min-height: 350px;
   }
 
   .sm\:w-\[104px\] {
