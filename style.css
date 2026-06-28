@@ -944,10 +944,6 @@ input:where([type='file']):focus {
   margin-top: 0.25rem;
 }
 
-.mt-16 {
-  margin-top: 4rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -1010,10 +1006,6 @@ input:where([type='file']):focus {
 
 .h-16 {
   height: 4rem;
-}
-
-.h-20 {
-  height: 5rem;
 }
 
 .h-24 {
@@ -1110,10 +1102,6 @@ input:where([type='file']):focus {
 
 .w-16 {
   width: 4rem;
-}
-
-.w-20 {
-  width: 5rem;
 }
 
 .w-24 {
@@ -1543,6 +1531,10 @@ input:where([type='file']):focus {
   border-color: rgb(199 198 205 / var(--tw-border-opacity, 1));
 }
 
+.border-outline-variant\/20 {
+  border-color: rgb(199 198 205 / 0.2);
+}
+
 .border-outline\/30 {
   border-color: rgb(119 118 125 / 0.3);
 }
@@ -1903,6 +1895,10 @@ input:where([type='file']):focus {
   padding-bottom: 0.25rem;
 }
 
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
 .pl-10 {
   padding-left: 2.5rem;
 }
@@ -1917,6 +1913,10 @@ input:where([type='file']):focus {
 
 .pr-4 {
   padding-right: 1rem;
+}
+
+.pt-24 {
+  padding-top: 6rem;
 }
 
 .pt-4 {
@@ -2086,11 +2086,6 @@ input:where([type='file']):focus {
   line-height: 16px;
   letter-spacing: 0.05em;
   font-weight: 600;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .text-sm {
@@ -3128,10 +3123,6 @@ input:where([type='file']):focus {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -3140,8 +3131,16 @@ input:where([type='file']):focus {
     flex-direction: row;
   }
 
+  .md\:flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
   .md\:items-center {
     align-items: center;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
   }
 
   .md\:justify-end {
@@ -3182,6 +3181,11 @@ input:where([type='file']):focus {
     padding-right: 64px;
   }
 
+  .md\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
   .md\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -3208,12 +3212,13 @@ input:where([type='file']):focus {
     text-align: left;
   }
 
-  .md\:text-center {
-    text-align: center;
-  }
-
   .md\:text-right {
     text-align: right;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .md\:text-4xl {
