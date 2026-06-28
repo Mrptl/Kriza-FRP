@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+
+  <!-- Pipe -->
+  <path d="M8 16h24v16" stroke-width="4" />
+  <path d="M8 24h16v8" stroke-width="4" />
+  <path d="M36 32h-16v4h16z" fill="currentColor" stroke="none" />
+  <!-- Water pouring -->
+  <path d="M24 36v12" stroke-width="3" />
+  <path d="M28 36v16" stroke-width="3" />
+  <!-- Waves -->
+  <path d="M8 56c4-4 8 0 12 0s8-4 12 0 8 0 12 0 8-4 12 0" />
+  <path d="M8 48c4-4 8 0 12 0s8-4 12 0 8 0 12 0 8-4 12 0" />
+
+</svg>

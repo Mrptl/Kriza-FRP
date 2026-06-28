@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+
+  <!-- Transmission Tower -->
+  <path d="M32 4L16 60" />
+  <path d="M32 4l16 56" />
+  <!-- Cross arms -->
+  <path d="M12 24h40" />
+  <path d="M16 40h32" />
+  <path d="M24 12h16" />
+  <!-- Insulators -->
+  <circle cx="12" cy="28" r="2" />
+  <circle cx="52" cy="28" r="2" />
+  <circle cx="16" cy="44" r="2" />
+  <circle cx="48" cy="44" r="2" />
+  <!-- Bracing -->
+  <path d="M26 12l-6 12l8 16l-8 20" />
+  <path d="M38 12l6 12l-8 16l8 20" />
+  <path d="M20 24l12 16l12-16" />
+  <path d="M16 40l16 20l16-20" />
+
+</svg>

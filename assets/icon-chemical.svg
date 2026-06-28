@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+
+  <!-- Factory -->
+  <rect x="8" y="24" width="16" height="32" />
+  <rect x="24" y="32" width="12" height="24" />
+  <path d="M8 24l8-8 8 8" />
+  <!-- Chimney -->
+  <rect x="12" y="8" width="8" height="8" />
+  <!-- Smoke -->
+  <path d="M14 4c-2-2 2-4 0-6" />
+  <path d="M20 4c2-2-2-4 0-6" />
+  <!-- Flask -->
+  <path d="M40 24h8v8l8 16c2 4-1 8-6 8H36c-5 0-8-4-6-8l8-16v-8z" />
+  <!-- Liquid in flask -->
+  <path d="M36 40h20" />
+
+</svg>

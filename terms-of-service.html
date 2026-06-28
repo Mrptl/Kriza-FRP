@@ -181,8 +181,6 @@
         <div class="flex items-center gap-1 text-primary-fixed-dim">
           <span class="material-symbols-outlined text-[13px] md:text-sm text-secondary-fixed">phone</span>
           <span>Mobile:
-            <a href="tel:+918128519480" class="hover:text-white transition-colors text-white font-semibold">+91 81285
-              19480</a> /
             <a href="tel:+919898972016" class="hover:text-white transition-colors text-white font-semibold">+91 98989
               72016</a>
           </span>
@@ -383,6 +381,11 @@
         <p class="text-body-sm text-on-surface-variant mb-4">Please fill out this form to download our comprehensive product catalog.</p>
         
         <div>
+          <label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1" for="catalogName">Name *</label>
+          <input class="w-full bg-surface border border-outline-variant rounded p-2.5 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-sm" id="catalogName" placeholder="Your Full Name" type="text" required />
+        </div>
+        
+        <div>
           <label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1" for="catalogCompany">Company Name *</label>
           <input class="w-full bg-surface border border-outline-variant rounded p-2.5 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-sm" id="catalogCompany" placeholder="Your Company" type="text" required />
         </div>
@@ -398,8 +401,8 @@
         </div>
         
         <div>
-          <label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1" for="catalogDescription">Description *</label>
-          <textarea class="w-full bg-surface border border-outline-variant rounded p-2.5 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-sm resize-none" id="catalogDescription" placeholder="Briefly describe your requirements..." rows="3" required></textarea>
+          <label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1" for="catalogDescription">Description (Optional)</label>
+          <textarea class="w-full bg-surface border border-outline-variant rounded p-2.5 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-sm resize-none" id="catalogDescription" placeholder="Briefly describe your requirements..." rows="3"></textarea>
         </div>
         
         <div class="pt-4">

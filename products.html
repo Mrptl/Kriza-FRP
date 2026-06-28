@@ -218,8 +218,6 @@
         <div class="flex items-center gap-1 text-primary-fixed-dim">
           <span class="material-symbols-outlined text-[13px] md:text-sm text-secondary-fixed">phone</span>
           <span>Mobile:
-            <a href="tel:+918128519480" class="hover:text-white transition-colors text-white font-semibold">+91 81285
-              19480</a> /
             <a href="tel:+919898972016" class="hover:text-white transition-colors text-white font-semibold">+91 98989
               72016</a>
           </span>
@@ -294,152 +292,8 @@
   <!-- Main Content Layout -->
   <main class="flex-grow max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-8 w-full">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-      <!-- Sidebar Navigation & Filters -->
-      <aside class="lg:col-span-3 space-y-8 reveal reveal-delay-1">
-        <!-- Industry Filters -->
-        <div
-          class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT p-6 shadow-[0_4px_4px_rgba(0,0,0,0.02)]">
-          <div class="flex justify-between items-center lg:block cursor-pointer lg:cursor-default" id="category-toggle">
-            <h3
-              class="font-headline-md text-headline-md text-primary border-b-0 lg:border-b border-surface-variant pb-0 lg:pb-3 mb-0 lg:mb-2 flex items-center justify-between w-full">
-              <span>Categories</span>
-            </h3>
-            <span class="material-symbols-outlined lg:hidden text-primary transition-transform duration-300"
-              id="category-toggle-icon">expand_more</span>
-          </div>
-          <div class="hidden lg:block mt-4 lg:mt-0" id="category-list-container">
-            <div
-              class="flex justify-between items-center text-[11px] text-secondary-fixed mb-4 border-b border-surface-variant/40 pb-2">
-              <button id="filter-select-all"
-                class="hover:text-primary transition-colors font-bold uppercase tracking-wider focus:outline-none">Select
-                All</button>
-              <span class="text-outline-variant/40">|</span>
-              <button id="filter-clear-all"
-                class="hover:text-primary transition-colors font-bold uppercase tracking-wider focus:outline-none">Clear
-                All</button>
-            </div>
-            <ul class="space-y-3">
-              <li>
-                <label class="flex items-center gap-3 cursor-pointer group">
-                  <input checked="" data-category="frp-cable-trays"
-                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
-                    type="checkbox" />
-                  <span
-                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP
-                    Cable Trays</span>
-                </label>
-              </li>
-              <li>
-                <label class="flex items-center gap-3 cursor-pointer group">
-                  <input checked="" data-category="frp-gratings"
-                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
-                    type="checkbox" />
-                  <span
-                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP
-                    Gratings</span>
-                </label>
-              </li>
-              <li>
-                <label class="flex items-center gap-3 cursor-pointer group">
-                  <input checked="" data-category="pp-frp-tanks"
-                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
-                    type="checkbox" />
-                  <span
-                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">PP
-                    FRP Tanks</span>
-                </label>
-              </li>
-              <li>
-                <label class="flex items-center gap-3 cursor-pointer group">
-                  <input checked="" data-category="frp-profiles"
-                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
-                    type="checkbox" />
-                  <span
-                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP
-                    Profiles</span>
-                </label>
-              </li>
-              <li>
-                <label class="flex items-center gap-3 cursor-pointer group">
-                  <input checked="" data-category="frp-walkways"
-                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
-                    type="checkbox" />
-                  <span
-                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP
-                    Walkways</span>
-                </label>
-              </li>
-              <li>
-                <label class="flex items-center gap-3 cursor-pointer group">
-                  <input checked="" data-category="frp-pipes"
-                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
-                    type="checkbox" />
-                  <span
-                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP
-                    Pipes</span>
-                </label>
-              </li>
-              <li>
-                <label class="flex items-center gap-3 cursor-pointer group">
-                  <input checked="" data-category="frp-poles"
-                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
-                    type="checkbox" />
-                  <span
-                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP
-                    Poles</span>
-                </label>
-              </li>
-              <li>
-                <label class="flex items-center gap-3 cursor-pointer group">
-                  <input checked="" data-category="frp-sheets"
-                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
-                    type="checkbox" />
-                  <span
-                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP
-                    Sheets</span>
-                </label>
-              </li>
-              <li>
-                <label class="flex items-center gap-3 cursor-pointer group">
-                  <input checked="" data-category="frp-canopies"
-                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
-                    type="checkbox" />
-                  <span
-                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP
-                    Canopies</span>
-                </label>
-              </li>
-              <li>
-                <label class="flex items-center gap-3 cursor-pointer group">
-                  <input checked="" data-category="frp-rods"
-                    class="form-checkbox text-secondary-fixed rounded-sm border-outline-variant focus:ring-secondary-fixed focus:ring-offset-surface-container-lowest"
-                    type="checkbox" />
-                  <span
-                    class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">FRP
-                    Rods</span>
-                </label>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- Quality Assurance Highlight -->
-        <div
-          class="bg-primary text-on-primary rounded-DEFAULT p-6 border-l-4 border-secondary-fixed relative overflow-hidden">
-          <span class="material-symbols-outlined absolute -bottom-4 -right-4 text-6xl text-white/10"
-            style="font-variation-settings: 'FILL' 1;">verified</span>
-          <h3 class="font-headline-md text-headline-md text-secondary-fixed mb-2 flex items-center gap-2">
-            <span class="material-symbols-outlined">shield</span> Quality Assurance
-          </h3>
-          <p class="font-body-md text-body-md text-primary-fixed mb-4">All products adhere to stringent international
-            standards for mechanical strength and chemical resistance.</p>
-          <a class="inline-flex items-center font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed hover:text-white transition-colors"
-            href="#">
-            View Certifications <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
-          </a>
-        </div>
-      </aside>
-      <!-- Product Grid Section -->
-      <div class="lg:col-span-9 reveal reveal-delay-2">
+<!-- Product Grid Section -->
+      <div class="lg:col-span-12 reveal reveal-delay-2">
         <!-- Search Bar -->
         <div class="bg-surface-container-low p-4 rounded-DEFAULT border border-outline-variant mb-6">
           <div class="relative w-full sm:max-w-xs md:max-w-sm">
@@ -747,6 +601,87 @@
   </main>
 
   <!-- Footer -->
+  <!-- Advantages of FRP/GRP Products Section -->
+  <section class="py-24 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="mb-16 text-center">
+      <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Advantages of FRP/GRP
+        Products</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Engineered for environments where
+        traditional materials fail. Discover why industry leaders choose Fibre-Reinforced Plastic.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div
+        class="bento-card reveal bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
+        <div
+          class="w-16 h-16 rounded-full bg-red-500/10 text-red-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-3xl">local_fire_department</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary">Fire Retardant</h3>
+      </div>
+      <div
+        class="bento-card reveal reveal-delay-1 bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
+        <div
+          class="w-16 h-16 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-3xl">fitness_center</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary">High Strength</h3>
+      </div>
+      <div
+        class="bento-card reveal reveal-delay-2 bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
+        <div
+          class="w-16 h-16 rounded-full bg-orange-500/10 text-orange-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-3xl">water_drop</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary">Corrosion & Chemical Resistance</h3>
+      </div>
+      <div
+        class="bento-card reveal reveal-delay-3 bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
+        <div
+          class="w-16 h-16 rounded-full bg-green-500/10 text-green-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8">
+            <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+            <line x1="16" y1="8" x2="2" y2="22"></line>
+            <line x1="17.5" y1="15" x2="9" y2="15"></line>
+          </svg>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary">Light in Weight</h3>
+      </div>
+      <div
+        class="bento-card reveal bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
+        <div
+          class="w-16 h-16 rounded-full bg-purple-500/10 text-purple-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-3xl">power_off</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary">Thermal & Electrical Non-conductor</h3>
+      </div>
+      <div
+        class="bento-card reveal reveal-delay-1 bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
+        <div
+          class="w-16 h-16 rounded-full bg-teal-500/10 text-teal-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-3xl">build</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary">Easy to Install</h3>
+      </div>
+      <div
+        class="bento-card reveal reveal-delay-2 bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
+        <div
+          class="w-16 h-16 rounded-full bg-indigo-500/10 text-indigo-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-3xl">flash_off</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary">Anti-Static</h3>
+      </div>
+      <div
+        class="bento-card reveal reveal-delay-3 bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col items-center text-center group hover:bg-surface-container-highest transition-colors">
+        <div
+          class="w-16 h-16 rounded-full bg-yellow-500/10 text-yellow-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-3xl">light_mode</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary">UV Resistant</h3>
+      </div>
+    </div>
+  </section>
+
   <footer
     class="bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-on-surface font-body-md text-body-md w-full py-12 border-t-4 border-secondary-fixed">
     <div
@@ -899,7 +834,7 @@
           const desc = card.querySelector('p').textContent.toLowerCase();
 
           const matchesSearch = !query || title.includes(query) || desc.includes(query);
-          const matchesCategory = activeCategories.includes(cardCategory);
+          const matchesCategory = checkboxes.length === 0 ? true : activeCategories.includes(cardCategory);
 
           if (matchesSearch && matchesCategory) {
             card.style.display = '';
@@ -964,6 +899,11 @@
         <p class="text-body-sm text-on-surface-variant mb-4">Please fill out this form to download our comprehensive product catalog.</p>
         
         <div>
+          <label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1" for="catalogName">Name *</label>
+          <input class="w-full bg-surface border border-outline-variant rounded p-2.5 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-sm" id="catalogName" placeholder="Your Full Name" type="text" required />
+        </div>
+        
+        <div>
           <label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1" for="catalogCompany">Company Name *</label>
           <input class="w-full bg-surface border border-outline-variant rounded p-2.5 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-sm" id="catalogCompany" placeholder="Your Company" type="text" required />
         </div>
@@ -979,8 +919,8 @@
         </div>
         
         <div>
-          <label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1" for="catalogDescription">Description *</label>
-          <textarea class="w-full bg-surface border border-outline-variant rounded p-2.5 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-sm resize-none" id="catalogDescription" placeholder="Briefly describe your requirements..." rows="3" required></textarea>
+          <label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1" for="catalogDescription">Description (Optional)</label>
+          <textarea class="w-full bg-surface border border-outline-variant rounded p-2.5 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-sm resize-none" id="catalogDescription" placeholder="Briefly describe your requirements..." rows="3"></textarea>
         </div>
         
         <div class="pt-4">

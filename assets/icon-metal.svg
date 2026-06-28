@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+
+  <!-- Press Top -->
+  <path d="M32 8v16" stroke-width="4" />
+  <path d="M24 24h16l-8 12z" fill="currentColor" />
+  <!-- Metal Sheet (V-bent) -->
+  <path d="M12 28l20 20 20-20" stroke-width="3" />
+  <!-- Base/Die -->
+  <path d="M8 56h48" stroke-width="4" />
+  <path d="M16 56v-6l16-16 16 16v6" />
+
+</svg>

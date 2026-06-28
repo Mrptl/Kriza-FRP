@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+
+  <!-- Cooling Tower Hyperboloid -->
+  <path d="M16 56c4-20 4-36 0-40h32c-4 4-4 20 0 40z" />
+  <!-- Base openings -->
+  <path d="M16 56h32" />
+  <path d="M20 56v-8" />
+  <path d="M28 56v-8" />
+  <path d="M36 56v-8" />
+  <path d="M44 56v-8" />
+  <path d="M16 48h32" />
+  <!-- Steam -->
+  <path d="M24 16c-2-4 4-8 0-12" />
+  <path d="M32 16c-2-6 6-6 0-12" />
+  <path d="M40 16c-2-4 4-8 0-12" />
+
+</svg>
