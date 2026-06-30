@@ -207,11 +207,23 @@
           href="about-us.html">About Us</a>
         <a class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-all duration-300 active:scale-95"
           href="products.html">Products</a>
+        <div class="relative group nav-dropdown-container">
+          <button class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-all duration-300 flex items-center gap-1 cursor-pointer">
+            Resources
+            <span class="material-symbols-outlined text-[18px]">expand_more</span>
+          </button>
+          <div class="nav-dropdown-menu absolute left-0 top-full pt-2 w-48 transition-all duration-300 z-50">
+            <div class="bg-surface border border-outline-variant rounded-md shadow-lg py-2 overflow-hidden">
+              <a href="catalog.html" class="block px-4 py-2 text-sm text-on-surface-variant hover:bg-surface-container hover:text-secondary transition-colors">Catalog / Brochure</a>
+            </div>
+          </div>
+        </div>
+
         <a class="text-primary dark:text-secondary-fixed border-b-2 border-secondary-fixed pb-1 hover:text-secondary dark:hover:text-secondary-fixed-dim transition-all duration-300 font-bold"
           href="contact-us.html">Contact Us</a>
       </div>
       <div class="flex items-center gap-3">
-        <button onclick="openCatalogModal()" class="hidden md:flex bg-secondary-fixed text-on-secondary-fixed font-bold py-2 px-4 rounded hover:bg-secondary-fixed-dim transition-colors text-sm items-center gap-2"><span class="material-symbols-outlined text-[18px]">download</span> Catalog</button>
+        
         <button id="hamburger" aria-label="Toggle menu"
           class="md:hidden flex flex-col gap-[6px] p-2 text-primary dark:text-secondary-fixed">
           <span class="ham-bar"></span>
@@ -230,11 +242,21 @@
           href="about-us.html">About Us</a>
         <a class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors"
           href="products.html">Products</a>
+        <div class="flex flex-col gap-2">
+          <button onclick="document.getElementById('mobile-resources-dropdown').classList.toggle('hidden')" class="flex items-center justify-between text-on-surface-variant font-medium w-full text-left">
+            <span>Resources</span>
+            <span class="material-symbols-outlined text-[18px]">expand_more</span>
+          </button>
+          <div id="mobile-resources-dropdown" class="hidden flex-col gap-2 pl-4 pt-1">
+            <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors" href="catalog.html">- Catalog / Brochure</a>
+          </div>
+        </div>
+
         <a class="text-on-surface-variant dark:text-primary-fixed-dim font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors"
           href="contact-us.html">Contact Us</a>
 
       
-        <button onclick="openCatalogModal()" class="bg-secondary-fixed text-on-secondary-fixed font-bold py-2 px-4 rounded hover:bg-secondary-fixed-dim transition-colors text-left flex items-center gap-2 w-max mt-2"><span class="material-symbols-outlined text-[18px]">download</span> Download Catalog</button>
+        
       </div>
     </div>
   </nav>
@@ -410,7 +432,7 @@
       <div class="col-span-1 md:col-span-2 lg:col-span-1">
         <a href="index.html"
           class="inline-block font-headline-md text-headline-md font-bold text-secondary-fixed mb-4 uppercase hover:opacity-90 transition-opacity">
-          <img src="assets/company-logo-Photoroom.png" alt="KRIZA FRP Logo"
+          <img src="assets/footer_logo.png" alt="KRIZA FRP Logo"
             class="h-12 md:h-16 w-auto object-contain drop-shadow-sm" />
         </a>
         <p class="text-on-primary-container dark:text-on-surface-variant text-[14px] pr-4">
@@ -436,20 +458,11 @@
         </ul>
       </div>
       <div>
-        <h4 class="font-bold mb-4 text-white">Products</h4>
+        <h4 class="font-bold mb-4 text-white">Resources</h4>
         <ul class="space-y-3">
           <li><a
               class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
-              href="products.html">FRP Gratings</a></li>
-          <li><a
-              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
-              href="products.html">FRP Cable Trays</a></li>
-          <li><a
-              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
-              href="products.html">PP FRP Tanks</a></li>
-          <li><a
-              class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
-              href="products.html">FRP Profiles &amp; Poles</a></li>
+              href="catalog.html">Catalog / Brochure</a></li>
         </ul>
       </div>
       <div>
@@ -460,10 +473,11 @@
               href="contact-us.html">Contact Support</a></li>
           <li><a
               class="text-on-primary-container dark:text-on-surface-variant hover:text-white dark:hover:text-primary transition-colors"
-              href="product-inquiry.html">Product Inquiry</a></li>
+              href="product-inquiry.html">Product inquiry</a></li>
           <li class="flex items-start gap-2 text-on-primary-container mt-4">
             <span class="material-symbols-outlined text-[18px] mt-0.5">location_on</span>
-            <span>Halol, Chandrapura, Gujarat</span>
+            <p>Halol, Chandrapura, Gujarat 389350
+            </p>
           </li>
         </ul>
       </div>
@@ -476,6 +490,7 @@
         <a class="hover:text-white transition-colors" href="terms-of-service.html">Terms of Service</a>
       </div>
     </div>
+  </footer>
     <script>
       // --- Mobile hamburger ---
       const hamburger = document.getElementById('hamburger');
