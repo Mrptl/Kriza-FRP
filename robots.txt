@@ -1,0 +1,10 @@
+﻿User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://krizafrp.com/sitemap.xml
+
+# Block unnecessary files
+Disallow: /node_modules/
+Disallow: /*.py$
+Disallow: /stitch/
