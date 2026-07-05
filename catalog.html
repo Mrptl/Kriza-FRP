@@ -414,10 +414,10 @@
             <p class="text-on-surface-variant mb-8 leading-relaxed">
               Detailed technical specifications, benefits, and application guidelines for our primary FRP product line.
             </p>
-            <a href="assets/Kriza FRP Products.pdf" target="_blank"
-              class="mt-auto inline-flex items-center gap-2 bg-primary text-on-primary font-bold py-3 px-8 rounded hover:bg-primary/90 transition-colors">
+            <button type="button" onclick="openBrochureModal()"
+              class="mt-auto inline-flex items-center gap-2 bg-primary text-on-primary font-bold py-3 px-8 rounded hover:bg-primary/90 transition-colors cursor-pointer">
               <span class="material-symbols-outlined">download</span> Download PDF
-            </a>
+            </button>
           </div>
         </div>
 
@@ -499,6 +499,80 @@
       </div>
     </div>
   </footer>
+
+  <!-- Brochure Download Modal Popup -->
+  <div id="brochure-modal" class="fixed inset-0 z-[9999] bg-primary/80 backdrop-blur-sm flex items-center justify-center p-4 transition-all duration-300 opacity-0 pointer-events-none">
+    <div class="bg-surface border border-outline-variant rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden relative transform scale-95 transition-all duration-300" id="brochure-modal-card">
+      
+      <!-- Modal Header -->
+      <div class="bg-primary text-on-primary p-6 relative">
+        <button type="button" onclick="closeBrochureModal()" class="absolute top-4 right-4 text-primary-fixed-dim hover:text-white transition-colors p-1 rounded-full hover:bg-white/10 flex items-center justify-center cursor-pointer" aria-label="Close modal">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-secondary/20 text-secondary-fixed flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-[24px]">picture_as_pdf</span>
+          </div>
+          <div>
+            <h3 class="font-headline-md text-xl font-bold text-white leading-tight">Download Product Brochure</h3>
+            <p class="text-xs text-primary-fixed-dim font-medium mt-0.5">Please provide your details to instantly access the PDF brochure.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Form Body -->
+      <form id="brochure-download-form" class="p-6 space-y-4">
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Full Name -->
+          <div>
+            <label for="modal-fullname" class="block text-xs font-semibold text-primary mb-1">Full Name <span class="text-red-500">*</span></label>
+            <input type="text" id="modal-fullname" required placeholder="e.g. Rahul Sharma" class="w-full px-3.5 py-2.5 text-sm bg-surface-container-low border border-outline-variant/70 rounded-xl focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors" />
+          </div>
+
+          <!-- Company Name -->
+          <div>
+            <label for="modal-company" class="block text-xs font-semibold text-primary mb-1">Company Name <span class="text-red-500">*</span></label>
+            <input type="text" id="modal-company" required placeholder="e.g. ABC Industries" class="w-full px-3.5 py-2.5 text-sm bg-surface-container-low border border-outline-variant/70 rounded-xl focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Email -->
+          <div>
+            <label for="modal-email" class="block text-xs font-semibold text-primary mb-1">Work Email <span class="text-red-500">*</span></label>
+            <input type="email" id="modal-email" required placeholder="name@company.com" class="w-full px-3.5 py-2.5 text-sm bg-surface-container-low border border-outline-variant/70 rounded-xl focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors" />
+          </div>
+
+          <!-- Mobile Number -->
+          <div>
+            <label for="modal-phone" class="block text-xs font-semibold text-primary mb-1">Mobile Number <span class="text-red-500">*</span></label>
+            <input type="tel" id="modal-phone" required placeholder="+91 98765 43210" pattern="[0-9+\s-]{8,15}" class="w-full px-3.5 py-2.5 text-sm bg-surface-container-low border border-outline-variant/70 rounded-xl focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors" />
+          </div>
+        </div>
+
+        <!-- Description (Optional) -->
+        <div>
+          <label for="modal-desc" class="block text-xs font-semibold text-primary mb-1">Description / Project Requirements <span class="text-on-surface-variant/60 font-normal">(Optional)</span></label>
+          <textarea id="modal-desc" rows="2" placeholder="Tell us about your specific FRP requirements or queries..." class="w-full px-3.5 py-2.5 text-sm bg-surface-container-low border border-outline-variant/70 rounded-xl focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors resize-none"></textarea>
+        </div>
+
+        <!-- Status message -->
+        <div id="modal-status-msg" class="hidden text-xs font-semibold p-3 rounded-xl"></div>
+
+        <!-- Submit CTA Button -->
+        <button type="submit" id="modal-submit-btn" class="w-full inline-flex items-center justify-center gap-2 bg-secondary text-on-secondary font-bold py-3 px-6 rounded-xl shadow-md hover:bg-secondary/90 transition-all cursor-pointer text-sm uppercase tracking-wider">
+          <span class="material-symbols-outlined text-[20px]">download</span>
+          <span>Submit &amp; Download Brochure</span>
+        </button>
+
+        <p class="text-[11px] text-center text-on-surface-variant/70">
+          🔒 Your information is kept 100% private and secure.
+        </p>
+      </form>
+
+    </div>
+  </div>
 
   <script>
     // --- Mobile hamburger ---
@@ -714,6 +788,75 @@
     window.addEventListener('scroll', () => {
       nav.classList.toggle('shadow-lg', window.scrollY > 20);
     });
+
+    // --- Brochure Lead Capture Modal Controller ---
+    function openBrochureModal() {
+      const modal = document.getElementById('brochure-modal');
+      const modalCard = document.getElementById('brochure-modal-card');
+      if (modal && modalCard) {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.classList.add('opacity-100', 'pointer-events-auto');
+        modalCard.classList.remove('scale-95');
+        modalCard.classList.add('scale-100');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeBrochureModal() {
+      const modal = document.getElementById('brochure-modal');
+      const modalCard = document.getElementById('brochure-modal-card');
+      if (modal && modalCard) {
+        modal.classList.remove('opacity-100', 'pointer-events-auto');
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modalCard.classList.remove('scale-100');
+        modalCard.classList.add('scale-95');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Close modal on backdrop click or Escape key
+    document.addEventListener('click', (e) => {
+      const modal = document.getElementById('brochure-modal');
+      if (modal && e.target === modal) {
+        closeBrochureModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeBrochureModal();
+      }
+    });
+
+    // Handle form submit
+    const brochureForm = document.getElementById('brochure-download-form');
+    if (brochureForm) {
+      brochureForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const statusMsg = document.getElementById('modal-status-msg');
+        const submitBtn = document.getElementById('modal-submit-btn');
+
+        if (statusMsg && submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.classList.add('opacity-75');
+          statusMsg.className = 'text-xs font-semibold p-3 rounded-xl bg-secondary/15 text-secondary border border-secondary/30 block text-center mb-2';
+          statusMsg.textContent = '✓ Details verified! Opening brochure PDF...';
+
+          setTimeout(() => {
+            // Trigger PDF download / view in new tab
+            window.open('assets/Kriza FRP Products.pdf', '_blank');
+
+            setTimeout(() => {
+              closeBrochureModal();
+              brochureForm.reset();
+              submitBtn.disabled = false;
+              submitBtn.classList.remove('opacity-75');
+              statusMsg.className = 'hidden text-xs font-semibold p-3 rounded-xl';
+            }, 1000);
+          }, 800);
+        }
+      });
+    }
   </script>
 
 
