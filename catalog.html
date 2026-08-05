@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html class="scroll-smooth" lang="en">
 
@@ -295,6 +295,9 @@
               <a href="frp-rods.html"
                 class="block px-4 py-1.5 text-xs text-on-surface-variant hover:bg-surface-container hover:text-secondary transition-colors whitespace-nowrap">FRP
                 Rods</a>
+              <a href="frp-ladder.html"
+                class="block px-4 py-1.5 text-xs text-on-surface-variant hover:bg-surface-container hover:text-secondary transition-colors whitespace-nowrap">FRP
+                Ladder</a>
             </div>
           </div>
         </div>
@@ -360,6 +363,8 @@
               href="frp-canopies.html">- FRP Canopies</a>
             <a class="text-on-surface-variant text-xs hover:text-secondary transition-colors whitespace-nowrap"
               href="frp-rods.html">- FRP Rods</a>
+            <a class="text-on-surface-variant text-xs hover:text-secondary transition-colors whitespace-nowrap"
+              href="frp-ladder.html">- FRP Ladder</a>
           </div>
         </div>
         <div class="flex flex-col gap-2">
@@ -508,8 +513,8 @@
           </div>
           <div>
             <h3 class="font-headline-md text-xl font-bold text-white leading-tight">Download Product Brochure</h3>
-            <p class="text-xs text-primary-fixed-dim font-medium mt-0.5">Please provide your details to instantly access
-              the PDF brochure.</p>
+            <p class="text-xs text-primary-fixed-dim font-medium mt-0.5">Fill in your details and we'll send the
+              catalog PDF directly to your email.</p>
           </div>
         </div>
       </div>
@@ -567,8 +572,8 @@
         <!-- Submit CTA Button -->
         <button type="submit" id="modal-submit-btn"
           class="w-full inline-flex items-center justify-center gap-2 bg-secondary text-on-secondary font-bold py-3 px-6 rounded-xl shadow-md hover:bg-secondary/90 transition-all cursor-pointer text-sm uppercase tracking-wider">
-          <span class="material-symbols-outlined text-[20px]">download</span>
-          <span>Submit &amp; Download Brochure</span>
+          <span class="material-symbols-outlined text-[20px]" id="modal-submit-icon">send</span>
+          <span id="modal-submit-label">Request Catalog PDF</span>
         </button>
 
         <p class="text-[11px] text-center text-on-surface-variant/70">
@@ -833,32 +838,96 @@
       }
     });
 
-    // Handle form submit
+    // ---------------------------------------------------------------
+    // Brochure Lead Capture — Form Submit Handler
+    // POSTs to send-catalog.php → PHPMailer → Zoho SMTP
+    // Sends: admin notification + visitor PDF attachment email
+    // ---------------------------------------------------------------
     const brochureForm = document.getElementById('brochure-download-form');
     if (brochureForm) {
-      brochureForm.addEventListener('submit', (e) => {
+      brochureForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const statusMsg = document.getElementById('modal-status-msg');
-        const submitBtn = document.getElementById('modal-submit-btn');
 
-        if (statusMsg && submitBtn) {
-          submitBtn.disabled = true;
-          submitBtn.classList.add('opacity-75');
-          statusMsg.className = 'text-xs font-semibold p-3 rounded-xl bg-secondary/15 text-secondary border border-secondary/30 block text-center mb-2';
-          statusMsg.textContent = '✓ Details verified! Opening brochure PDF...';
+        const statusMsg   = document.getElementById('modal-status-msg');
+        const submitBtn   = document.getElementById('modal-submit-btn');
+        const submitIcon  = document.getElementById('modal-submit-icon');
+        const submitLabel = document.getElementById('modal-submit-label');
 
-          setTimeout(() => {
-            // Trigger PDF download / view in new tab
-            window.open('assets/Kriza FRP Products.pdf', '_blank');
+        const fullName = document.getElementById('modal-fullname').value.trim();
+        const company  = document.getElementById('modal-company').value.trim();
+        const email    = document.getElementById('modal-email').value.trim();
+        const phone    = document.getElementById('modal-phone').value.trim();
+        const desc     = document.getElementById('modal-desc').value.trim();
 
+        // --- Loading state ---
+        submitBtn.disabled = true;
+        submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+        submitIcon.textContent  = 'hourglass_top';
+        submitLabel.textContent = 'Sending Request…';
+        statusMsg.className = 'hidden text-xs font-semibold p-3 rounded-xl';
+
+        // Build IST timestamp to pass to PHP (PHP date is server time; this is client-side)
+        const dateStr = new Date().toLocaleString('en-IN', {
+          weekday: 'short', year: 'numeric', month: 'short', day: '2-digit',
+          hour: '2-digit', minute: '2-digit', second: '2-digit',
+          timeZoneName: 'long', timeZone: 'Asia/Kolkata'
+        });
+
+        const payload = {
+          name:     fullName,
+          company:  company,
+          email:    email,
+          phone:    phone,
+          desc:     desc,
+          date:     dateStr,
+          botcheck: ''       // honeypot — always empty
+        };
+
+        try {
+          const res  = await fetch('send-catalog.php', {
+            method:  'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body:    JSON.stringify(payload)
+          });
+          const data = await res.json();
+
+          if (data.success) {
+            // --- Success state ---
+            statusMsg.className = 'text-xs font-semibold p-3 rounded-xl bg-green-500/15 text-green-700 dark:text-green-400 border border-green-500/30 block text-center';
+            statusMsg.innerHTML = `✅ Catalog sent! Check your inbox at <strong>${email}</strong> — the PDF is attached.`;
+
+            submitIcon.textContent  = 'check_circle';
+            submitLabel.textContent = 'Catalog Sent!';
+            submitBtn.classList.replace('bg-secondary', 'bg-green-600');
+
+            // Close modal and reset after a short delay
             setTimeout(() => {
               closeBrochureModal();
-              brochureForm.reset();
-              submitBtn.disabled = false;
-              submitBtn.classList.remove('opacity-75');
-              statusMsg.className = 'hidden text-xs font-semibold p-3 rounded-xl';
-            }, 1000);
-          }, 800);
+              setTimeout(() => {
+                brochureForm.reset();
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                submitBtn.classList.replace('bg-green-600', 'bg-secondary');
+                submitIcon.textContent  = 'send';
+                submitLabel.textContent = 'Request Catalog PDF';
+                statusMsg.className = 'hidden text-xs font-semibold p-3 rounded-xl';
+              }, 400);
+            }, 3500);
+
+          } else {
+            throw new Error(data.message || 'Submission failed');
+          }
+
+        } catch (err) {
+          console.error('Brochure form error:', err);
+          // --- Error state ---
+          statusMsg.className = 'text-xs font-semibold p-3 rounded-xl bg-red-500/15 text-red-700 dark:text-red-400 border border-red-500/30 block text-center';
+          statusMsg.textContent = '❌ Something went wrong. Please try again or contact us at info@krizafrp.co.in';
+
+          submitBtn.disabled = false;
+          submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+          submitIcon.textContent  = 'send';
+          submitLabel.textContent = 'Request Catalog PDF';
         }
       });
     }
