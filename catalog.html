@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html class="scroll-smooth" lang="en">
 
@@ -64,6 +64,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
     rel="stylesheet" />
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body class="bg-background text-on-background font-body-md antialiased pt-[92px] md:pt-[100px]">
@@ -839,10 +841,21 @@
     });
 
     // ---------------------------------------------------------------
-    // Brochure Lead Capture — Form Submit Handler
-    // POSTs to send-catalog.php → PHPMailer → Zoho SMTP
-    // Sends: admin notification + visitor PDF attachment email
+    // Brochure Lead Capture — EmailJS Form Handler
+    // Sends 2 emails via EmailJS:
+    //   1. Admin notification  → info@krizafrp.co.in
+    //   2. Visitor catalog     → visitor's email (PDF attached in template)
+    //
+    // ⚙️  FILL IN YOUR EMAILJS CREDENTIALS BELOW:
     // ---------------------------------------------------------------
+    const EJS_PUBLIC_KEY      = 'YOUR_EMAILJS_PUBLIC_KEY';      // EmailJS → Account → Public Key
+    const EJS_SERVICE_ID      = 'YOUR_SERVICE_ID';              // EmailJS → Email Services → Service ID
+    const EJS_ADMIN_TMPL      = 'YOUR_ADMIN_TEMPLATE_ID';       // Template 1: admin notification
+    const EJS_VISITOR_TMPL    = 'YOUR_VISITOR_TEMPLATE_ID';     // Template 2: visitor catalog (PDF attached here)
+
+    // Initialise EmailJS with your public key
+    emailjs.init({ publicKey: EJS_PUBLIC_KEY });
+
     const brochureForm = document.getElementById('brochure-download-form');
     if (brochureForm) {
       brochureForm.addEventListener('submit', async (e) => {
@@ -866,61 +879,61 @@
         submitLabel.textContent = 'Sending Request…';
         statusMsg.className = 'hidden text-xs font-semibold p-3 rounded-xl';
 
-        // Build IST timestamp to pass to PHP (PHP date is server time; this is client-side)
+        // IST timestamp
         const dateStr = new Date().toLocaleString('en-IN', {
           weekday: 'short', year: 'numeric', month: 'short', day: '2-digit',
           hour: '2-digit', minute: '2-digit', second: '2-digit',
           timeZoneName: 'long', timeZone: 'Asia/Kolkata'
         });
 
-        const payload = {
-          name:     fullName,
+        // Template variables — these map to {{variable_name}} in your EmailJS templates
+        const adminParams = {
+          from_name:    fullName,
+          company:      company,
+          reply_to:     email,
+          phone:        phone,
+          requirements: desc || 'No additional requirements provided.',
+          date:         dateStr,
+          visitor_email: email,
+        };
+
+        const visitorParams = {
+          to_name:  fullName,
+          to_email: email,
           company:  company,
-          email:    email,
-          phone:    phone,
-          desc:     desc,
-          date:     dateStr,
-          botcheck: ''       // honeypot — always empty
         };
 
         try {
-          const res  = await fetch('send-catalog.php', {
-            method:  'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body:    JSON.stringify(payload)
-          });
-          const data = await res.json();
+          // 1. Send admin notification
+          await emailjs.send(EJS_SERVICE_ID, EJS_ADMIN_TMPL, adminParams);
 
-          if (data.success) {
-            // --- Success state ---
-            statusMsg.className = 'text-xs font-semibold p-3 rounded-xl bg-green-500/15 text-green-700 dark:text-green-400 border border-green-500/30 block text-center';
-            statusMsg.innerHTML = `✅ Catalog sent! Check your inbox at <strong>${email}</strong> — the PDF is attached.`;
+          // 2. Send visitor catalog email (PDF is a static attachment on this template)
+          await emailjs.send(EJS_SERVICE_ID, EJS_VISITOR_TMPL, visitorParams);
 
-            submitIcon.textContent  = 'check_circle';
-            submitLabel.textContent = 'Catalog Sent!';
-            submitBtn.classList.replace('bg-secondary', 'bg-green-600');
+          // --- Success state ---
+          statusMsg.className = 'text-xs font-semibold p-3 rounded-xl bg-green-500/15 text-green-700 dark:text-green-400 border border-green-500/30 block text-center';
+          statusMsg.innerHTML = `✅ Catalog sent! Check your inbox at <strong>${email}</strong> — the PDF is attached.`;
 
-            // Close modal and reset after a short delay
+          submitIcon.textContent  = 'check_circle';
+          submitLabel.textContent = 'Catalog Sent!';
+          submitBtn.classList.replace('bg-secondary', 'bg-green-600');
+
+          // Close modal and reset
+          setTimeout(() => {
+            closeBrochureModal();
             setTimeout(() => {
-              closeBrochureModal();
-              setTimeout(() => {
-                brochureForm.reset();
-                submitBtn.disabled = false;
-                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
-                submitBtn.classList.replace('bg-green-600', 'bg-secondary');
-                submitIcon.textContent  = 'send';
-                submitLabel.textContent = 'Request Catalog PDF';
-                statusMsg.className = 'hidden text-xs font-semibold p-3 rounded-xl';
-              }, 400);
-            }, 3500);
-
-          } else {
-            throw new Error(data.message || 'Submission failed');
-          }
+              brochureForm.reset();
+              submitBtn.disabled = false;
+              submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+              submitBtn.classList.replace('bg-green-600', 'bg-secondary');
+              submitIcon.textContent  = 'send';
+              submitLabel.textContent = 'Request Catalog PDF';
+              statusMsg.className = 'hidden text-xs font-semibold p-3 rounded-xl';
+            }, 400);
+          }, 3500);
 
         } catch (err) {
-          console.error('Brochure form error:', err);
-          // --- Error state ---
+          console.error('EmailJS error:', err);
           statusMsg.className = 'text-xs font-semibold p-3 rounded-xl bg-red-500/15 text-red-700 dark:text-red-400 border border-red-500/30 block text-center';
           statusMsg.textContent = '❌ Something went wrong. Please try again or contact us at info@krizafrp.co.in';
 
